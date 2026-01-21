@@ -6,9 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // GitHub Pages configuration
-  basePath: process.env.NODE_ENV === 'production' ? '/pattarapornd-web' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/pattarapornd-web/' : '',
+  // Custom domain configuration for GitHub Pages
+  // No basePath or assetPrefix needed for custom domains
 }
 
 module.exports = nextConfig

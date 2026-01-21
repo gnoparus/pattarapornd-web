@@ -104,20 +104,21 @@ Custom medical-themed color palette defined in `tailwind.config.ts`:
 
 ## 🌐 Deployment
 
-### GitHub Pages (Automatic)
+### GitHub Pages with Custom Domain
 
-This website is configured for automatic deployment to GitHub Pages:
+This website is configured for automatic deployment to GitHub Pages with custom domain:
 
-1. **Enable GitHub Pages**: 
-   - Go to repository Settings → Pages
-   - Select "GitHub Actions" as the source
+1. **Custom Domain Setup**: 
+   - Custom domain: `pattarapornd.com`
+   - CNAME file included in `public/` directory
+   - DNS configured to point to GitHub Pages
 
 2. **Automatic Deployment**:
    - Push to the `main` branch triggers automatic deployment
    - The GitHub Actions workflow builds and deploys the site
-   - Site will be available at: `https://gnoparus.github.io/pattarapornd-web/`
+   - Site is available at: `https://pattarapornd.com`
 
-3. **Manual Deployment**:
+3. **Manual Build**:
    ```bash
    npm run build
    # The static site is exported to the 'out' directory
