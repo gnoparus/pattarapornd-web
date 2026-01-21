@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { CheckCircle2 } from 'lucide-react'
+import { experienceImages } from '@/lib/unsplashImages'
 
 const experiences = [
   {
@@ -124,8 +125,19 @@ export default function Experience() {
 
   return (
     <section id="experience" className="section py-24 px-4 relative">
-      {/* Background decoration */}
+      {/* 
+        Unsplash Background Images - Professional Experience Theme
+        To update: Modify images in /lib/unsplashImages.ts -> experienceImages array
+      */}
       <div className="absolute left-0 top-1/4 w-96 h-96 bg-medical-primary rounded-full blur-3xl opacity-5 -z-10"></div>
+      <div 
+        className="absolute right-10 bottom-1/4 w-80 h-80 rounded-lg opacity-10 blur-sm -z-10"
+        style={{
+          backgroundImage: `url('${experienceImages[1].url}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
       
       <div className="max-w-5xl mx-auto">
         <motion.div
@@ -141,6 +153,29 @@ export default function Experience() {
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             A journey of continuous learning and dedication to advancing healthcare excellence
           </p>
+        </motion.div>
+
+        {/* Hero image for experience section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative"
+        >
+          <div className="relative h-64 md:h-80">
+            <img 
+              src={experienceImages[0].url}
+              alt={experienceImages[0].alt}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-medical-dark/90 via-medical-dark/50 to-transparent flex items-end justify-center pb-10">
+              <p className="text-white text-xl md:text-2xl font-bold text-center max-w-3xl px-6">
+                Delivering exceptional patient care through innovation and expertise
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         <div className="space-y-8">

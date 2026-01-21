@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { GraduationCap, Award, Brain, Sparkles, Heart, Music } from 'lucide-react'
+import { educationImages } from '@/lib/unsplashImages'
 
 const education = [
   {
@@ -76,8 +77,20 @@ export default function Education() {
 
   return (
     <section id="education" className="section py-24 px-4 bg-gradient-to-b from-medical-accent/30 to-transparent relative overflow-hidden">
-      {/* Background decoration */}
+      {/* 
+        Unsplash Background Images - Educational Theme
+        To update: Modify images in /lib/unsplashImages.ts -> educationImages array
+        Multiple subtle background images create visual interest
+      */}
       <div className="absolute right-0 bottom-0 w-96 h-96 bg-medical-secondary rounded-full blur-3xl opacity-5 -z-10"></div>
+      <div 
+        className="absolute left-10 top-1/4 w-64 h-64 rounded-lg opacity-10 blur-sm -z-10"
+        style={{
+          backgroundImage: `url('${educationImages[1].url}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
       
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -105,6 +118,29 @@ export default function Education() {
           >
             Academic Qualifications
           </motion.h3>
+          
+          {/* Decorative image banner for academic section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mb-8 rounded-2xl overflow-hidden shadow-2xl relative"
+          >
+            <div className="relative h-48 md:h-64">
+              <img 
+                src={educationImages[0].url}
+                alt={educationImages[0].alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-medical-primary/80 to-transparent flex items-center px-8">
+                <p className="text-white text-lg md:text-xl font-semibold max-w-md">
+                  Committed to lifelong learning and academic excellence in medical science
+                </p>
+              </div>
+            </div>
+          </motion.div>
           
           <div className="space-y-6">
             {education.map((edu, index) => {
@@ -156,6 +192,29 @@ export default function Education() {
           >
             Professional Certifications
           </motion.h3>
+          
+          {/* Decorative image for certifications section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="mb-8 rounded-2xl overflow-hidden shadow-2xl relative"
+          >
+            <div className="relative h-40 md:h-48">
+              <img 
+                src={educationImages[2].url}
+                alt={educationImages[2].alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-l from-medical-secondary/80 to-transparent flex items-center justify-end px-8">
+                <p className="text-white text-lg md:text-xl font-semibold max-w-md text-right">
+                  Continuous professional development and specialized certifications
+                </p>
+              </div>
+            </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => {
