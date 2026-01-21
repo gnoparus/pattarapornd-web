@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -71,12 +72,15 @@ export default function Contact() {
         Unsplash Background Image for Contact Section
         To update: Modify images in /lib/unsplashImages.ts -> contactImages array
       */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{
-          backgroundImage: `url('${contactImages[0].url}')`,
-        }}
-      ></div>
+      <div className="absolute inset-0 opacity-20">
+        <Image
+          src={contactImages[0].url}
+          alt={contactImages[0].alt}
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          quality={60}
+        />
+      </div>
       
       {/* Background decorative elements */}
       <motion.div 
@@ -120,11 +124,12 @@ export default function Contact() {
           className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative"
         >
           <div className="relative h-48 md:h-56">
-            <img 
+            <Image 
               src={contactImages[1].url}
               alt={contactImages[1].alt}
-              className="w-full h-full object-cover"
-              loading="lazy"
+              fill
+              style={{ objectFit: 'cover' }}
+              quality={80}
             />
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-medical-primary/90 to-medical-secondary/80 flex items-center justify-center">

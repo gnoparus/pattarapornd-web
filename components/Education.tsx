@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { GraduationCap, Award, Brain, Sparkles, Heart, Music } from 'lucide-react'
 import { educationImages } from '@/lib/unsplashImages'
@@ -83,14 +84,15 @@ export default function Education() {
         Multiple subtle background images create visual interest
       */}
       <div className="absolute right-0 bottom-0 w-96 h-96 bg-medical-secondary rounded-full blur-3xl opacity-5 -z-10"></div>
-      <div 
-        className="absolute left-10 top-1/4 w-64 h-64 rounded-lg opacity-10 blur-sm -z-10"
-        style={{
-          backgroundImage: `url('${educationImages[1].url}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      ></div>
+      <div className="absolute left-10 top-1/4 w-64 h-64 rounded-lg opacity-10 blur-sm -z-10 overflow-hidden">
+        <Image
+          src={educationImages[1].url}
+          alt={educationImages[1].alt}
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          quality={60}
+        />
+      </div>
       
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -127,11 +129,12 @@ export default function Education() {
             className="mb-8 rounded-2xl overflow-hidden shadow-2xl relative"
           >
             <div className="relative h-48 md:h-64">
-              <img 
+              <Image 
                 src={educationImages[0].url}
                 alt={educationImages[0].alt}
-                className="w-full h-full object-cover"
-                loading="lazy"
+                fill
+                style={{ objectFit: 'cover' }}
+                quality={80}
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-medical-primary/80 to-transparent flex items-center px-8">
@@ -201,11 +204,12 @@ export default function Education() {
             className="mb-8 rounded-2xl overflow-hidden shadow-2xl relative"
           >
             <div className="relative h-40 md:h-48">
-              <img 
+              <Image 
                 src={educationImages[2].url}
                 alt={educationImages[2].alt}
-                className="w-full h-full object-cover"
-                loading="lazy"
+                fill
+                style={{ objectFit: 'cover' }}
+                quality={80}
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-l from-medical-secondary/80 to-transparent flex items-center justify-end px-8">

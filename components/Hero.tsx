@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
+import Image from 'next/image'
 import { heroImages } from '@/lib/unsplashImages'
 
 export default function Hero() {
@@ -15,14 +16,15 @@ export default function Hero() {
         To update: Change the image in /lib/unsplashImages.ts -> heroImages array
         The image is overlaid with a gradient for better text readability
       */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('${heroImage.url}')`,
-        }}
-        role="img"
-        aria-label={heroImage.alt}
-      >
+      <div className="absolute inset-0">
+        <Image
+          src={heroImage.url}
+          alt={heroImage.alt}
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+          quality={80}
+        />
         {/* Overlay gradient for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white/85"></div>
       </div>
