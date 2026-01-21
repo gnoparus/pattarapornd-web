@@ -104,11 +104,32 @@ Custom medical-themed color palette defined in `tailwind.config.ts`:
 
 ## 🌐 Deployment
 
-The website is production-ready and can be deployed to:
-- Vercel (recommended for Next.js)
+### GitHub Pages (Automatic)
+
+This website is configured for automatic deployment to GitHub Pages:
+
+1. **Enable GitHub Pages**: 
+   - Go to repository Settings → Pages
+   - Select "GitHub Actions" as the source
+
+2. **Automatic Deployment**:
+   - Push to the `main` branch triggers automatic deployment
+   - The GitHub Actions workflow builds and deploys the site
+   - Site will be available at: `https://gnoparus.github.io/pattarapornd-web/`
+
+3. **Manual Deployment**:
+   ```bash
+   npm run build
+   # The static site is exported to the 'out' directory
+   ```
+
+### Other Platforms
+
+The website can also be deployed to:
+- Vercel
 - Netlify
 - AWS Amplify
-- Any Node.js hosting platform
+- Any static hosting platform
 
 ## 📄 License
 
