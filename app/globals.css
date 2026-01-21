@@ -1,13 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+:root {
+  /* Medical color palette */
+  --color-medical-primary: #2D5F7F;
+  --color-medical-secondary: #7FB3D5;
+  --color-medical-accent: #E8F4F8;
+  --color-medical-dark: #1A3A52;
+  --color-medical-light: #F0F8FC;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 html {
@@ -34,8 +55,74 @@ canvas {
   z-index: 10;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-medical-primary {
+  color: var(--color-medical-primary);
+}
+
+.text-medical-secondary {
+  color: var(--color-medical-secondary);
+}
+
+.text-medical-accent {
+  color: var(--color-medical-accent);
+}
+
+.text-medical-dark {
+  color: var(--color-medical-dark);
+}
+
+.text-medical-light {
+  color: var(--color-medical-light);
+}
+
+.bg-medical-primary {
+  background-color: var(--color-medical-primary);
+}
+
+.bg-medical-secondary {
+  background-color: var(--color-medical-secondary);
+}
+
+.bg-medical-accent {
+  background-color: var(--color-medical-accent);
+}
+
+.bg-medical-dark {
+  background-color: var(--color-medical-dark);
+}
+
+.bg-medical-light {
+  background-color: var(--color-medical-light);
+}
+
+.border-medical-primary {
+  border-color: var(--color-medical-primary);
+}
+
+.border-medical-secondary {
+  border-color: var(--color-medical-secondary);
+}
+
+.border-medical-accent {
+  border-color: var(--color-medical-accent);
+}
+
+.hover\:bg-medical-dark:hover {
+  background-color: var(--color-medical-dark);
+}
+
+.hover\:bg-medical-accent:hover {
+  background-color: var(--color-medical-accent);
+}
+
+.hover\:border-medical-secondary:hover {
+  border-color: var(--color-medical-secondary);
+}
+
+.hover\:text-medical-primary:hover {
+  color: var(--color-medical-primary);
 }

@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import { CheckCircle2 } from 'lucide-react'
 
 const experiences = [
   {
@@ -64,38 +66,54 @@ function ExperienceCard({ experience, index }: { experience: typeof experiences[
       ref={ref}
       initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.6, -0.05, 0.01, 0.99] }}
       className="relative"
     >
-      <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-medical-primary">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-          <div className="flex-1">
-            <span className="inline-block px-4 py-1 bg-medical-accent text-medical-primary rounded-full text-sm font-semibold mb-3">
-              {experience.period}
-            </span>
-            <h3 className="text-2xl font-bold text-medical-dark mb-2 font-display">
-              {experience.title}
-            </h3>
-            <p className="text-medical-primary font-semibold mb-3">
-              {experience.organization}
-            </p>
-          </div>
-        </div>
-        
-        <p className="text-gray-700 mb-4 leading-relaxed">
-          {experience.description}
-        </p>
-
-        <div className="space-y-2">
-          <h4 className="font-semibold text-medical-dark mb-2">Key Achievements:</h4>
-          {experience.achievements.map((achievement, i) => (
-            <div key={i} className="flex items-start">
-              <span className="text-medical-primary mr-2 mt-1">✓</span>
-              <span className="text-gray-600">{achievement}</span>
+      <Card className="border-l-4 border-medical-primary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/90 backdrop-blur-sm">
+        <CardHeader>
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+            <div className="flex-1">
+              <motion.span 
+                className="inline-block px-4 py-1 bg-medical-accent text-medical-primary rounded-full text-sm font-semibold mb-3"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                {experience.period}
+              </motion.span>
+              <CardTitle className="text-2xl text-medical-dark mb-2 font-display">
+                {experience.title}
+              </CardTitle>
+              <p className="text-medical-primary font-semibold mb-3">
+                {experience.organization}
+              </p>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+          <CardDescription className="text-gray-700 leading-relaxed text-base">
+            {experience.description}
+          </CardDescription>
+        </CardHeader>
+        
+        <CardContent>
+          <h4 className="font-semibold text-medical-dark mb-3 flex items-center">
+            <CheckCircle2 className="w-5 h-5 mr-2 text-medical-primary" />
+            Key Achievements:
+          </h4>
+          <div className="space-y-2">
+            {experience.achievements.map((achievement, i) => (
+              <motion.div 
+                key={i} 
+                className="flex items-start group"
+                initial={{ opacity: 0, x: -10 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                transition={{ duration: 0.3, delay: index * 0.1 + i * 0.05 }}
+              >
+                <span className="text-medical-primary mr-2 mt-1 group-hover:scale-125 transition-transform">✓</span>
+                <span className="text-gray-600">{achievement}</span>
+              </motion.div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
     </motion.div>
   )
 }
@@ -105,7 +123,10 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="experience" className="section py-24 px-4">
+    <section id="experience" className="section py-24 px-4 relative">
+      {/* Background decoration */}
+      <div className="absolute left-0 top-1/4 w-96 h-96 bg-medical-primary rounded-full blur-3xl opacity-5 -z-10"></div>
+      
       <div className="max-w-5xl mx-auto">
         <motion.div
           ref={ref}
