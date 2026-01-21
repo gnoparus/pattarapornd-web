@@ -120,20 +120,20 @@ export default function Contact() {
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
-                  <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer">
+                  <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30 hover:bg-medical-dark/95 transition-all duration-300 group cursor-pointer">
                     <CardContent className="p-4">
                       <div className="flex items-center">
                         <motion.div 
-                          className="mr-4 text-white"
+                          className="mr-4 text-medical-secondary"
                           whileHover={{ scale: 1.2, rotate: 5 }}
                           transition={{ duration: 0.3 }}
                         >
                           <Icon className="w-8 h-8" />
                         </motion.div>
                         <div>
-                          <p className="text-medical-accent text-sm font-semibold">{method.type}</p>
+                          <p className="text-medical-secondary text-sm font-semibold">{method.type}</p>
                           <p className="text-white text-lg font-medium">{method.value}</p>
-                          <p className="text-medical-accent/70 text-sm">{method.description}</p>
+                          <p className="text-medical-accent text-sm">{method.description}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -148,7 +148,7 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="mt-8"
             >
-              <Card className="bg-white/10 backdrop-blur-md border-white/20">
+              <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30">
                 <CardContent className="p-6">
                   <h4 className="text-xl font-bold text-white mb-3">Office Hours</h4>
                   <div className="space-y-2 text-medical-accent">
@@ -167,7 +167,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Card className="bg-white/10 backdrop-blur-md border-white/20">
+            <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30">
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -181,7 +181,7 @@ export default function Contact() {
                       value={formState.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
                       placeholder="Your name"
                     />
                   </div>
@@ -197,7 +197,7 @@ export default function Contact() {
                       value={formState.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                       value={formState.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
                     >
                       <option value="" className="bg-medical-dark">Select a subject</option>
                       <option value="general" className="bg-medical-dark">General Inquiry</option>
@@ -233,7 +233,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300 resize-none"
                       placeholder="Your message..."
                     ></textarea>
                   </div>
