@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import { GraduationCap, Award, Brain, Sparkles, Heart, Music } from 'lucide-react'
 
 const education = [
   {
@@ -11,6 +13,7 @@ const education = [
     institution: 'Harvard Medical School',
     year: '2015',
     description: 'Specialized in Internal Medicine with honors, thesis on AI applications in diagnostics',
+    icon: GraduationCap,
   },
   {
     id: 2,
@@ -18,6 +21,7 @@ const education = [
     institution: 'Massachusetts Institute of Technology',
     year: '2011',
     description: 'Focus on medical device innovation and computational biology',
+    icon: GraduationCap,
   },
 ]
 
@@ -27,42 +31,42 @@ const certifications = [
     title: 'Board Certified in Internal Medicine',
     issuer: 'American Board of Internal Medicine',
     year: '2016',
-    icon: '🏆',
+    icon: Award,
   },
   {
     id: 2,
     title: 'Advanced Aesthetic Medicine Certification',
     issuer: 'International Board of Aesthetic Medicine',
     year: '2017',
-    icon: '💉',
+    icon: Sparkles,
   },
   {
     id: 3,
     title: 'Medical AI & Machine Learning Specialization',
     issuer: 'Stanford University',
     year: '2019',
-    icon: '🤖',
+    icon: Brain,
   },
   {
     id: 4,
     title: 'Certified Anti-Aging Medicine Specialist',
     issuer: 'American Academy of Anti-Aging Medicine',
     year: '2018',
-    icon: '✨',
+    icon: Heart,
   },
   {
     id: 5,
     title: 'Traditional Thai Massage Therapist',
     issuer: 'Wat Pho Traditional Medical School',
     year: '2015',
-    icon: '🙏',
+    icon: Heart,
   },
   {
     id: 6,
     title: 'Tibetan Singing Bowl Sound Healing Practitioner',
     issuer: 'International Sound Healing Academy',
     year: '2016',
-    icon: '🎵',
+    icon: Music,
   },
 ]
 
@@ -71,7 +75,10 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="education" className="section py-24 px-4 bg-gradient-to-b from-medical-accent/30 to-transparent">
+    <section id="education" className="section py-24 px-4 bg-gradient-to-b from-medical-accent/30 to-transparent relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute right-0 bottom-0 w-96 h-96 bg-medical-secondary rounded-full blur-3xl opacity-5 -z-10"></div>
+      
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -100,24 +107,42 @@ export default function Education() {
           </motion.h3>
           
           <div className="space-y-6">
-            {education.map((edu, index) => (
-              <motion.div
-                key={edu.id}
-                initial={{ opacity: 0, x: -30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-medical-secondary"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                  <h4 className="text-xl font-bold text-medical-dark">{edu.degree}</h4>
-                  <span className="inline-block px-4 py-1 bg-medical-secondary/20 text-medical-primary rounded-full text-sm font-semibold mt-2 md:mt-0">
-                    {edu.year}
-                  </span>
-                </div>
-                <p className="text-medical-primary font-semibold mb-2">{edu.institution}</p>
-                <p className="text-gray-600">{edu.description}</p>
-              </motion.div>
-            ))}
+            {education.map((edu, index) => {
+              const Icon = edu.icon
+              return (
+                <motion.div
+                  key={edu.id}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                >
+                  <Card className="border-l-4 border-medical-secondary hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="flex items-start justify-between">
+                        <div className="flex items-start flex-1">
+                          <motion.div 
+                            className="mr-4 mt-1"
+                            whileHover={{ scale: 1.1, rotate: 5 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <Icon className="w-8 h-8 text-medical-primary" />
+                          </motion.div>
+                          <div className="flex-1">
+                            <CardTitle className="text-xl text-medical-dark mb-2">{edu.degree}</CardTitle>
+                            <p className="text-medical-primary font-semibold mb-2">{edu.institution}</p>
+                            <CardDescription className="text-gray-600">{edu.description}</CardDescription>
+                          </div>
+                        </div>
+                        <span className="inline-block px-4 py-1 bg-medical-secondary/20 text-medical-primary rounded-full text-sm font-semibold ml-4">
+                          {edu.year}
+                        </span>
+                      </div>
+                    </CardHeader>
+                  </Card>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
 
@@ -133,24 +158,35 @@ export default function Education() {
           </motion.h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.05 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {cert.icon}
-                </div>
-                <h4 className="text-lg font-bold text-medical-dark mb-2">{cert.title}</h4>
-                <p className="text-sm text-medical-primary mb-2">{cert.issuer}</p>
-                <span className="inline-block px-3 py-1 bg-medical-accent text-medical-dark rounded-full text-xs font-semibold">
-                  {cert.year}
-                </span>
-              </motion.div>
-            ))}
+            {certifications.map((cert, index) => {
+              const Icon = cert.icon
+              return (
+                <motion.div
+                  key={cert.id}
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 20 }}
+                  transition={{ duration: 0.4, delay: 0.5 + index * 0.05, ease: [0.6, -0.05, 0.01, 0.99] }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <Card className="h-full hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-white/80 backdrop-blur-sm border-medical-accent hover:border-medical-secondary">
+                    <CardContent className="p-6">
+                      <motion.div 
+                        className="mb-4"
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Icon className="w-10 h-10 text-medical-primary" />
+                      </motion.div>
+                      <h4 className="text-lg font-bold text-medical-dark mb-2 group-hover:text-medical-primary transition-colors">{cert.title}</h4>
+                      <p className="text-sm text-medical-primary mb-2">{cert.issuer}</p>
+                      <span className="inline-block px-3 py-1 bg-medical-accent text-medical-dark rounded-full text-xs font-semibold">
+                        {cert.year}
+                      </span>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </div>

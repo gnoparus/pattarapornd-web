@@ -3,35 +3,42 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
+import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 const contactMethods = [
   {
     id: 1,
     type: 'Email',
-    value: 'contact@medicalportfolio.example',
-    icon: '📧',
-    link: 'mailto:contact@medicalportfolio.example',
+    value: 'Contact via email',
+    icon: Mail,
+    link: '#',
+    description: 'Reach out for professional inquiries'
   },
   {
     id: 2,
     type: 'Phone',
-    value: '+1 (555) 123-4567',
-    icon: '📱',
-    link: 'tel:+15551234567',
+    value: 'Available for consultation',
+    icon: Phone,
+    link: '#',
+    description: 'Schedule a call'
   },
   {
     id: 3,
     type: 'Location',
-    value: 'Boston, MA',
-    icon: '📍',
+    value: 'Healthcare Facility',
+    icon: MapPin,
     link: '#',
+    description: 'Professional practice location'
   },
   {
     id: 4,
     type: 'LinkedIn',
-    value: 'Professional Profile',
-    icon: '💼',
+    value: 'Professional Network',
+    icon: Linkedin,
     link: '#',
+    description: 'Connect professionally'
   },
 ]
 
@@ -47,8 +54,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Form submission would be handled here
-    alert('Thank you for your message! This is a demo form.')
+    alert('Thank you for your interest! This is a demo contact form.')
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -61,10 +67,22 @@ export default function Contact() {
   return (
     <section id="contact" className="section py-24 px-4 bg-gradient-to-b from-transparent to-medical-dark relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-medical-secondary rounded-full blur-3xl opacity-10 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-medical-primary rounded-full blur-3xl opacity-10 animate-float" style={{ animationDelay: '2s' }}></div>
-      </div>
+      <motion.div 
+        className="absolute top-20 left-10 w-64 h-64 bg-medical-secondary rounded-full blur-3xl opacity-10"
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.1, 0.2, 0.1]
+        }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div 
+        className="absolute bottom-20 right-10 w-80 h-80 bg-medical-primary rounded-full blur-3xl opacity-10"
+        animate={{ 
+          scale: [1, 1.3, 1],
+          opacity: [0.1, 0.2, 0.1]
+        }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -92,37 +110,54 @@ export default function Contact() {
           >
             <h3 className="text-3xl font-bold text-white mb-8 font-display">Contact Information</h3>
             
-            {contactMethods.map((method, index) => (
-              <motion.a
-                key={method.id}
-                href={method.link}
-                initial={{ opacity: 0, x: -30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                  {method.icon}
-                </div>
-                <div>
-                  <p className="text-medical-accent text-sm font-semibold">{method.type}</p>
-                  <p className="text-white text-lg">{method.value}</p>
-                </div>
-              </motion.a>
-            ))}
+            {contactMethods.map((method, index) => {
+              const Icon = method.icon
+              return (
+                <motion.div
+                  key={method.id}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                >
+                  <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer">
+                    <CardContent className="p-4">
+                      <div className="flex items-center">
+                        <motion.div 
+                          className="mr-4 text-white"
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Icon className="w-8 h-8" />
+                        </motion.div>
+                        <div>
+                          <p className="text-medical-accent text-sm font-semibold">{method.type}</p>
+                          <p className="text-white text-lg font-medium">{method.value}</p>
+                          <p className="text-medical-accent/70 text-sm">{method.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="mt-8 p-6 bg-white/10 backdrop-blur-sm rounded-xl"
+              className="mt-8"
             >
-              <h4 className="text-xl font-bold text-white mb-3">Office Hours</h4>
-              <div className="space-y-2 text-medical-accent">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
+              <Card className="bg-white/10 backdrop-blur-md border-white/20">
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-bold text-white mb-3">Office Hours</h4>
+                  <div className="space-y-2 text-medical-accent">
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </motion.div>
 
@@ -132,82 +167,88 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-white font-semibold mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formState.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary transition-all duration-300"
-                  placeholder="Your name"
-                />
-              </div>
+            <Card className="bg-white/10 backdrop-blur-md border-white/20">
+              <CardContent className="p-8">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-white font-semibold mb-2">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formState.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      placeholder="Your name"
+                    />
+                  </div>
 
-              <div>
-                <label htmlFor="email" className="block text-white font-semibold mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary transition-all duration-300"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+                  <div>
+                    <label htmlFor="email" className="block text-white font-semibold mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formState.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
 
-              <div>
-                <label htmlFor="subject" className="block text-white font-semibold mb-2">
-                  Subject
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={formState.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:border-medical-secondary transition-all duration-300"
-                >
-                  <option value="" className="bg-medical-dark">Select a subject</option>
-                  <option value="general" className="bg-medical-dark">General Inquiry</option>
-                  <option value="consultation" className="bg-medical-dark">Consultation Request</option>
-                  <option value="collaboration" className="bg-medical-dark">Collaboration Opportunity</option>
-                  <option value="other" className="bg-medical-dark">Other</option>
-                </select>
-              </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-white font-semibold mb-2">
+                      Subject
+                    </label>
+                    <select
+                      id="subject"
+                      name="subject"
+                      value={formState.subject}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                    >
+                      <option value="" className="bg-medical-dark">Select a subject</option>
+                      <option value="general" className="bg-medical-dark">General Inquiry</option>
+                      <option value="consultation" className="bg-medical-dark">Consultation Request</option>
+                      <option value="collaboration" className="bg-medical-dark">Collaboration Opportunity</option>
+                      <option value="other" className="bg-medical-dark">Other</option>
+                    </select>
+                  </div>
 
-              <div>
-                <label htmlFor="message" className="block text-white font-semibold mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formState.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary transition-all duration-300 resize-none"
-                  placeholder="Your message..."
-                ></textarea>
-              </div>
+                  <div>
+                    <label htmlFor="message" className="block text-white font-semibold mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formState.message}
+                      onChange={handleChange}
+                      required
+                      rows={5}
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-medical-accent/60 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300 resize-none"
+                      placeholder="Your message..."
+                    ></textarea>
+                  </div>
 
-              <button
-                type="submit"
-                className="w-full px-8 py-4 bg-medical-secondary text-medical-dark rounded-lg font-semibold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
-                Send Message
-              </button>
-            </form>
+                  <Button
+                    type="submit"
+                    variant="secondary"
+                    size="lg"
+                    className="w-full"
+                  >
+                    Send Message
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
 
