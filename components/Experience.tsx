@@ -134,10 +134,11 @@ export default function Experience() {
       <div className="absolute right-10 bottom-1/4 w-80 h-80 rounded-lg opacity-10 blur-sm -z-10 overflow-hidden">
         <Image
           src={experienceImages[1].url}
-          alt={experienceImages[1].alt}
+          alt=""
           fill
           style={{ objectFit: 'cover', objectPosition: 'center' }}
           quality={60}
+          aria-hidden="true"
         />
       </div>
       

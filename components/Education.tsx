@@ -87,10 +87,11 @@ export default function Education() {
       <div className="absolute left-10 top-1/4 w-64 h-64 rounded-lg opacity-10 blur-sm -z-10 overflow-hidden">
         <Image
           src={educationImages[1].url}
-          alt={educationImages[1].alt}
+          alt=""
           fill
           style={{ objectFit: 'cover', objectPosition: 'center' }}
           quality={60}
+          aria-hidden="true"
         />
       </div>
       
