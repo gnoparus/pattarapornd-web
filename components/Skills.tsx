@@ -80,11 +80,11 @@ export default function Skills() {
                 <Card className="h-full border-muted hover:border-primary hover:shadow-2xl transition-all duration-300 bg-card/90 backdrop-blur-sm">
                   <CardContent className="p-8">
                     <motion.div 
-                      className={`w-14 h-14 rounded-xl ${skill.bgColor} flex items-center justify-center mb-4`}
+                      className={`w-12 h-12 rounded-lg ${skill.bgColor} flex items-center justify-center mb-4`}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <Icon className={`w-7 h-7 ${skill.color}`} />
+                      <Icon className={`w-6 h-6 ${skill.color}`} />
                     </motion.div>
                     <h3 className="text-2xl font-bold text-foreground mb-3 font-display">
                       {skill.title}

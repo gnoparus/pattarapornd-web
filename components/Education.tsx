@@ -158,7 +158,7 @@ export default function Education() {
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <Icon className="w-8 h-8 text-primary" />
+                            <Icon className="w-6 h-6 text-primary" />
                           </motion.div>
                           <div className="flex-1">
                             <CardTitle className="text-xl text-foreground mb-2">{edu.degree}</CardTitle>
@@ -231,7 +231,7 @@ export default function Education() {
                         whileHover={{ scale: 1.2, rotate: 10 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <Icon className="w-10 h-10 text-primary" />
+                        <Icon className="w-6 h-6 text-primary" />
                       </motion.div>
                       <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{cert.title}</h4>
                       <p className="text-sm text-primary mb-2">{cert.issuer}</p>

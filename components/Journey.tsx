@@ -63,14 +63,14 @@ export default function Journey() {
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="default" className="flex items-center space-x-2">
-                <FileDown className="w-5 h-5" />
+              <Button variant="default" className="flex items-center gap-2">
+                <FileDown className="w-4 h-4" />
                 <span>Download Full CV</span>
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="outline" className="flex items-center space-x-2">
-                <FileCheck className="w-5 h-5" />
+              <Button variant="outline" className="flex items-center gap-2">
+                <FileCheck className="w-4 h-4" />
                 <span>View Certificates</span>
               </Button>
             </motion.div>
@@ -146,8 +146,8 @@ export default function Journey() {
           </div>
 
           {/* Bot Icon */}
-          <div className="absolute bottom-8 right-8 w-24 h-24 bg-primary rounded-2xl flex items-center justify-center opacity-20">
-            <Bot className="w-12 h-12 text-primary-foreground" />
+          <div className="absolute bottom-8 right-8 w-20 h-20 bg-primary rounded-2xl flex items-center justify-center opacity-20">
+            <Bot className="w-8 h-8 text-primary-foreground" />
           </div>
         </motion.div>
 

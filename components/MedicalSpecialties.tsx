@@ -72,13 +72,13 @@ function SpecialtyCard({ specialty, index }: { specialty: typeof specialties[0],
       <Card className="h-full hover:border-primary hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-card/90 backdrop-blur-sm">
         <CardHeader>
           <motion.div 
-            className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${specialty.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl`}
+            className={`w-14 h-14 rounded-lg bg-gradient-to-br ${specialty.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl`}
             whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ duration: 0.3 }}
           >
-            <Icon className="w-8 h-8 text-white" />
+            <Icon className="w-6 h-6 text-white" />
           </motion.div>
-          <CardTitle className="text-2xl font-display">
+          <CardTitle className="text-xl font-display">
             {specialty.title}
           </CardTitle>
         </CardHeader>

@@ -173,7 +173,7 @@ export default function Contact() {
                           whileHover={{ scale: 1.2, rotate: 5 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <Icon className="w-8 h-8" />
+                          <Icon className="w-6 h-6" />
                         </motion.div>
                         <div className="space-y-1">
                           <p className="text-primary text-sm font-semibold">{method.type}</p>
