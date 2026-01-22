@@ -67,7 +67,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section py-24 px-4 bg-gradient-to-b from-transparent to-medical-dark relative overflow-hidden">
+    <section id="contact" className="section py-24 px-4 bg-gradient-to-b from-transparent to-foreground relative overflow-hidden">
       {/* 
         Unsplash Background Image for Contact Section
         To update: Modify images in /lib/unsplashImages.ts -> contactImages array
@@ -84,7 +84,7 @@ export default function Contact() {
       
       {/* Background decorative elements */}
       <motion.div 
-        className="absolute top-20 left-10 w-64 h-64 bg-medical-secondary rounded-full blur-3xl opacity-10"
+        className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl opacity-10"
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.1, 0.2, 0.1]
@@ -92,7 +92,7 @@ export default function Contact() {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div 
-        className="absolute bottom-20 right-10 w-80 h-80 bg-medical-primary rounded-full blur-3xl opacity-10"
+        className="absolute bottom-20 right-10 w-80 h-80 bg-primary rounded-full blur-3xl opacity-10"
         animate={{ 
           scale: [1, 1.3, 1],
           opacity: [0.1, 0.2, 0.1]
@@ -108,10 +108,10 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-6">
             Get in Touch
           </h2>
-          <p className="text-xl text-medical-accent max-w-3xl mx-auto">
+          <p className="text-xl text-muted max-w-3xl mx-auto">
             Ready to explore how we can work together? Reach out for consultations or inquiries
           </p>
         </motion.div>
@@ -132,12 +132,12 @@ export default function Contact() {
               quality={80}
             />
             {/* Improved gradient overlay for better contrast */}
-            <div className="absolute inset-0 bg-gradient-to-r from-medical-dark/95 via-medical-primary/90 to-medical-secondary/90 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-primary/90 to-primary/90 flex items-center justify-center">
               <div className="text-center px-6 py-8">
-                <p className="text-white text-3xl md:text-4xl font-bold mb-3">
+                <p className="text-primary-foreground text-3xl md:text-4xl font-bold mb-3">
                   Ready to Transform Your Health?
                 </p>
-                <p className="text-medical-accent text-lg md:text-xl font-medium">
+                <p className="text-muted text-lg md:text-xl font-medium">
                   Let's collaborate on your wellness journey
                 </p>
               </div>
@@ -153,7 +153,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-8"
           >
-            <h3 className="text-3xl font-bold text-white mb-10 font-display">Contact Information</h3>
+            <h3 className="text-3xl font-bold text-primary-foreground mb-10 font-display">Contact Information</h3>
             
             {contactMethods.map((method, index) => {
               const Icon = method.icon
@@ -165,20 +165,20 @@ export default function Contact() {
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
-                  <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30 hover:bg-medical-dark/95 transition-all duration-300 group cursor-pointer">
+                  <Card className="bg-foreground/90 backdrop-blur-md border-border hover:bg-foreground/95 transition-all duration-300 group cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-5">
                         <motion.div 
-                          className="text-medical-secondary"
+                          className="text-primary"
                           whileHover={{ scale: 1.2, rotate: 5 }}
                           transition={{ duration: 0.3 }}
                         >
                           <Icon className="w-8 h-8" />
                         </motion.div>
                         <div className="space-y-1">
-                          <p className="text-medical-secondary text-sm font-semibold">{method.type}</p>
-                          <p className="text-white text-lg font-medium">{method.value}</p>
-                          <p className="text-medical-accent text-sm">{method.description}</p>
+                          <p className="text-primary text-sm font-semibold">{method.type}</p>
+                          <p className="text-primary-foreground text-lg font-medium">{method.value}</p>
+                          <p className="text-muted text-sm">{method.description}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -193,10 +193,10 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="mt-10"
             >
-              <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30">
+              <Card className="bg-foreground/90 backdrop-blur-md border-border">
                 <CardContent className="p-8">
-                  <h4 className="text-xl font-bold text-white mb-6">Office Hours</h4>
-                  <div className="space-y-3 text-medical-accent">
+                  <h4 className="text-xl font-bold text-primary-foreground mb-6">Office Hours</h4>
+                  <div className="space-y-3 text-muted">
                     <p className="text-base">Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p className="text-base">Saturday: 10:00 AM - 4:00 PM</p>
                     <p className="text-base">Sunday: Closed</p>
@@ -304,9 +304,9 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center pt-16 border-t border-white/20"
+          className="text-center pt-16 border-t border-primary-foreground/20"
         >
-          <p className="text-medical-accent text-base">
+          <p className="text-muted text-base">
             © 2024 Medical Portfolio. All rights reserved. | Designed with care and precision
           </p>
         </motion.div>

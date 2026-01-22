@@ -59,33 +59,33 @@ function ExperienceCard({ experience, index }: { experience: typeof experiences[
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.6, -0.05, 0.01, 0.99] }}
       className="relative"
     >
-      <Card className="border-l-4 border-medical-primary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/90 backdrop-blur-sm">
+      <Card className="border-l-4 border-primary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-card/90 backdrop-blur-sm">
         <CardHeader>
           <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
             <div className="flex-1">
               <motion.span 
-                className="inline-block px-4 py-1 bg-medical-accent text-medical-primary rounded-full text-sm font-semibold mb-3"
+                className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-3"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
                 {experience.period}
               </motion.span>
-              <CardTitle className="text-2xl text-medical-dark mb-2 font-display">
+              <CardTitle className="text-2xl text-foreground mb-2 font-display">
                 {experience.title}
               </CardTitle>
-              <p className="text-medical-primary font-semibold mb-3">
+              <p className="text-primary font-semibold mb-3">
                 {experience.organization}
               </p>
             </div>
           </div>
-          <CardDescription className="text-gray-700 leading-relaxed text-base">
+          <CardDescription className="text-muted-foreground leading-relaxed text-base">
             {experience.description}
           </CardDescription>
         </CardHeader>
         
         <CardContent>
-          <h4 className="font-semibold text-medical-dark mb-3 flex items-center">
-            <CheckCircle2 className="w-5 h-5 mr-2 text-medical-primary" />
+          <h4 className="font-semibold text-foreground mb-3 flex items-center">
+            <CheckCircle2 className="w-5 h-5 mr-2 text-primary" />
             Key Achievements:
           </h4>
           <div className="space-y-2">
@@ -97,8 +97,8 @@ function ExperienceCard({ experience, index }: { experience: typeof experiences[
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                 transition={{ duration: 0.3, delay: index * 0.1 + i * 0.05 }}
               >
-                <span className="text-medical-primary mr-2 mt-1 group-hover:scale-125 transition-transform">✓</span>
-                <span className="text-gray-600">{achievement}</span>
+                <span className="text-primary mr-2 mt-1 group-hover:scale-125 transition-transform">✓</span>
+                <span className="text-muted-foreground">{achievement}</span>
               </motion.div>
             ))}
           </div>
@@ -118,7 +118,7 @@ export default function Experience() {
         Unsplash Background Images - Professional Experience Theme
         To update: Modify images in /lib/unsplashImages.ts -> experienceImages array
       */}
-      <div className="absolute left-0 top-1/4 w-96 h-96 bg-medical-primary rounded-full blur-3xl opacity-5 -z-10"></div>
+      <div className="absolute left-0 top-1/4 w-96 h-96 bg-primary rounded-full blur-3xl opacity-5 -z-10"></div>
       <div className="absolute right-10 bottom-1/4 w-80 h-80 rounded-lg opacity-10 blur-sm -z-10 overflow-hidden">
         <Image
           src={experienceImages[1].url}
@@ -138,10 +138,10 @@ export default function Experience() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-medical-dark mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
             Professional Experience
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A journey of continuous learning and dedication to advancing healthcare excellence
           </p>
         </motion.div>
@@ -162,8 +162,8 @@ export default function Experience() {
               quality={80}
             />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-medical-dark/90 via-medical-dark/50 to-transparent flex items-end justify-center pb-10">
-              <p className="text-white text-xl md:text-2xl font-bold text-center max-w-3xl px-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/50 to-transparent flex items-end justify-center pb-10">
+              <p className="text-primary-foreground text-xl md:text-2xl font-bold text-center max-w-3xl px-6">
                 Delivering exceptional patient care through innovation and expertise
               </p>
             </div>
