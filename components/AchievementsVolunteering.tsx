@@ -1,0 +1,203 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import { Award, Heart, Users, BookOpen, Trophy, Smile } from 'lucide-react'
+
+const achievements = [
+  {
+    id: 1,
+    title: 'Rajavithi Advanced Trauma Course for Medical Students',
+    description: 'Gained advanced skills in trauma care, understanding real-time critical decision-making—parallels with AI in emergency medicine and diagnostics',
+    year: '2014',
+    icon: Award,
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-100',
+  },
+  {
+    id: 2,
+    title: 'Prince Mahidol Award Youth Program Conference 2020',
+    description: 'Engaged with global health innovators, expanding knowledge of current and future healthcare challenges, aligning with the mission of AI in solving health disparities',
+    year: '2020',
+    icon: Trophy,
+    color: 'text-violet-600',
+    bgColor: 'bg-violet-100',
+  },
+]
+
+const volunteering = [
+  {
+    id: 1,
+    title: 'Less Luxury Project',
+    description: 'Spearheaded a charity initiative, honing project management and community engagement skills',
+    icon: Heart,
+    color: 'text-pink-600',
+    bgColor: 'bg-pink-100',
+  },
+  {
+    id: 2,
+    title: 'In the Name of Love Ep. 2',
+    description: 'Contributed to mental health awareness events, aligning with AI\'s role in promoting mental health solutions',
+    icon: Smile,
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-100',
+  },
+  {
+    id: 3,
+    title: 'Srithanya Charity Run',
+    description: 'Participated in community health and wellness initiatives, promoting active lifestyles and charitable giving',
+    icon: Users,
+    color: 'text-teal-600',
+    bgColor: 'bg-teal-100',
+  },
+  {
+    id: 4,
+    title: 'Crazy Run 2019',
+    description: 'Led and participated in public health initiatives, fostering skills in communication and health promotion',
+    icon: Users,
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-100',
+  },
+  {
+    id: 5,
+    title: '"I Can Detect! Let\'s Talk About Depression"',
+    description: 'Educational project focused on mental health awareness and early detection of depression',
+    icon: BookOpen,
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-100',
+  },
+  {
+    id: 6,
+    title: 'Change 5th Med RSU',
+    description: 'Organized medical education events to bridge knowledge gaps, mirroring AI\'s role in health education and continuous learning',
+    icon: BookOpen,
+    color: 'text-violet-600',
+    bgColor: 'bg-violet-100',
+  },
+]
+
+export default function AchievementsVolunteering() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  return (
+    <section id="achievements" className="section py-24 px-4 bg-gradient-to-b from-medical-accent/30 to-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute right-0 top-1/4 w-96 h-96 bg-medical-primary rounded-full blur-3xl opacity-5 -z-10"></div>
+      
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-medical-dark mb-6">
+            Achievements & Community Service
+          </h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Commitment to professional excellence and giving back to the community
+          </p>
+        </motion.div>
+
+        {/* Professional Achievements */}
+        <div className="mb-16">
+          <motion.h3
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-3xl font-bold text-medical-dark mb-8 font-display"
+          >
+            Professional Achievements
+          </motion.h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {achievements.map((achievement, index) => {
+              const Icon = achievement.icon
+              return (
+                <motion.div
+                  key={achievement.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <Card className="h-full border-l-4 border-medical-primary hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="flex items-start justify-between mb-3">
+                        <motion.div 
+                          className={`w-12 h-12 rounded-xl ${achievement.bgColor} flex items-center justify-center`}
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Icon className={`w-6 h-6 ${achievement.color}`} />
+                        </motion.div>
+                        <span className="inline-block px-3 py-1 bg-medical-accent text-medical-primary rounded-full text-sm font-semibold">
+                          {achievement.year}
+                        </span>
+                      </div>
+                      <CardTitle className="text-xl text-medical-dark mb-2">
+                        {achievement.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 leading-relaxed">
+                        {achievement.description}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Volunteering & Extracurricular Activities */}
+        <div>
+          <motion.h3
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-3xl font-bold text-medical-dark mb-8 font-display"
+          >
+            Extracurricular Activities & Volunteering
+          </motion.h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {volunteering.map((activity, index) => {
+              const Icon = activity.icon
+              return (
+                <motion.div
+                  key={activity.id}
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 20 }}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <Card className="h-full hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-white/80 backdrop-blur-sm border-medical-accent hover:border-medical-secondary">
+                    <CardContent className="p-6">
+                      <motion.div 
+                        className={`w-12 h-12 rounded-xl ${activity.bgColor} flex items-center justify-center mb-4`}
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Icon className={`w-6 h-6 ${activity.color}`} />
+                      </motion.div>
+                      <h4 className="text-lg font-bold text-medical-dark mb-2 group-hover:text-medical-primary transition-colors">
+                        {activity.title}
+                      </h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {activity.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

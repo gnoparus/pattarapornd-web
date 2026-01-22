@@ -35,10 +35,10 @@ export default function Hero() {
           transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-medical-dark mb-6">
-            Medical Excellence
+            Dr. Pattarapornd Suparcha
             <br />
-            <span className="text-medical-primary bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              & Aesthetic Mastery
+            <span className="text-medical-primary bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
+              Medical Excellence & Holistic Wellness
             </span>
           </h1>
         </motion.div>
@@ -49,8 +49,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}
           className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          Integrating cutting-edge medical technology with holistic wellness practices
-          to deliver comprehensive healthcare solutions
+          Integrating evidence-based medicine with aesthetic expertise and traditional healing practices
+          to deliver compassionate, comprehensive healthcare solutions
         </motion.p>
 
         <motion.div

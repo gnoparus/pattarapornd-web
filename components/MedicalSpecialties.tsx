@@ -4,50 +4,50 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Brain, Stethoscope, Sparkles, Gem, Music, User } from 'lucide-react'
+import { Brain, Stethoscope, Sparkles, Gem, Music, User, Palette } from 'lucide-react'
 
 const specialties = [
   {
     id: 1,
-    title: 'Medical AI & Diagnostics',
-    description: 'Leveraging artificial intelligence for precision diagnostics, predictive analytics, and personalized treatment plans',
-    icon: Brain,
-    gradient: 'from-blue-500 to-blue-700',
-  },
-  {
-    id: 2,
     title: 'General Practice Expertise',
-    description: 'Comprehensive primary care services with a focus on preventive medicine and patient-centered care',
+    description: 'Comprehensive primary care services with a focus on preventive medicine, evidence-based treatment, and patient-centered care',
     icon: Stethoscope,
-    gradient: 'from-green-500 to-green-700',
-  },
-  {
-    id: 3,
-    title: 'Anti-aging & Regenerative Medicine',
-    description: 'Advanced therapies for cellular rejuvenation, hormone optimization, and longevity enhancement',
-    icon: Sparkles,
     gradient: 'from-purple-500 to-purple-700',
   },
   {
-    id: 4,
+    id: 2,
+    title: 'Anti-aging & Regenerative Medicine',
+    description: 'Advanced therapies for cellular rejuvenation, hormone optimization, and longevity enhancement using cutting-edge medical science',
+    icon: Sparkles,
+    gradient: 'from-violet-500 to-violet-700',
+  },
+  {
+    id: 3,
     title: 'Aesthetic Medicine',
-    description: 'Non-invasive cosmetic procedures, dermal fillers, and skin rejuvenation treatments for natural beauty enhancement',
+    description: 'Non-invasive cosmetic procedures, dermal fillers, skin rejuvenation, and beauty enhancement treatments with artistic precision',
     icon: Gem,
     gradient: 'from-pink-500 to-pink-700',
   },
   {
+    id: 4,
+    title: 'Thai Massage Therapy',
+    description: 'Traditional Thai healing massage combining acupressure, yoga-like stretches, and energy line work for holistic wellness',
+    icon: User,
+    gradient: 'from-teal-500 to-teal-700',
+  },
+  {
     id: 5,
-    title: 'Singing Bowl Therapy',
-    description: 'Ancient Tibetan sound healing techniques for stress reduction, energy balance, and deep relaxation',
+    title: 'Singing Bowl Sound Healing',
+    description: 'Ancient Tibetan sound healing techniques using singing bowls for stress reduction, energy balance, and deep relaxation',
     icon: Music,
     gradient: 'from-amber-500 to-amber-700',
   },
   {
     id: 6,
-    title: 'Thai Massage',
-    description: 'Traditional Thai healing massage combining acupressure, yoga-like stretches, and energy line work',
-    icon: User,
-    gradient: 'from-teal-500 to-teal-700',
+    title: 'Artistic & Creative Wellness',
+    description: 'Combining medical expertise with artistic sensibility in drawing and creative expression for therapeutic healing',
+    icon: Palette,
+    gradient: 'from-indigo-500 to-indigo-700',
   },
 ]
 
