@@ -56,13 +56,13 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 bg-linear-to-br from-violet-100 via-purple-50 to-pink-50">
               <div className="aspect-3/4 relative group flex items-center justify-center p-8">
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full flex items-center justify-center">
                   <Image
-                    src="/avatar with bg.JPG"
-                    alt="Dr. Pattarapornd Suparcha"
-                    fill
-                    className="object-contain transition-transform duration-700 group-hover:scale-105"
-                    priority
+                  src="/avatar with bg.JPG"
+                  alt="Dr. Pattarapornd Suparcha"
+                  fill
+                  className="object-contain object-center transition-transform duration-700 scale-[0.7] group-hover:scale-[0.75]"
+                  priority
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-black/70 via-black/40 to-transparent">
@@ -128,15 +128,15 @@ export default function About() {
               <blockquote className="text-2xl lg:text-3xl font-display italic text-foreground mb-8 leading-relaxed">
                 My mission is to help patients feel confident and peaceful in their own skin, blending the precision of medical science with the timeless art of healing.
               </blockquote>
-              <div className="flex items-center justify-center gap-4">
+                <div className="flex items-center justify-center gap-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20 bg-white">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="/avatar transparent bg.png"
-                      alt="Dr. Pattarapornd Suparcha"
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/avatar transparent bg.png"
+                    alt="Dr. Pattarapornd Suparcha"
+                    fill
+                    className="object-contain object-center transform scale-[0.95]"
+                  />
                   </div>
                 </div>
                 <div className="text-left">
