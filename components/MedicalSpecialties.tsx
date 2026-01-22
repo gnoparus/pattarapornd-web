@@ -69,7 +69,7 @@ function SpecialtyCard({ specialty, index }: { specialty: typeof specialties[0],
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
       className="h-full"
     >
-      <Card className="h-full border-gray-100 hover:border-purple-300 hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-white/90 backdrop-blur-sm">
+      <Card className="h-full hover:border-primary hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-card/90 backdrop-blur-sm">
         <CardHeader>
           <motion.div 
             className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${specialty.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl`}
@@ -78,12 +78,12 @@ function SpecialtyCard({ specialty, index }: { specialty: typeof specialties[0],
           >
             <Icon className="w-8 h-8 text-white" />
           </motion.div>
-          <CardTitle className="text-2xl text-gray-900 font-display">
+          <CardTitle className="text-2xl font-display">
             {specialty.title}
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <CardDescription className="text-gray-600 leading-relaxed text-base">
+          <CardDescription className="leading-relaxed text-base">
             {specialty.description}
           </CardDescription>
         </CardContent>
@@ -100,9 +100,9 @@ export default function MedicalSpecialties() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="services" className="section py-24 px-4 bg-white relative overflow-hidden">
+    <section id="services" className="section py-24 px-4 bg-background relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-10 -z-10"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-10 -z-10"></div>
       
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -112,9 +112,9 @@ export default function MedicalSpecialties() {
           transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
           className="text-center mb-16"
         >
-          <p className="text-purple-600 font-semibold uppercase tracking-wide mb-3">Services</p>
+          <p className="text-primary font-semibold uppercase tracking-wide mb-3">Services</p>
           <motion.h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -122,7 +122,7 @@ export default function MedicalSpecialties() {
             Areas of Expertise
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}

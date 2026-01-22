@@ -8,12 +8,74 @@
 }
 
 :root {
-  /* Medical color palette - Purple theme inspired by Apple design */
-  --color-medical-primary: #7C3AED;
-  --color-medical-secondary: #A78BFA;
-  --color-medical-accent: #F3F0FF;
-  --color-medical-dark: #4C1D95;
-  --color-medical-light: #FAF5FF;
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.541 0.281 293.009);
+  --primary-foreground: oklch(0.969 0.016 293.756);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.969 0.016 293.756);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.702 0.183 293.541);
+  --chart-1: oklch(0.811 0.111 293.571);
+  --chart-2: oklch(0.606 0.25 292.717);
+  --chart-3: oklch(0.541 0.281 293.009);
+  --chart-4: oklch(0.491 0.27 292.581);
+  --chart-5: oklch(0.432 0.232 292.759);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.541 0.281 293.009);
+  --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.702 0.183 293.541);
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.606 0.25 292.717);
+  --primary-foreground: oklch(0.969 0.016 293.756);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.38 0.189 293.745);
+  --chart-1: oklch(0.811 0.111 293.571);
+  --chart-2: oklch(0.606 0.25 292.717);
+  --chart-3: oklch(0.541 0.281 293.009);
+  --chart-4: oklch(0.491 0.27 292.581);
+  --chart-5: oklch(0.432 0.232 292.759);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.606 0.25 292.717);
+  --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.38 0.189 293.745);
 }
 
 @keyframes float {
@@ -40,6 +102,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 canvas {
@@ -57,72 +121,4 @@ canvas {
 
 .font-display {
   font-family: 'Playfair Display', serif;
-}
-
-.text-medical-primary {
-  color: var(--color-medical-primary);
-}
-
-.text-medical-secondary {
-  color: var(--color-medical-secondary);
-}
-
-.text-medical-accent {
-  color: var(--color-medical-accent);
-}
-
-.text-medical-dark {
-  color: var(--color-medical-dark);
-}
-
-.text-medical-light {
-  color: var(--color-medical-light);
-}
-
-.bg-medical-primary {
-  background-color: var(--color-medical-primary);
-}
-
-.bg-medical-secondary {
-  background-color: var(--color-medical-secondary);
-}
-
-.bg-medical-accent {
-  background-color: var(--color-medical-accent);
-}
-
-.bg-medical-dark {
-  background-color: var(--color-medical-dark);
-}
-
-.bg-medical-light {
-  background-color: var(--color-medical-light);
-}
-
-.border-medical-primary {
-  border-color: var(--color-medical-primary);
-}
-
-.border-medical-secondary {
-  border-color: var(--color-medical-secondary);
-}
-
-.border-medical-accent {
-  border-color: var(--color-medical-accent);
-}
-
-.hover\:bg-medical-dark:hover {
-  background-color: var(--color-medical-dark);
-}
-
-.hover\:bg-medical-accent:hover {
-  background-color: var(--color-medical-accent);
-}
-
-.hover\:border-medical-secondary:hover {
-  border-color: var(--color-medical-secondary);
-}
-
-.hover\:text-medical-primary:hover {
-  color: var(--color-medical-primary);
 }

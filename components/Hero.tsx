@@ -2,13 +2,15 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20 pb-16 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-20 -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-300 rounded-full blur-3xl opacity-15 -z-10"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-20 -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/30 rounded-full blur-3xl opacity-15 -z-10"></div>
       
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -25,13 +27,13 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               Redefining Beauty through{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
                 Holistic Medicine
               </span>
             </motion.h1>
             
             <motion.p
-              className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -45,22 +47,22 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <motion.a
-                href="#contact"
-                className="px-8 py-4 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Book Consultation
-              </motion.a>
-              <motion.a
-                href="#services"
-                className="px-8 py-4 bg-white text-purple-600 border-2 border-purple-600 rounded-full font-semibold hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                <Button asChild size="lg" className="rounded-full px-8 shadow-lg hover:shadow-xl">
+                  <a href="#contact">Book Consultation</a>
+                </Button>
+              </motion.div>
+              <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Learn More
-              </motion.a>
+                <Button asChild variant="outline" size="lg" className="rounded-full px-8 shadow-lg hover:shadow-xl">
+                  <a href="#services">Learn More</a>
+                </Button>
+              </motion.div>
             </motion.div>
           </motion.div>
 
@@ -71,7 +73,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-purple-50 to-white p-8">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-accent to-card p-8">
               {/* Spa/Aesthetic Image */}
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-6">
                 <Image
@@ -86,25 +88,28 @@ export default function Hero() {
               {/* Stats Cards */}
               <div className="grid grid-cols-3 gap-4">
                 <motion.div
-                  className="text-center p-4 bg-white rounded-xl shadow-md"
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 >
-                  <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Experience</p>
-                  <p className="text-2xl font-bold text-gray-900">10+ Years</p>
+                  <Card className="text-center p-4">
+                    <p className="text-xs text-primary font-semibold uppercase mb-1">Experience</p>
+                    <p className="text-2xl font-bold">10+ Years</p>
+                  </Card>
                 </motion.div>
                 <motion.div
-                  className="text-center p-4 bg-white rounded-xl shadow-md"
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 >
-                  <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Licenses</p>
-                  <p className="text-2xl font-bold text-gray-900">3 Boards</p>
+                  <Card className="text-center p-4">
+                    <p className="text-xs text-primary font-semibold uppercase mb-1">Licenses</p>
+                    <p className="text-2xl font-bold">3 Boards</p>
+                  </Card>
                 </motion.div>
                 <motion.div
-                  className="text-center p-4 bg-white rounded-xl shadow-md"
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 >
-                  <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Patients</p>
-                  <p className="text-2xl font-bold text-gray-900">2k+ Happy</p>
+                  <Card className="text-center p-4">
+                    <p className="text-xs text-primary font-semibold uppercase mb-1">Patients</p>
+                    <p className="text-2xl font-bold">2k+ Happy</p>
+                  </Card>
                 </motion.div>
               </div>
             </div>
