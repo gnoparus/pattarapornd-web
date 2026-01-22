@@ -1,120 +1,116 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
 import Image from 'next/image'
-import { heroImages } from '@/lib/unsplashImages'
 
 export default function Hero() {
-  // Use the first hero image as the background
-  const heroImage = heroImages[0]
-  
   return (
-    <section className="section min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
-      {/* 
-        Unsplash Background Image
-        To update: Change the image in /lib/unsplashImages.ts -> heroImages array
-        The image is overlaid with a gradient for better text readability
-      */}
-      <div className="absolute inset-0">
-        <Image
-          src={heroImage.url}
-          alt={heroImage.alt}
-          fill
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-          priority
-          quality={80}
-        />
-        {/* Overlay gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white/85"></div>
-      </div>
-      <div className="max-w-6xl mx-auto text-center z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
-        >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-medical-dark mb-6">
-            Dr. Pattarapornd Suparcha
-            <br />
-            <span className="text-medical-primary bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
-              Medical Excellence & Holistic Wellness
-            </span>
-          </h1>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}
-          className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed"
-        >
-          Integrating evidence-based medicine with aesthetic expertise and traditional healing practices
-          to deliver compassionate, comprehensive healthcare solutions
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: [0.6, -0.05, 0.01, 0.99] }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-          <motion.a
-            href="#specialties"
-            className="px-8 py-4 bg-medical-primary text-white rounded-full font-semibold hover:bg-medical-dark transition-all duration-300 shadow-lg hover:shadow-2xl"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Explore Specialties
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="px-8 py-4 bg-white text-medical-primary border-2 border-medical-primary rounded-full font-semibold hover:bg-medical-accent transition-all duration-300 shadow-lg hover:shadow-2xl"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get in Touch
-          </motion.a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="mt-20"
-        >
-          <motion.div 
-            className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-medical-accent"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ArrowDown className="w-6 h-6 text-medical-primary" />
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Decorative elements */}
-      <motion.div 
-        className="absolute top-20 left-10 w-32 h-32 bg-medical-accent rounded-full blur-3xl opacity-30"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3]
-        }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div 
-        className="absolute bottom-20 right-10 w-40 h-40 bg-medical-secondary rounded-full blur-3xl opacity-20"
-        animate={{ 
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.4, 0.2]
-        }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      />
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20 pb-16 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-20 -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-300 rounded-full blur-3xl opacity-15 -z-10"></div>
       
-      {/* Image credit (hidden visually but accessible for attribution) */}
-      <span className="sr-only">
-        Photo by {heroImage.photographer} on Unsplash
-      </span>
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <motion.h1 
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              Redefining Beauty through{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
+                Holistic Medicine
+              </span>
+            </motion.h1>
+            
+            <motion.p
+              className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Dr. Pattarapornd Suparcha combines advanced aesthetic science with the healing traditions of Thai wellness for a truly transformative experience.
+            </motion.p>
+
+            <motion.div
+              className="flex flex-wrap gap-4 mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <motion.a
+                href="#contact"
+                className="px-8 py-4 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Book Consultation
+              </motion.a>
+              <motion.a
+                href="#services"
+                className="px-8 py-4 bg-white text-purple-600 border-2 border-purple-600 rounded-full font-semibold hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Learn More
+              </motion.a>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Content - Image Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-purple-50 to-white p-8">
+              {/* Spa/Aesthetic Image */}
+              <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-6">
+                <Image
+                  src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80"
+                  alt="Elegant aesthetic medicine spa setting"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  quality={90}
+                />
+              </div>
+
+              {/* Stats Cards */}
+              <div className="grid grid-cols-3 gap-4">
+                <motion.div
+                  className="text-center p-4 bg-white rounded-xl shadow-md"
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Experience</p>
+                  <p className="text-2xl font-bold text-gray-900">10+ Years</p>
+                </motion.div>
+                <motion.div
+                  className="text-center p-4 bg-white rounded-xl shadow-md"
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Licenses</p>
+                  <p className="text-2xl font-bold text-gray-900">3 Boards</p>
+                </motion.div>
+                <motion.div
+                  className="text-center p-4 bg-white rounded-xl shadow-md"
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Patients</p>
+                  <p className="text-2xl font-bold text-gray-900">2k+ Happy</p>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </section>
   )
 }
