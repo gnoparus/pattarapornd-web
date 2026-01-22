@@ -21,7 +21,7 @@ const experiences = [
       'Collaborated with multidisciplinary teams on data-driven treatment protocols',
       'Implemented healthcare data workflows that improved patient outcomes by 25%',
     ],
-    color: 'primary'
+    borderColor: 'border-l-primary'
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const experiences = [
       'Built lasting patient relationships through empathetic communication',
       'Developed critical decision-making skills in high-pressure emergency situations',
     ],
-    color: 'accent'
+    borderColor: 'border-l-accent'
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const experiences = [
       'Managed comprehensive family medicine services for diverse patient populations',
       'Developed expertise in resource-optimized healthcare delivery',
     ],
-    color: 'chart-3'
+    borderColor: 'border-l-chart-3'
   },
 ]
 
@@ -65,13 +65,17 @@ function ExperienceCard({ experience, index }: { experience: typeof experiences[
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.6, -0.05, 0.01, 0.99] }}
       className="relative"
     >
-      <Card className={`border-l-4 border-l-${experience.color} hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-card/90 backdrop-blur-sm group`}>
+      <Card className={`${experience.borderColor} border-l-4 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-card/90 backdrop-blur-sm group`}>
         <CardHeader>
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-3">
                 <motion.span 
-                  className={`inline-flex items-center gap-2 px-4 py-1.5 bg-${experience.color}/10 text-${experience.color} rounded-full text-sm font-semibold`}
+                  className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold ${
+                    experience.id === 1 ? 'bg-primary/10 text-primary' :
+                    experience.id === 2 ? 'bg-accent/20 text-accent-foreground' :
+                    'bg-chart-3/20 text-chart-3'
+                  }`}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
