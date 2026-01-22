@@ -67,7 +67,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section py-24 px-4 bg-gradient-to-b from-transparent to-foreground relative overflow-hidden">
+    <section id="contact" className="section py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-transparent to-foreground relative overflow-hidden">
       {/* 
         Unsplash Background Image for Contact Section
         To update: Modify images in /lib/unsplashImages.ts -> contactImages array

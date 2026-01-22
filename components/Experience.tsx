@@ -113,7 +113,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="experience" className="section py-24 px-4 relative">
+    <section id="experience" className="section py-24 px-6 sm:px-8 lg:px-12 relative">
       {/* 
         Unsplash Background Images - Professional Experience Theme
         To update: Modify images in /lib/unsplashImages.ts -> experienceImages array

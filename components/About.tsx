@@ -12,7 +12,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="about" className="section py-24 px-4 relative overflow-hidden bg-gradient-to-b from-background to-accent/30">
+    <section id="about" className="section py-24 px-6 sm:px-8 lg:px-12 relative overflow-hidden bg-gradient-to-b from-background to-accent/30">
       <div className="absolute left-0 top-1/3 w-64 h-64 bg-primary/20 rounded-full blur-3xl opacity-10 -z-10"></div>
       
       <div className="max-w-7xl mx-auto">

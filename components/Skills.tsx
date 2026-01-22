@@ -46,7 +46,7 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="skills" className="section py-24 px-4 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+    <section id="skills" className="section py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary rounded-full blur-3xl opacity-5 -z-10"></div>
       

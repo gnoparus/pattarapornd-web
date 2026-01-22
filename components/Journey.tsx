@@ -39,7 +39,7 @@ export default function Journey() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="education" className="section py-24 px-4 relative overflow-hidden bg-gradient-to-b from-primary/5 to-background">
+    <section id="education" className="section py-24 px-6 sm:px-8 lg:px-12 relative overflow-hidden bg-gradient-to-b from-primary/5 to-background">
       <div className="absolute right-0 top-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-10 -z-10"></div>
       
       <div className="max-w-6xl mx-auto">

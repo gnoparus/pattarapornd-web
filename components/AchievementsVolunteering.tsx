@@ -83,7 +83,7 @@ export default function AchievementsVolunteering() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="achievements" className="section py-24 px-4 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+    <section id="achievements" className="section py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute right-0 top-1/4 w-96 h-96 bg-primary rounded-full blur-3xl opacity-5 -z-10"></div>
       

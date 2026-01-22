@@ -69,7 +69,7 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="education" className="section py-24 px-4 bg-gradient-to-b from-muted/30 to-transparent relative overflow-hidden">
+    <section id="education" className="section py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-muted/30 to-transparent relative overflow-hidden">
       {/* 
         Unsplash Background Images - Educational Theme
         To update: Modify images in /lib/unsplashImages.ts -> educationImages array

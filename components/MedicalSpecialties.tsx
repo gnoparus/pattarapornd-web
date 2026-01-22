@@ -100,7 +100,7 @@ export default function MedicalSpecialties() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="services" className="section py-24 px-4 bg-background relative overflow-hidden">
+    <section id="services" className="section py-24 px-6 sm:px-8 lg:px-12 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-10 -z-10"></div>
       
