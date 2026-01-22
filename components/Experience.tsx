@@ -85,7 +85,7 @@ function ExperienceCard({ experience, index }: { experience: typeof experiences[
         
         <CardContent>
           <h4 className="font-semibold text-foreground mb-3 flex items-center">
-            <CheckCircle2 className="w-5 h-5 mr-2 text-primary" />
+            <CheckCircle2 className="w-4 h-4 mr-2 text-primary" />
             Key Achievements:
           </h4>
           <div className="space-y-2">
