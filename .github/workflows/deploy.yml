@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - redesign-from-scratch
   workflow_dispatch:
 
 permissions:
@@ -35,9 +36,6 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-
-      - name: Add .nojekyll file
-        run: touch out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

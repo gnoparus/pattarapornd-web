@@ -21,44 +21,39 @@ export default function Navigation() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-sm"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.a
             href="#home"
-            className="flex items-center space-x-2"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/60 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">P</span>
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-xl">P</span>
             </div>
-            <span className="text-xl font-bold text-foreground">Dr. Pattarapornd</span>
+            <span className="text-lg font-semibold text-foreground">Dr. Pattarapornd</span>
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
                 {link.name}
               </motion.a>
             ))}
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button asChild className="rounded-full shadow-md hover:shadow-lg">
-                <a href="#contact">Book Consultation</a>
-              </Button>
-            </motion.div>
+            <Button size="lg" className="rounded-full bg-primary hover:bg-primary/90">
+              <a href="#contact">Book Consultation</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,21 +77,21 @@ export default function Navigation() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-background border-t border-border"
+          className="md:hidden bg-white border-t border-border"
         >
-          <div className="px-4 py-4 space-y-3">
+          <div className="px-6 py-6 space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block px-4 py-2 text-muted-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors font-medium"
+                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary rounded-lg transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-            <Button asChild className="w-full rounded-full" onClick={() => setIsMenuOpen(false)}>
-              <a href="#contact">Book Consultation</a>
+            <Button size="lg" className="w-full rounded-full" onClick={() => setIsMenuOpen(false)}>
+              <a href="#contact" className="w-full">Book Consultation</a>
             </Button>
           </div>
         </motion.div>
