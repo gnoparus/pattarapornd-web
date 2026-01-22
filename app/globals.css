@@ -8,12 +8,12 @@
 }
 
 :root {
-  /* Medical color palette */
-  --color-medical-primary: #2D5F7F;
-  --color-medical-secondary: #7FB3D5;
-  --color-medical-accent: #E8F4F8;
-  --color-medical-dark: #1A3A52;
-  --color-medical-light: #F0F8FC;
+  /* Medical color palette - Purple theme inspired by Apple design */
+  --color-medical-primary: #7C3AED;
+  --color-medical-secondary: #A78BFA;
+  --color-medical-accent: #F3F0FF;
+  --color-medical-dark: #4C1D95;
+  --color-medical-light: #FAF5FF;
 }
 
 @keyframes float {
