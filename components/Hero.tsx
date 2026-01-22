@@ -2,10 +2,32 @@
 
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
+import Image from 'next/image'
+import { heroImages } from '@/lib/unsplashImages'
 
 export default function Hero() {
+  // Use the first hero image as the background
+  const heroImage = heroImages[0]
+  
   return (
     <section className="section min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+      {/* 
+        Unsplash Background Image
+        To update: Change the image in /lib/unsplashImages.ts -> heroImages array
+        The image is overlaid with a gradient for better text readability
+      */}
+      <div className="absolute inset-0">
+        <Image
+          src={heroImage.url}
+          alt={heroImage.alt}
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+          quality={80}
+        />
+        {/* Overlay gradient for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white/85"></div>
+      </div>
       <div className="max-w-6xl mx-auto text-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -88,6 +110,11 @@ export default function Hero() {
         }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
+      
+      {/* Image credit (hidden visually but accessible for attribution) */}
+      <span className="sr-only">
+        Photo by {heroImage.photographer} on Unsplash
+      </span>
     </section>
   )
 }

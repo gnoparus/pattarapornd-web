@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { contactImages } from '@/lib/unsplashImages'
 
 const contactMethods = [
   {
@@ -66,6 +68,20 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section py-24 px-4 bg-gradient-to-b from-transparent to-medical-dark relative overflow-hidden">
+      {/* 
+        Unsplash Background Image for Contact Section
+        To update: Modify images in /lib/unsplashImages.ts -> contactImages array
+      */}
+      <div className="absolute inset-0 opacity-20">
+        <Image
+          src={contactImages[0].url}
+          alt={contactImages[0].alt}
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          quality={60}
+        />
+      </div>
+      
       {/* Background decorative elements */}
       <motion.div 
         className="absolute top-20 left-10 w-64 h-64 bg-medical-secondary rounded-full blur-3xl opacity-10"
@@ -98,6 +114,30 @@ export default function Contact() {
           <p className="text-xl text-medical-accent max-w-3xl mx-auto">
             Ready to explore how we can work together? Reach out for consultations or inquiries
           </p>
+        </motion.div>
+
+        {/* Decorative image banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative"
+        >
+          <div className="relative h-48 md:h-56">
+            <Image 
+              src={contactImages[1].url}
+              alt={contactImages[1].alt}
+              fill
+              style={{ objectFit: 'cover' }}
+              quality={80}
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-medical-primary/90 to-medical-secondary/80 flex items-center justify-center">
+              <p className="text-white text-2xl md:text-3xl font-bold text-center px-6">
+                Let's Connect and Collaborate
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
