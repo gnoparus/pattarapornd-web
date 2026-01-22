@@ -10,7 +10,7 @@ const achievements = [
   {
     id: 1,
     title: 'Rajavithi Advanced Trauma Course for Medical Students',
-    description: 'Gained advanced skills in trauma care, understanding real-time critical decision-making—parallels with AI in emergency medicine and diagnostics',
+    description: 'Gained advanced skills in trauma care and emergency medicine, mastering real-time critical decision-making in high-pressure medical situations',
     year: '2014',
     icon: Award,
     color: 'text-purple-600',
@@ -19,7 +19,7 @@ const achievements = [
   {
     id: 2,
     title: 'Prince Mahidol Award Youth Program Conference 2020',
-    description: 'Engaged with global health innovators, expanding knowledge of current and future healthcare challenges, aligning with the mission of AI in solving health disparities',
+    description: 'Engaged with global health innovators and leaders, expanding knowledge of current healthcare challenges and innovative approaches to public health',
     year: '2020',
     icon: Trophy,
     color: 'text-violet-600',
@@ -39,7 +39,7 @@ const volunteering = [
   {
     id: 2,
     title: 'In the Name of Love Ep. 2',
-    description: 'Contributed to mental health awareness events, aligning with AI\'s role in promoting mental health solutions',
+    description: 'Contributed to mental health awareness events, promoting understanding and support for mental health in the community',
     icon: Smile,
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-100',
@@ -63,7 +63,7 @@ const volunteering = [
   {
     id: 5,
     title: '"I Can Detect! Let\'s Talk About Depression"',
-    description: 'Educational project focused on mental health awareness and early detection of depression',
+    description: 'Educational project focused on mental health awareness and early detection of depression in the community',
     icon: BookOpen,
     color: 'text-purple-600',
     bgColor: 'bg-purple-100',
@@ -71,7 +71,7 @@ const volunteering = [
   {
     id: 6,
     title: 'Change 5th Med RSU',
-    description: 'Organized medical education events to bridge knowledge gaps, mirroring AI\'s role in health education and continuous learning',
+    description: 'Organized medical education events to bridge knowledge gaps and promote continuous learning among medical students',
     icon: BookOpen,
     color: 'text-violet-600',
     bgColor: 'bg-violet-100',

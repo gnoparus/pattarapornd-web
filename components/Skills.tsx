@@ -10,7 +10,7 @@ const skills = [
   {
     id: 1,
     title: 'Critical & Analytical Thinking',
-    description: 'Proficient in breaking down complex clinical problems, a key skill for integrating AI into clinical workflows and improving patient outcomes',
+    description: 'Proficient in breaking down complex clinical problems to provide accurate diagnoses and develop effective treatment plans for optimal patient outcomes',
     icon: Brain,
     color: 'text-purple-600',
     bgColor: 'bg-purple-100',
@@ -18,7 +18,7 @@ const skills = [
   {
     id: 2,
     title: 'Adaptability & Lateral Problem-Solving',
-    description: 'Ability to find creative solutions in fast-paced healthcare settings, well-suited to rapidly evolving AI environments',
+    description: 'Ability to find creative solutions in fast-paced healthcare settings and adapt to diverse patient needs across multiple medical specialties',
     icon: Zap,
     color: 'text-violet-600',
     bgColor: 'bg-violet-100',
@@ -26,7 +26,7 @@ const skills = [
   {
     id: 3,
     title: 'Interdisciplinary Collaboration',
-    description: 'Strong ability to work with diverse teams, from medical practitioners to data scientists, facilitating the development and adoption of AI healthcare technologies',
+    description: 'Strong ability to work with diverse healthcare teams, from specialists to allied health professionals, to deliver comprehensive patient care',
     icon: Users,
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-100',
@@ -34,7 +34,7 @@ const skills = [
   {
     id: 4,
     title: 'Tech-Savvy',
-    description: 'Comfortable with technology adoption in healthcare settings, positioning for seamless transition into AI-based healthcare systems',
+    description: 'Comfortable with modern medical technology and digital health tools to enhance patient care and streamline healthcare delivery',
     icon: Cpu,
     color: 'text-purple-600',
     bgColor: 'bg-purple-100',
