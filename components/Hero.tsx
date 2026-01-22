@@ -9,9 +9,9 @@ import { heroImages } from '@/lib/unsplashImages'
 
 export default function Hero() {
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '3+' },
+    { icon: Award, label: 'Years Experience', value: '10+' },
     { icon: GraduationCap, label: 'Certifications', value: '6' },
-    { icon: Users, label: 'Happy Patients', value: '2k+' },
+    { icon: Users, label: 'Happy Patients', value: '155k+' },
   ]
 
   return (
@@ -121,15 +121,15 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Experience</div>
-                    <div className="text-3xl font-bold text-foreground">3+ Years</div>
+                    <div className="text-3xl font-bold text-foreground">10+ Years</div>
                   </div>
                   <div>
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Licenses</div>
-                    <div className="text-3xl font-bold text-foreground">1 Board</div>
+                    <div className="text-3xl font-bold text-foreground">3 Board</div>
                   </div>
                   <div className="col-span-2">
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Patients</div>
-                    <div className="text-3xl font-bold text-foreground">2k+ Happy</div>
+                    <div className="text-3xl font-bold text-foreground">155k+ Happy</div>
                   </div>
                 </div>
               </div>
