@@ -261,7 +261,7 @@ export default function Contact() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2024 Dr. Pattarapornd Suparcha. All rights reserved.
+            © 2026 Dr. Pattarapornd Suparcha. All rights reserved.
           </div>
         </div>
       </motion.div>

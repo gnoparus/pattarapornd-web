@@ -9,7 +9,7 @@ import { heroImages } from '@/lib/unsplashImages'
 
 export default function Hero() {
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '10+' },
+    { icon: Award, label: 'Years Experience', value: '3+' },
     { icon: GraduationCap, label: 'Certifications', value: '6' },
     { icon: Users, label: 'Happy Patients', value: '2k+' },
   ]
@@ -39,7 +39,7 @@ export default function Hero() {
               >
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                   <span className="text-foreground">Excellence in </span>
-                  <span className="bg-linear-to-r from-primary to-pink-500 bg-clip-text text-transparent font-display">Holistic Medicine</span>
+                  <span className="bg-linear-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent font-display">Holistic Medicine</span>
                 </h1>
               </motion.div>
 
@@ -121,11 +121,11 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Experience</div>
-                    <div className="text-3xl font-bold text-foreground">10+ Years</div>
+                    <div className="text-3xl font-bold text-foreground">3+ Years</div>
                   </div>
                   <div>
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Licenses</div>
-                    <div className="text-3xl font-bold text-foreground">3 Boards</div>
+                    <div className="text-3xl font-bold text-foreground">1 Board</div>
                   </div>
                   <div className="col-span-2">
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Patients</div>
