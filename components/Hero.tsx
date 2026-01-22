@@ -38,8 +38,8 @@ export default function Hero() {
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="text-foreground">Excellence in </span>
-                  <span className="bg-linear-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent font-display">Holistic Medicine</span>
+                  <span className="text-foreground">Art Meets </span>
+                  <span className="bg-linear-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent font-display">Aesthetic Medicine</span>
                 </h1>
               </motion.div>
 
@@ -49,7 +49,7 @@ export default function Hero() {
                 transition={{ delay: 0.4, duration: 0.8 }}
                 className="text-xl text-muted-foreground leading-relaxed"
               >
-                Every Life Deserves World-Class Care
+                Where Medical Science Becomes Artistry
               </motion.p>
 
               <motion.p
@@ -58,7 +58,7 @@ export default function Hero() {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="text-base text-muted-foreground leading-relaxed max-w-xl"
               >
-                Dr. Pattarapornd Suparcha bridges advanced aesthetic medicine with traditional Thai healing for transformative, compassionate care.
+                Dr. Pattarapornd Suparcha combines aesthetic medicine expertise, anti-aging treatments, and artistic sensibility with traditional Thai healing for naturally beautiful results.
               </motion.p>
             </div>
 
