@@ -1,220 +1,173 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { heroImages } from '@/lib/unsplashImages'
-import { Award, Users, Sparkles, Heart } from 'lucide-react'
+import { Award, Users, GraduationCap } from 'lucide-react'
 
 export default function Hero() {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={heroImages[2].url}
-          alt={heroImages[2].alt}
-          fill
-          style={{ objectFit: 'cover' }}
-          quality={90}
-          priority
-          className="brightness-50"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-foreground/80 via-primary/60 to-foreground/80" />
-      </div>
+  const stats = [
+    { icon: Award, label: 'Years Experience', value: '10+' },
+    { icon: GraduationCap, label: 'Certifications', value: '6' },
+    { icon: Users, label: 'Happy Patients', value: '2k+' },
+  ]
 
-      {/* Floating decorative elements */}
-      <motion.div 
-        className="absolute top-20 right-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3]
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div 
-        className="absolute bottom-20 left-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
-        animate={{ 
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.4, 0.2]
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      />
+  return (
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-violet-50 via-white to-purple-50">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 -left-40 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl" />
+      </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary-foreground">Excellence in Holistic Medicine</span>
-              </div>
-            </motion.div>
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+              >
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  <span className="text-foreground">Excellence in </span>
+                  <span className="text-primary font-display">Holistic Medicine</span>
+                </h1>
+              </motion.div>
 
-            {/* Main Heading */}
-            <motion.h1 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-primary-foreground"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Every Life Deserves{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">
-                World-Class Care
-              </span>
-            </motion.h1>
-            
-            {/* Subtitle */}
-            <motion.p
-              className="text-xl md:text-2xl text-muted leading-relaxed max-w-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              Dr. Pattarapornd Suparcha bridges advanced aesthetic medicine with traditional Thai healing for transformative, compassionate care.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="text-xl text-muted-foreground leading-relaxed"
+              >
+                Every Life Deserves World-Class Care
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="text-base text-muted-foreground leading-relaxed max-w-xl"
+              >
+                Dr. Pattarapornd Suparcha bridges advanced aesthetic medicine with traditional Thai healing for transformative, compassionate care.
+              </motion.p>
+            </div>
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-wrap gap-4 pt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="flex flex-wrap gap-4"
             >
-              <motion.div
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button asChild size="lg" className="rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-primary/50">
-                  <a href="#contact">
-                    <Heart className="w-5 h-5 mr-2" />
-                    Book Consultation
-                  </a>
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg bg-card/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-card/20 hover:border-primary shadow-xl">
-                  <a href="#services">Explore Services</a>
-                </Button>
-              </motion.div>
+              <Button size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 text-base">
+                <a href="#contact">Book Consultation</a>
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full px-8 text-base">
+                <a href="#services">Explore Services</a>
+              </Button>
             </motion.div>
 
-            {/* Quick Stats - Horizontal */}
+            {/* Stats */}
             <motion.div
-              className="grid grid-cols-3 gap-6 pt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              className="grid grid-cols-3 gap-6 pt-8"
             >
-              <div className="text-center">
-                <p className="text-4xl font-bold text-primary-foreground mb-1">10+</p>
-                <p className="text-sm text-muted">Years Experience</p>
-              </div>
-              <div className="text-center border-l border-r border-primary-foreground/20">
-                <p className="text-4xl font-bold text-primary-foreground mb-1">6</p>
-                <p className="text-sm text-muted">Certifications</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-bold text-primary-foreground mb-1">2k+</p>
-                <p className="text-sm text-muted">Happy Patients</p>
-              </div>
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl lg:text-4xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wide">{stat.label}</div>
+                </motion.div>
+              ))}
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Feature Cards */}
+          {/* Right Content - Image/Stats Card */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative space-y-6"
+            className="relative"
           >
-            {/* Main Image Card */}
+            <Card className="overflow-hidden bg-linear-to-br from-white to-violet-50/30 border-violet-100 shadow-2xl">
+              <div className="aspect-4/3 bg-linear-to-br from-violet-100 to-purple-100 relative overflow-hidden">
+                {/* Placeholder for image */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-violet-400">
+                    <div className="text-6xl mb-4">🏥</div>
+                    <p className="text-sm font-medium px-4">Modern hospital lobby with clean architecture</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="grid grid-cols-2 gap-8">
+                  <div>
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Experience</div>
+                    <div className="text-3xl font-bold text-foreground">10+ Years</div>
+                  </div>
+                  <div>
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Licenses</div>
+                    <div className="text-3xl font-bold text-foreground">3 Boards</div>
+                  </div>
+                  <div className="col-span-2">
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Patients</div>
+                    <div className="text-3xl font-bold text-foreground">2k+ Happy</div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Floating badge */}
             <motion.div
-              whileHover={{ y: -5, transition: { duration: 0.3 } }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl group"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+              className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-violet-100"
             >
-              <div className="relative h-96 md:h-[500px]">
-                <Image
-                  src={heroImages[0].url}
-                  alt={heroImages[0].alt}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  quality={90}
-                  className="group-hover:scale-105 transition-transform duration-700"
-                />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-transparent to-transparent" />
-                
-                {/* Bottom overlay content */}
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-2xl font-bold text-primary-foreground mb-2">
-                    Aesthetic Excellence
-                  </h3>
-                  <p className="text-muted text-lg">
-                    Where science meets artistry in modern medicine
-                  </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Award className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <div className="text-xs text-muted-foreground">Board Certified</div>
+                  <div className="text-sm font-semibold">Licensed Professional</div>
                 </div>
               </div>
             </motion.div>
-
-            {/* Feature Pills */}
-            <div className="grid grid-cols-2 gap-4">
-              <motion.div
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                <Card className="p-6 bg-card/80 backdrop-blur-sm hover:bg-card/90 transition-all border-primary/20 hover:border-primary/40 cursor-pointer">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Award className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-1">Board Certified</h4>
-                      <p className="text-sm text-muted-foreground">Licensed Professional</p>
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-              >
-                <Card className="p-6 bg-card/80 backdrop-blur-sm hover:bg-card/90 transition-all border-primary/20 hover:border-primary/40 cursor-pointer">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-accent/30 flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-accent-foreground" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-1">Patient-Centered</h4>
-                      <p className="text-sm text-muted-foreground">Compassionate Care</p>
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-            </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center pt-2"
+        >
+          <div className="w-1.5 h-3 bg-primary rounded-full" />
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Dr. Portfolio - Medical Excellence & Aesthetic Mastery',
-  description: 'Comprehensive portfolio showcasing expertise in Medical AI, General Practice, Anti-aging Medicine, Aesthetic Treatments, and Holistic Wellness Therapies',
-  keywords: ['medical AI', 'diagnostics', 'anti-aging', 'aesthetic medicine', 'singing bowl therapy', 'Thai massage', 'regenerative medicine'],
+  title: 'Dr. Pattarapornd Suparcha | Aesthetic Medicine & Holistic Wellness',
+  description: 'Bridging advanced aesthetic medicine with traditional Thai healing for transformative care. Offering General Practice, Anti-aging Medicine, Aesthetic Medicine, Thai Massage, Sound Healing, and Creative Wellness.',
+  keywords: ['aesthetic medicine', 'holistic wellness', 'anti-aging', 'Thai massage', 'sound healing', 'general practice', 'Bangkok doctor'],
 }
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased bg-gradient-to-br from-medical-light via-white to-medical-accent">
+      <body className="antialiased bg-white">
         {children}
       </body>
     </html>
