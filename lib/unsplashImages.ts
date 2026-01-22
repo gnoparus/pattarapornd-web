@@ -37,18 +37,25 @@ export interface UnsplashImage {
  */
 export const heroImages: UnsplashImage[] = [
   {
-    // Main hero background - Modern medical facility
-    url: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Modern medical facility with professional atmosphere',
-    photographer: 'Olga Guryanova',
-    photographerUrl: 'https://unsplash.com/@designer4u'
+    // Main hero background - Elegant spa/aesthetic medicine setting
+    url: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1920&q=80',
+    alt: 'Elegant aesthetic medicine spa setting',
+    photographer: 'Patrick Malleret',
+    photographerUrl: 'https://unsplash.com/@patrick_malleret'
   },
   {
-    // Alternative: Medical professional in modern setting
-    url: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Medical professional in modern healthcare setting',
-    photographer: 'Mufid Majnun',
-    photographerUrl: 'https://unsplash.com/@mufidpwt'
+    // Professional portrait - Medical doctor
+    url: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80',
+    alt: 'Professional medical doctor in modern setting',
+    photographer: 'CDC',
+    photographerUrl: 'https://unsplash.com/@cdc'
+  },
+  {
+    // Modern hospital lobby - Clean architecture
+    url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80',
+    alt: 'Modern hospital lobby with clean architecture',
+    photographer: 'Ani Kolleshi',
+    photographerUrl: 'https://unsplash.com/@anikolleshi'
   }
 ]
 
@@ -86,11 +93,11 @@ export const educationImages: UnsplashImage[] = [
  */
 export const experienceImages: UnsplashImage[] = [
   {
-    // Medical professional at work
-    url: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80',
-    alt: 'Medical professional providing patient care',
-    photographer: 'Jair Lázaro',
-    photographerUrl: 'https://unsplash.com/@jairlazaro'
+    // Modern hospital corridor - Professional environment
+    url: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80',
+    alt: 'Modern hospital corridor with professional atmosphere',
+    photographer: 'Olga Guryanova',
+    photographerUrl: 'https://unsplash.com/@designer4u'
   },
   {
     // Healthcare technology and innovation
@@ -100,18 +107,18 @@ export const experienceImages: UnsplashImage[] = [
     photographerUrl: 'https://unsplash.com/@nci'
   },
   {
-    // Medical consultation and expertise
+    // Medical professional consultation
     url: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=800&q=80',
     alt: 'Medical consultation and professional expertise',
     photographer: 'Tima Miroshnichenko',
     photographerUrl: 'https://unsplash.com/@tima_photographer'
   },
   {
-    // Holistic healthcare approach
-    url: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80',
-    alt: 'Holistic healthcare and wellness',
-    photographer: 'Toa Heftiba',
-    photographerUrl: 'https://unsplash.com/@heftiba'
+    // Clean medical examination room
+    url: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
+    alt: 'Clean modern medical examination room',
+    photographer: 'Mufid Majnun',
+    photographerUrl: 'https://unsplash.com/@mufidpwt'
   }
 ]
 
