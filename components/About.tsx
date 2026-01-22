@@ -54,18 +54,19 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
-              <div className="aspect-3/4 relative group">
-                <Image
-                  src={heroImages[1].url}
-                  alt={heroImages[1].alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  priority
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-1">Dr. Pattarapornd Suparcha</h3>
+            <div className="relative rounded-3xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 bg-linear-to-br from-violet-100 via-purple-50 to-pink-50">
+              <div className="aspect-3/4 relative group flex items-center justify-center p-8">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/avatar with bg.JPG"
+                    alt="Dr. Pattarapornd Suparcha"
+                    fill
+                    className="object-contain transition-transform duration-700 group-hover:scale-105"
+                    priority
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-black/70 via-black/40 to-transparent">
+                  <h3 className="text-2xl font-bold mb-1 text-white">Dr. Pattarapornd Suparcha</h3>
                   <p className="text-sm text-white/90">M.D., Aesthetic Medicine Specialist</p>
                 </div>
               </div>
@@ -128,8 +129,15 @@ export default function About() {
                 My mission is to help patients feel confident and peaceful in their own skin, blending the precision of medical science with the timeless art of healing.
               </blockquote>
               <div className="flex items-center justify-center gap-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold">P</span>
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20 bg-white">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/avatar transparent bg.png"
+                      alt="Dr. Pattarapornd Suparcha"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="text-left">
                   <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>

@@ -106,6 +106,24 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
+            {/* Avatar floating image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="absolute -top-12 -left-12 z-20 w-48 h-48 lg:w-56 lg:h-56"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src="/avatar transparent bg.png"
+                  alt="Dr. Pattarapornd Suparcha Avatar"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
+            </motion.div>
+
             <Card className="overflow-hidden bg-white border-violet-100 shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
               <div className="aspect-4/3 relative overflow-hidden group">
                 <Image
