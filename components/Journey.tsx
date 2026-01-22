@@ -106,9 +106,9 @@ export default function Journey() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <Card className="bg-linear-to-br from-primary to-purple-600 text-white p-12 border-none shadow-2xl overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+          <Card className="bg-linear-to-br from-purple-700 to-purple-900 text-white p-12 border-none shadow-2xl overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl" />
             
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">

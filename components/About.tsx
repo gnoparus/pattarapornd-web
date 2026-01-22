@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Sparkles, Heart, Activity } from 'lucide-react'
+import { heroImages } from '@/lib/unsplashImages'
 
 export default function About() {
   const services = [
@@ -52,13 +54,19 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-linear-to-br from-violet-100 to-purple-100">
-              {/* Placeholder for doctor image */}
-              <div className="aspect-3/4 flex items-center justify-center">
-                <div className="text-center text-violet-400">
-                  <div className="text-8xl mb-4">👨‍⚕️</div>
-                  <p className="text-sm font-medium px-4">Dr. Pattarapornd Suparcha</p>
-                  <p className="text-xs text-violet-300 px-4 mt-2">M.D., Aesthetic Medicine Specialist</p>
+            <div className="relative rounded-3xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
+              <div className="aspect-3/4 relative group">
+                <Image
+                  src={heroImages[1].url}
+                  alt={heroImages[1].alt}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-1">Dr. Pattarapornd Suparcha</h3>
+                  <p className="text-sm text-white/90">M.D., Aesthetic Medicine Specialist</p>
                 </div>
               </div>
             </div>
@@ -125,7 +133,7 @@ export default function About() {
                 </div>
                 <div className="text-left">
                   <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                  <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist</div>
+                  <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist · Cat Lover 🐱</div>
                 </div>
               </div>
             </div>

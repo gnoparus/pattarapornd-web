@@ -69,7 +69,7 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="education" className="section py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-muted/30 to-transparent relative overflow-hidden">
+    <section id="education" className="section py-24 px-6 sm:px-8 lg:px-12 bg-linear-to-b from-muted/30 to-transparent relative overflow-hidden">
       {/* 
         Unsplash Background Images - Educational Theme
         To update: Modify images in /lib/unsplashImages.ts -> educationImages array
@@ -119,7 +119,7 @@ export default function Education() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="mb-8 rounded-2xl overflow-hidden shadow-2xl relative"
+            className="mb-8 rounded-2xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 relative group"
           >
             <div className="relative h-48 md:h-64">
               <Image 
@@ -128,9 +128,10 @@ export default function Education() {
                 fill
                 style={{ objectFit: 'cover' }}
                 quality={80}
+                className="transition-transform duration-700 group-hover:scale-105"
               />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center px-8">
+              <div className="absolute inset-0 bg-linear-to-r from-primary/80 to-transparent flex items-center px-8">
                 <p className="text-primary-foreground text-lg md:text-xl font-semibold max-w-md">
                   Committed to lifelong learning and academic excellence in medical science
                 </p>
@@ -194,7 +195,7 @@ export default function Education() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mb-8 rounded-2xl overflow-hidden shadow-2xl relative"
+            className="mb-8 rounded-2xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 relative group"
           >
             <div className="relative h-40 md:h-48">
               <Image 
@@ -203,9 +204,10 @@ export default function Education() {
                 fill
                 style={{ objectFit: 'cover' }}
                 quality={80}
+                className="transition-transform duration-700 group-hover:scale-105"
               />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-l from-primary/80 to-transparent flex items-center justify-end px-8">
+              <div className="absolute inset-0 bg-linear-to-l from-primary/80 to-transparent flex items-center justify-end px-8">
                 <p className="text-primary-foreground text-lg md:text-xl font-semibold max-w-md text-right">
                   Continuous professional development and specialized certifications
                 </p>
