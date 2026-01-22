@@ -3,17 +3,19 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-[--color-medical-primary] text-white shadow-lg hover:bg-[--color-medical-dark] hover:shadow-xl transform hover:scale-105",
+          "bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 hover:shadow-xl transform hover:scale-105",
         outline:
-          "bg-white text-[--color-medical-primary] border-2 border-[--color-medical-primary] hover:bg-[--color-medical-accent] shadow-lg hover:shadow-xl transform hover:scale-105",
+          "bg-background text-primary border-2 border-primary hover:bg-accent hover:text-accent-foreground shadow-lg hover:shadow-xl transform hover:scale-105",
         secondary:
-          "bg-[--color-medical-secondary] text-[--color-medical-dark] hover:bg-white shadow-lg hover:shadow-xl transform hover:scale-105",
-        ghost: "hover:bg-[--color-medical-accent] hover:text-[--color-medical-primary]",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-lg hover:shadow-xl transform hover:scale-105",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        destructive:
+          "bg-destructive text-destructive-foreground shadow-lg hover:bg-destructive/90",
       },
       size: {
         default: "px-8 py-4 text-base",

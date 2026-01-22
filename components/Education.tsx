@@ -69,13 +69,13 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="education" className="section py-24 px-4 bg-gradient-to-b from-medical-accent/30 to-transparent relative overflow-hidden">
+    <section id="education" className="section py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-muted/30 to-transparent relative overflow-hidden">
       {/* 
         Unsplash Background Images - Educational Theme
         To update: Modify images in /lib/unsplashImages.ts -> educationImages array
         Multiple subtle background images create visual interest
       */}
-      <div className="absolute right-0 bottom-0 w-96 h-96 bg-medical-secondary rounded-full blur-3xl opacity-5 -z-10"></div>
+      <div className="absolute right-0 bottom-0 w-96 h-96 bg-primary rounded-full blur-3xl opacity-5 -z-10"></div>
       <div className="absolute left-10 top-1/4 w-64 h-64 rounded-lg opacity-10 blur-sm -z-10 overflow-hidden">
         <Image
           src={educationImages[1].url}
@@ -95,10 +95,10 @@ export default function Education() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-medical-dark mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
             Education & Certifications
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Continuously advancing knowledge and expertise through rigorous academic and professional development
           </p>
         </motion.div>
@@ -109,7 +109,7 @@ export default function Education() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl font-bold text-medical-dark mb-8 font-display"
+            className="text-3xl font-bold text-foreground mb-8 font-display"
           >
             Academic Qualifications
           </motion.h3>
@@ -130,8 +130,8 @@ export default function Education() {
                 quality={80}
               />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-medical-primary/80 to-transparent flex items-center px-8">
-                <p className="text-white text-lg md:text-xl font-semibold max-w-md">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center px-8">
+                <p className="text-primary-foreground text-lg md:text-xl font-semibold max-w-md">
                   Committed to lifelong learning and academic excellence in medical science
                 </p>
               </div>
@@ -149,7 +149,7 @@ export default function Education() {
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
-                  <Card className="border-l-4 border-medical-secondary hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm">
+                  <Card className="border-l-4 border-primary hover:shadow-2xl transition-all duration-300 bg-card/90 backdrop-blur-sm">
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex items-start flex-1">
@@ -158,15 +158,15 @@ export default function Education() {
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <Icon className="w-8 h-8 text-medical-primary" />
+                            <Icon className="w-8 h-8 text-primary" />
                           </motion.div>
                           <div className="flex-1">
-                            <CardTitle className="text-xl text-medical-dark mb-2">{edu.degree}</CardTitle>
-                            <p className="text-medical-primary font-semibold mb-2">{edu.institution}</p>
-                            <CardDescription className="text-gray-600">{edu.description}</CardDescription>
+                            <CardTitle className="text-xl text-foreground mb-2">{edu.degree}</CardTitle>
+                            <p className="text-primary font-semibold mb-2">{edu.institution}</p>
+                            <CardDescription className="text-muted-foreground">{edu.description}</CardDescription>
                           </div>
                         </div>
-                        <span className="inline-block px-4 py-1 bg-medical-secondary/20 text-medical-primary rounded-full text-sm font-semibold ml-4">
+                        <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold ml-4">
                           {edu.year}
                         </span>
                       </div>
@@ -184,7 +184,7 @@ export default function Education() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-3xl font-bold text-medical-dark mb-8 font-display"
+            className="text-3xl font-bold text-foreground mb-8 font-display"
           >
             Professional Certifications
           </motion.h3>
@@ -205,8 +205,8 @@ export default function Education() {
                 quality={80}
               />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-l from-medical-secondary/80 to-transparent flex items-center justify-end px-8">
-                <p className="text-white text-lg md:text-xl font-semibold max-w-md text-right">
+              <div className="absolute inset-0 bg-gradient-to-l from-primary/80 to-transparent flex items-center justify-end px-8">
+                <p className="text-primary-foreground text-lg md:text-xl font-semibold max-w-md text-right">
                   Continuous professional development and specialized certifications
                 </p>
               </div>
@@ -224,18 +224,18 @@ export default function Education() {
                   transition={{ duration: 0.4, delay: 0.5 + index * 0.05, ease: [0.6, -0.05, 0.01, 0.99] }}
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 >
-                  <Card className="h-full hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-white/80 backdrop-blur-sm border-medical-accent hover:border-medical-secondary">
+                  <Card className="h-full hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-card/80 backdrop-blur-sm border-muted hover:border-primary">
                     <CardContent className="p-6">
                       <motion.div 
                         className="mb-4"
                         whileHover={{ scale: 1.2, rotate: 10 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <Icon className="w-10 h-10 text-medical-primary" />
+                        <Icon className="w-10 h-10 text-primary" />
                       </motion.div>
-                      <h4 className="text-lg font-bold text-medical-dark mb-2 group-hover:text-medical-primary transition-colors">{cert.title}</h4>
-                      <p className="text-sm text-medical-primary mb-2">{cert.issuer}</p>
-                      <span className="inline-block px-3 py-1 bg-medical-accent text-medical-dark rounded-full text-xs font-semibold">
+                      <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{cert.title}</h4>
+                      <p className="text-sm text-primary mb-2">{cert.issuer}</p>
+                      <span className="inline-block px-3 py-1 bg-primary/10 text-foreground rounded-full text-xs font-semibold">
                         {cert.year}
                       </span>
                     </CardContent>
