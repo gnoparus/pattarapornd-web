@@ -5,30 +5,48 @@ import { Card } from '@/components/ui/card'
 import { Brain, Lightbulb, Users, Cpu } from 'lucide-react'
 
 export default function Skills() {
+  const technicalSkills = [
+    {
+      category: 'Languages',
+      items: [
+        { name: 'Thai', level: 'Native' },
+        { name: 'English', level: 'Intermediate' },
+      ],
+    },
+    {
+      category: 'Computer Skills',
+      items: [
+        { name: 'Microsoft Word', level: 'Good' },
+        { name: 'Microsoft Excel', level: 'Good' },
+        { name: 'Microsoft PowerPoint', level: 'Good' },
+      ],
+    },
+  ]
+
   const skills = [
     {
       icon: Brain,
-      title: 'Critical & Analytical Thinking',
-      description: 'Expert in breaking down complex clinical problems to provide accurate diagnoses and develop effective, evidence-based treatment plans',
-      proficiency: 95,
+      title: 'Aesthetic Precision & Artistry',
+      description: 'Exceptional eye for facial symmetry and aesthetic harmony, combining medical expertise with artistic sensibility to achieve naturally beautiful results',
+      proficiency: 98,
     },
     {
       icon: Lightbulb,
-      title: 'Adaptability & Problem-Solving',
-      description: 'Creative solutions in fast-paced healthcare environments, adapting seamlessly to diverse patient needs across medical specialties',
-      proficiency: 92,
+      title: 'Holistic Treatment Design',
+      description: 'Creating personalized treatment plans that blend aesthetic medicine, anti-aging therapies, and traditional healing for comprehensive wellness',
+      proficiency: 95,
     },
     {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Strong leadership and collaboration with diverse healthcare teams to deliver comprehensive, coordinated patient care',
+      title: 'Patient-Centered Communication',
+      description: 'Building trust through empathetic listening and clear communication, ensuring patients feel heard, understood, and confident in their care',
       proficiency: 98,
     },
     {
       icon: Cpu,
-      title: 'Technology Integration',
-      description: 'Proficient with modern medical technology, digital health tools, and AI-driven healthcare solutions for enhanced patient outcomes',
-      proficiency: 88,
+      title: 'Advanced Aesthetic Technology',
+      description: 'Mastery of cutting-edge aesthetic devices, laser systems, and FDA-approved treatments for safe, effective beauty enhancement',
+      proficiency: 92,
     },
   ]
 
@@ -52,7 +70,41 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
+        {/* Technical Skills */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <Card className="p-8 border-violet-100">
+            <h3 className="text-2xl font-bold mb-6">Technical Proficiencies</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {technicalSkills.map((category, catIndex) => (
+                <motion.div
+                  key={category.category}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: catIndex * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <h4 className="text-lg font-semibold mb-4 text-primary">{category.category}</h4>
+                  <div className="space-y-3">
+                    {category.items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="flex justify-between items-center">
+                        <span className="text-foreground">{item.name}</span>
+                        <span className="text-sm font-semibold text-muted-foreground">{item.level}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </Card>
+        </motion.div>
+
+        {/* Core Skills Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {skills.map((skill, index) => (
             <motion.div

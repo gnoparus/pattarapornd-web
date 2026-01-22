@@ -10,18 +10,18 @@ export default function About() {
   const services = [
     {
       icon: Sparkles,
-      title: 'Aesthetic Excellence',
-      description: 'Advanced aesthetic procedures including precision injectables, laser treatments, and skin rejuvenation techniques. Using only FDA-approved technology to ensure optimal safety and natural-looking results.',
+      title: 'Aesthetic Artistry',
+      description: 'Merging medical precision with artistic vision for natural beauty enhancement. Advanced injectables, laser treatments, and skin rejuvenation delivered with an artist\'s eye for harmony and balance.',
     },
     {
       icon: Heart,
-      title: 'Holistic Healing',
-      description: 'Integrating traditional Thai massage and Tibetan singing bowl therapy for deep cellular relaxation and stress relief. Our treatments heal from within, addressing both body and spirit.',
+      title: 'Anti-Aging & Wellness',
+      description: 'Cellular rejuvenation and regenerative medicine techniques that turn back time naturally. Combining cutting-edge anti-aging treatments with traditional healing practices for holistic vitality.',
     },
     {
       icon: Activity,
-      title: 'Evidence-Based Care',
-      description: 'Committed to continuous learning and staying current with the latest medical research. Every treatment plan is backed by scientific evidence and tailored to individual patient needs.',
+      title: 'Holistic Integration',
+      description: 'Drawing, Thai massage, and singing bowl therapy complement medical treatments. A creative, multidimensional approach to healing that addresses physical, emotional, and aesthetic wellbeing.',
     },
   ]
 
@@ -41,7 +41,7 @@ export default function About() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Meet Dr. Pattarapornd</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Bridging rigorous medical training with a passion for holistic healing. Dr. Suparcha believes true beauty radiates from a balance of inner health and outer care.
+            A physician who approaches medicine as an art form. Specializing in aesthetic medicine, anti-aging treatments, and holistic wellness, Dr. Suparcha believes true beauty emerges when medical precision meets artistic vision.
           </p>
         </motion.div>
 
