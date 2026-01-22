@@ -106,7 +106,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
             Get in Touch
@@ -116,14 +116,14 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        {/* Decorative image banner */}
+        {/* Improved Decorative image banner with better contrast */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative"
+          className="mb-20 rounded-2xl overflow-hidden shadow-2xl relative"
         >
-          <div className="relative h-48 md:h-56">
+          <div className="relative h-56 md:h-64">
             <Image 
               src={contactImages[1].url}
               alt={contactImages[1].alt}
@@ -131,24 +131,29 @@ export default function Contact() {
               style={{ objectFit: 'cover' }}
               quality={80}
             />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-medical-primary/90 to-medical-secondary/80 flex items-center justify-center">
-              <p className="text-white text-2xl md:text-3xl font-bold text-center px-6">
-                Let's Connect and Collaborate
-              </p>
+            {/* Improved gradient overlay for better contrast */}
+            <div className="absolute inset-0 bg-gradient-to-r from-medical-dark/95 via-medical-primary/90 to-medical-secondary/90 flex items-center justify-center">
+              <div className="text-center px-6 py-8">
+                <p className="text-white text-3xl md:text-4xl font-bold mb-3">
+                  Ready to Transform Your Health?
+                </p>
+                <p className="text-medical-accent text-lg md:text-xl font-medium">
+                  Let's collaborate on your wellness journey
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <h3 className="text-3xl font-bold text-white mb-8 font-display">Contact Information</h3>
+            <h3 className="text-3xl font-bold text-white mb-10 font-display">Contact Information</h3>
             
             {contactMethods.map((method, index) => {
               const Icon = method.icon
@@ -161,16 +166,16 @@ export default function Contact() {
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
                   <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30 hover:bg-medical-dark/95 transition-all duration-300 group cursor-pointer">
-                    <CardContent className="p-4">
-                      <div className="flex items-center">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-5">
                         <motion.div 
-                          className="mr-4 text-medical-secondary"
+                          className="text-medical-secondary"
                           whileHover={{ scale: 1.2, rotate: 5 }}
                           transition={{ duration: 0.3 }}
                         >
                           <Icon className="w-8 h-8" />
                         </motion.div>
-                        <div>
+                        <div className="space-y-1">
                           <p className="text-medical-secondary text-sm font-semibold">{method.type}</p>
                           <p className="text-white text-lg font-medium">{method.value}</p>
                           <p className="text-medical-accent text-sm">{method.description}</p>
@@ -186,32 +191,32 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="mt-8"
+              className="mt-10"
             >
               <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30">
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold text-white mb-3">Office Hours</h4>
-                  <div className="space-y-2 text-medical-accent">
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p>Saturday: 10:00 AM - 4:00 PM</p>
-                    <p>Sunday: Closed</p>
+                <CardContent className="p-8">
+                  <h4 className="text-xl font-bold text-white mb-6">Office Hours</h4>
+                  <div className="space-y-3 text-medical-accent">
+                    <p className="text-base">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p className="text-base">Saturday: 10:00 AM - 4:00 PM</p>
+                    <p className="text-base">Sunday: Closed</p>
                   </div>
                 </CardContent>
               </Card>
             </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contact Form with improved spacing */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Card className="bg-medical-dark/90 backdrop-blur-md border-medical-secondary/30">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-white font-semibold mb-2">
+              <CardContent className="p-10">
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="space-y-3">
+                    <label htmlFor="name" className="block text-white font-semibold text-base">
                       Full Name
                     </label>
                     <input
@@ -221,13 +226,13 @@ export default function Contact() {
                       value={formState.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      className="w-full px-5 py-4 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-xl text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
                       placeholder="Your name"
                     />
                   </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-white font-semibold mb-2">
+                  <div className="space-y-3">
+                    <label htmlFor="email" className="block text-white font-semibold text-base">
                       Email Address
                     </label>
                     <input
@@ -237,13 +242,13 @@ export default function Contact() {
                       value={formState.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      className="w-full px-5 py-4 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-xl text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
                       placeholder="your.email@example.com"
                     />
                   </div>
 
-                  <div>
-                    <label htmlFor="subject" className="block text-white font-semibold mb-2">
+                  <div className="space-y-3">
+                    <label htmlFor="subject" className="block text-white font-semibold text-base">
                       Subject
                     </label>
                     <select
@@ -252,7 +257,7 @@ export default function Contact() {
                       value={formState.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
+                      className="w-full px-5 py-4 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-xl text-white focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300"
                     >
                       <option value="" className="bg-medical-dark">Select a subject</option>
                       <option value="general" className="bg-medical-dark">General Inquiry</option>
@@ -262,8 +267,8 @@ export default function Contact() {
                     </select>
                   </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-white font-semibold mb-2">
+                  <div className="space-y-3">
+                    <label htmlFor="message" className="block text-white font-semibold text-base">
                       Message
                     </label>
                     <textarea
@@ -273,19 +278,21 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-lg text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300 resize-none"
+                      className="w-full px-5 py-4 bg-medical-primary/50 backdrop-blur-sm border border-medical-secondary/50 rounded-xl text-white placeholder-medical-accent/70 focus:outline-none focus:border-medical-secondary focus:ring-2 focus:ring-medical-secondary/50 transition-all duration-300 resize-none"
                       placeholder="Your message..."
                     ></textarea>
                   </div>
 
-                  <Button
-                    type="submit"
-                    variant="secondary"
-                    size="lg"
-                    className="w-full"
-                  >
-                    Send Message
-                  </Button>
+                  <div className="pt-4">
+                    <Button
+                      type="submit"
+                      variant="secondary"
+                      size="lg"
+                      className="w-full text-lg py-6"
+                    >
+                      Send Message
+                    </Button>
+                  </div>
                 </form>
               </CardContent>
             </Card>
@@ -297,9 +304,9 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center pt-12 border-t border-white/20"
+          className="text-center pt-16 border-t border-white/20"
         >
-          <p className="text-medical-accent">
+          <p className="text-medical-accent text-base">
             © 2024 Medical Portfolio. All rights reserved. | Designed with care and precision
           </p>
         </motion.div>
