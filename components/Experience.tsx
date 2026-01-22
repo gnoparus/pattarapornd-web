@@ -38,7 +38,7 @@ const experiences = [
     period: '2015 - 2016',
     title: 'General Practitioner',
     organization: 'Oboun Family Clinic (UC Clinic)',
-    description: 'Managed comprehensive care under Thailand\'s Universal Coverage Scheme, demonstrating experience in delivering quality healthcare with limited resources.',
+    description: "Managed comprehensive care under Thailand's Universal Coverage Scheme, demonstrating experience in delivering quality healthcare with limited resources.",
     achievements: [
       'Delivered quality care within Universal Coverage Scheme constraints',
       'Managed comprehensive family medicine services efficiently',

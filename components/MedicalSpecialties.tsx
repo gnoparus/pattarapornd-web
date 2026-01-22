@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Brain, Stethoscope, Sparkles, Gem, Music, User, Palette } from 'lucide-react'
+import { Stethoscope, Sparkles, Gem, Music, User, Palette } from 'lucide-react'
 
 const specialties = [
   {
