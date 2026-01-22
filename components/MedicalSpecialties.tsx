@@ -78,7 +78,7 @@ function SpecialtyCard({ specialty, index }: { specialty: typeof specialties[0],
           >
             <Icon className="w-6 h-6 text-white" />
           </motion.div>
-          <CardTitle className="text-xl font-display">
+          <CardTitle className="font-display">
             {specialty.title}
           </CardTitle>
         </CardHeader>
