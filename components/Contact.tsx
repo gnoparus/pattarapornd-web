@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Mail, Phone, MapPin, Linkedin, Clock } from 'lucide-react'
+import { contactImages } from '@/lib/unsplashImages'
 
 export default function Contact() {
   const contactInfo = [
@@ -121,18 +123,25 @@ export default function Contact() {
               </Card>
             </motion.div>
 
-            {/* Image Placeholder */}
+            {/* Professional Image */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Card className="overflow-hidden bg-linear-to-br from-violet-100 to-purple-100 border-violet-100">
-                <div className="aspect-square flex items-center justify-center">
-                  <div className="text-center text-violet-400">
-                    <div className="text-6xl mb-4">💬</div>
-                    <p className="text-sm font-medium px-4">Professional healthcare communication</p>
+              <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
+                <div className="aspect-square relative group">
+                  <Image
+                    src={contactImages[1].url}
+                    alt={contactImages[1].alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-violet-900/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h4 className="text-xl font-bold mb-1">Let's Connect</h4>
+                    <p className="text-sm text-white/90">Professional healthcare communication</p>
                   </div>
                 </div>
               </Card>

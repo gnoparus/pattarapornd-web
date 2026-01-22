@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Building2, Check } from 'lucide-react'
+import { experienceImages } from '@/lib/unsplashImages'
 
 export default function Experience() {
   const experiences = [
@@ -72,12 +74,20 @@ export default function Experience() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Card className="overflow-hidden bg-linear-to-br from-violet-100 to-purple-100 border-violet-100">
-            <div className="aspect-21/9 lg:aspect-16/5 flex items-center justify-center">
-              <div className="text-center text-violet-400">
-                <div className="text-6xl mb-4">🏥</div>
-                <p className="text-sm font-medium px-4">Modern hospital corridor with professional atmosphere</p>
-                <p className="text-xs text-violet-300 px-4 mt-2">Delivering exceptional patient care through innovation, compassion, and expertise</p>
+          <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
+            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+              <Image
+                src={experienceImages[0].url}
+                alt={experienceImages[0].alt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-violet-900/70 via-purple-900/50 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-start px-12">
+                <div className="text-white max-w-xl">
+                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Professional Excellence</h3>
+                  <p className="text-base lg:text-lg text-white/90">Delivering exceptional patient care through innovation, compassion, and expertise</p>
+                </div>
               </div>
             </div>
           </Card>

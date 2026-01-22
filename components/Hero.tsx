@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Award, Users, GraduationCap } from 'lucide-react'
+import { heroImages } from '@/lib/unsplashImages'
 
 export default function Hero() {
   const stats = [
@@ -37,7 +39,7 @@ export default function Hero() {
               >
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                   <span className="text-foreground">Excellence in </span>
-                  <span className="text-primary font-display">Holistic Medicine</span>
+                  <span className="bg-linear-to-r from-primary to-pink-500 bg-clip-text text-transparent font-display">Holistic Medicine</span>
                 </h1>
               </motion.div>
 
@@ -104,15 +106,16 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <Card className="overflow-hidden bg-linear-to-br from-white to-violet-50/30 border-violet-100 shadow-2xl">
-              <div className="aspect-4/3 bg-linear-to-br from-violet-100 to-purple-100 relative overflow-hidden">
-                {/* Placeholder for image */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-violet-400">
-                    <div className="text-6xl mb-4">🏥</div>
-                    <p className="text-sm font-medium px-4">Modern hospital lobby with clean architecture</p>
-                  </div>
-                </div>
+            <Card className="overflow-hidden bg-white border-violet-100 shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
+              <div className="aspect-4/3 relative overflow-hidden group">
+                <Image
+                  src={heroImages[2].url}
+                  alt={heroImages[2].alt}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-linear-to-br from-violet-900/20 to-purple-900/20" />
               </div>
               <div className="p-8">
                 <div className="grid grid-cols-2 gap-8">
