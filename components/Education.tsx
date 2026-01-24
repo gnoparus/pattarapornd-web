@@ -11,10 +11,18 @@ import { educationImages } from '@/lib/unsplashImages'
 const education = [
   {
     id: 1,
+    degree: 'Master of Science (M.Sc.) in Medicine – Anti-Aging and Regenerative Science',
+    institution: 'Dhurakij Pundit University (DPU)',
+    year: '2025-2027 (Expected)',
+    description: 'Currently pursuing advanced studies in anti-aging and regenerative medicine. Serving as Class President and Union Committee of the Graduate Student.',
+    icon: GraduationCap,
+  },
+  {
+    id: 2,
     degree: 'Doctor of Medicine (M.D.)',
-    institution: 'Rangsit University (Rajavithi Hospital) College of Medicine',
+    institution: 'Rangsit University',
     year: '2015',
-    description: 'Emphasized patient-centered care with hands-on training in a clinical environment',
+    description: 'Completed comprehensive medical training with emphasis on patient-centered care. Active in Union Committee of Medical College.',
     icon: GraduationCap,
   },
 ]
@@ -22,9 +30,9 @@ const education = [
 const certifications = [
   {
     id: 1,
-    title: 'Certificate in Basic Occupational Medicine',
+    title: 'Fundamental Occupational Medicine',
     issuer: 'Chiang Mai University',
-    year: '2016',
+    year: '2023',
     icon: Award,
   },
   {
