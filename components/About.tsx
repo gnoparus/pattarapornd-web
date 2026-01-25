@@ -10,18 +10,18 @@ export default function About() {
   const services = [
     {
       icon: Sparkles,
-      title: 'Aesthetic Artistry',
-      description: 'Merging medical precision with artistic vision for natural beauty enhancement. Advanced injectables, laser treatments, and skin rejuvenation delivered with an artist\'s eye for harmony and balance.',
+      title: 'Aesthetic Medicine & Training',
+      description: 'Expert in filler and aesthetic techniques, actively contributing as a Teaching Assistant for hands-on aesthetic training programs. Delivering natural beauty enhancement with medical precision and artistic vision.',
     },
     {
       icon: Heart,
-      title: 'Anti-Aging & Wellness',
-      description: 'Cellular rejuvenation and regenerative medicine techniques that turn back time naturally. Combining cutting-edge anti-aging treatments with traditional healing practices for holistic vitality.',
+      title: 'Anti-Aging & Regenerative Science',
+      description: 'Currently pursuing M.Sc. in Anti-Aging and Regenerative Science, serving as Class President. Combining cutting-edge regenerative medicine with evidence-based anti-aging treatments for holistic vitality.',
     },
     {
       icon: Activity,
-      title: 'Holistic Integration',
-      description: 'Drawing, Thai massage, and singing bowl therapy complement medical treatments. A creative, multidimensional approach to healing that addresses physical, emotional, and aesthetic wellbeing.',
+      title: 'Occupational Health & General Practice',
+      description: 'Comprehensive healthcare services including occupational health and safety protocols, general health check-ups, and patient assessments. A founding member of Tele Care Center initiatives.',
     },
   ]
 
@@ -41,7 +41,7 @@ export default function About() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Meet Dr. Pattarapornd</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A physician who approaches medicine as an art form. Specializing in aesthetic medicine, anti-aging treatments, and holistic wellness, Dr. Suparcha believes true beauty emerges when medical precision meets artistic vision.
+            A dedicated medical doctor and General Practitioner with expertise in Occupational Health and Aesthetic Medicine. Currently pursuing an M.Sc. in Anti-Aging and Regenerative Science at Dhurakij Pundit University, Dr. Suparcha bridges clinical practice with education as a Teaching Assistant for aesthetic training programs, while bringing creative vision to every project as a Digital Commercial Artist.
           </p>
         </motion.div>
 
@@ -67,7 +67,7 @@ export default function About() {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-black/70 via-black/40 to-transparent">
                   <h3 className="text-2xl font-bold mb-1 text-white">Dr. Pattarapornd Suparcha</h3>
-                  <p className="text-sm text-white/90">M.D., Aesthetic Medicine Specialist</p>
+                  <p className="text-sm text-white/90">M.D. | General Practitioner | M.Sc. Candidate</p>
                 </div>
               </div>
             </div>
@@ -82,8 +82,8 @@ export default function About() {
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">M.D.</div>
-                <div className="text-xs text-muted-foreground mt-1">Aesthetic Medicine</div>
-                <div className="text-xs text-muted-foreground">Specialist</div>
+                <div className="text-xs text-muted-foreground mt-1">General Practitioner</div>
+                <div className="text-xs text-muted-foreground">M.Sc. Candidate</div>
               </div>
             </motion.div>
           </motion.div>
@@ -141,7 +141,7 @@ export default function About() {
                 </div>
                 <div className="text-left">
                   <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                  <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist · Cat Lover 🐱</div>
+                  <div className="text-sm text-muted-foreground">M.D., General Practitioner · Digital Artist · Cat Lover 🐱</div>
                 </div>
               </div>
             </div>

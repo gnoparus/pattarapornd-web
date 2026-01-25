@@ -8,25 +8,25 @@ import { GraduationCap, Download, Award, Brain } from 'lucide-react'
 export default function Journey() {
   const education = [
     {
-      year: '2015',
-      title: 'Doctor of Medicine (M.D.)',
-      institution: 'Rangsit University',
-      description: 'Graduated with honors, focusing on internal medicine and dermatology fundamentals. Completed comprehensive clinical rotations across Thailand\'s top teaching hospitals.',
+      year: '2025-2027',
+      title: 'M.Sc. in Anti-Aging and Regenerative Science',
+      institution: 'Dhurakij Pundit University',
+      description: 'Currently pursuing advanced studies in anti-aging and regenerative medicine. Serving as Class President and Union Committee of the Graduate Student.',
       icon: GraduationCap,
     },
     {
-      year: '2018',
-      title: 'Aesthetic Medicine',
+      year: '2023',
+      title: 'Fundamental Occupational Medicine',
       institution: 'Chiang Mai University',
-      description: 'Advanced certification in non-invasive cosmetic procedures and facial anatomy.',
+      description: 'Specialized certification in occupational medicine fundamentals and workplace health management.',
       icon: Award,
     },
     {
-      year: '2018',
-      title: 'Anti-Aging Science',
-      institution: 'Dhurakij Pundit University',
-      description: 'Specialized training in integrative wellness and age-management protocols.',
-      icon: Award,
+      year: '2015',
+      title: 'Doctor of Medicine (M.D.)',
+      institution: 'Rangsit University',
+      description: 'Comprehensive medical training with emphasis on patient-centered care. Active in Union Committee of Medical College.',
+      icon: GraduationCap,
     },
   ]
 
@@ -46,7 +46,7 @@ export default function Journey() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">The Journey to Holistic Excellence</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Bridging the gap between timeless medical wisdom and futuristic technology. From rigorous foundations at Rangsit University to the forefront of AI-driven aesthetic medicine.
+            Bridging clinical practice with education and creative artistry. From rigorous medical foundations at Rangsit University to advanced anti-aging science at Dhurakij Pundit University.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mt-8">
             <Button size="lg" variant="outline" className="rounded-full">
@@ -117,18 +117,21 @@ export default function Journey() {
                 </div>
                 <div>
                   <div className="text-white/70 text-sm font-semibold uppercase tracking-wider">● Current Focus</div>
-                  <h3 className="text-3xl font-bold">AI-Driven Healthcare Integration</h3>
+                  <h3 className="text-3xl font-bold">Anti-Aging & Regenerative Science</h3>
                 </div>
               </div>
               <p className="text-xl text-white/90 mb-6 leading-relaxed max-w-3xl">
-                Pioneering the use of artificial intelligence for hyper-personalized skin analysis and predictive aging models. Combining data science with dermatology.
+                Pursuing M.Sc. in Anti-Aging and Regenerative Science while contributing to aesthetic medicine education as a Teaching Assistant. Combining clinical practice with academic excellence.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30">
-                  Machine Learning
+                  Class President
                 </span>
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30">
-                  Data Analysis
+                  Teaching Assistant
+                </span>
+                <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30">
+                  Digital Artist
                 </span>
               </div>
             </div>
@@ -146,7 +149,7 @@ export default function Journey() {
           <div className="max-w-4xl mx-auto">
             <div className="text-6xl text-primary/20 mb-4">"</div>
             <blockquote className="text-2xl lg:text-3xl font-display italic text-foreground mb-6 leading-relaxed">
-              True aesthetic medicine isn't just about correcting flaws; it's about understanding the biological narrative of the patient and using technology to rewrite it for longevity.
+              My mission is to help patients feel confident and healthy, blending the precision of medical science with the art of regenerative medicine and creative expression.
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -154,7 +157,7 @@ export default function Journey() {
               </div>
               <div className="text-left">
                 <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist</div>
+                <div className="text-sm text-muted-foreground">M.D., M.Sc. Candidate</div>
               </div>
             </div>
           </div>

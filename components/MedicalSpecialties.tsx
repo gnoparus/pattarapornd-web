@@ -9,42 +9,42 @@ export default function MedicalSpecialties() {
     {
       icon: Stethoscope,
       title: 'General Practice',
-      description: 'Comprehensive primary care with preventive medicine, evidence-based treatment, and patient-centered approach for all ages',
+      description: 'Comprehensive primary care with preventive medicine, evidence-based treatment, and patient-centered approach. Experienced in SSO and Check-up departments.',
       color: 'from-blue-500/10 to-blue-600/10',
       iconColor: 'text-blue-600',
     },
     {
       icon: Activity,
-      title: 'Anti-aging Medicine',
-      description: 'Advanced cellular rejuvenation, hormone optimization, and longevity enhancement using cutting-edge regenerative science',
+      title: 'Occupational Health',
+      description: 'Specialized in occupational health and safety protocols, workplace health assessments, and ensuring employee health standards compliance.',
       color: 'from-green-500/10 to-green-600/10',
       iconColor: 'text-green-600',
     },
     {
       icon: Sparkles,
       title: 'Aesthetic Medicine',
-      description: 'Non-invasive cosmetic procedures, dermal fillers, skin rejuvenation, and beauty enhancement with artistic precision',
+      description: 'Expert in filler techniques and aesthetic procedures. Teaching Assistant for hands-on aesthetic training programs at CMC Training Center and Academy Aesthetic Training.',
       color: 'from-purple-500/10 to-purple-600/10',
       iconColor: 'text-purple-600',
     },
     {
       icon: Wind,
-      title: 'Thai Massage Therapy',
-      description: 'Traditional healing massage combining acupressure, yoga-like stretches, and energy line work for holistic wellness',
+      title: 'Anti-Aging & Regenerative Science',
+      description: 'Currently pursuing M.Sc. in Anti-Aging and Regenerative Science, applying cutting-edge regenerative medicine approaches for holistic wellness.',
       color: 'from-orange-500/10 to-orange-600/10',
       iconColor: 'text-orange-600',
     },
     {
       icon: Music,
-      title: 'Sound Healing',
-      description: 'Ancient Tibetan singing bowl techniques for stress reduction, energy balance, and deep therapeutic relaxation',
+      title: 'Traditional Healing',
+      description: 'Certified in Traditional Thai Massage and Tibetan Singing Bowl Sound Healing, integrating ancient techniques with modern medical practice.',
       color: 'from-pink-500/10 to-pink-600/10',
       iconColor: 'text-pink-600',
     },
     {
       icon: Palette,
-      title: 'Creative Wellness',
-      description: 'Integrating medical expertise with artistic expression in drawing and creative therapies for holistic healing',
+      title: 'Digital Commercial Art',
+      description: 'Passionate Digital Commercial Artist, bringing a unique blend of scientific precision and creative vision to every project.',
       color: 'from-teal-500/10 to-teal-600/10',
       iconColor: 'text-teal-600',
     },
@@ -66,7 +66,7 @@ export default function MedicalSpecialties() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Comprehensive Care Services</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Blending modern medical science with traditional healing practices for complete wellness
+            Bridging clinical practice with education and creative artistry
           </p>
         </motion.div>
 

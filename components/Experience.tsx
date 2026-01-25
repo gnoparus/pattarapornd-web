@@ -9,39 +9,75 @@ import { experienceImages } from '@/lib/unsplashImages'
 export default function Experience() {
   const experiences = [
     {
-      period: '2018 - Present',
-      title: 'General Practitioner',
+      period: 'Dec 2023 - Jan 2026',
+      title: 'General Practitioner – SSO Department',
       organization: 'Phyathai Nawamin Hospital',
       location: 'Bangkok, Thailand',
-      description: 'Providing holistic medical care in one of Bangkok\'s premier hospitals, diagnosing complex cases and applying evidence-based medicine in a multidisciplinary environment.',
+      description: 'Served as a General Practitioner within the Social Security Office (SSO) department, providing comprehensive medical care to patients covered under the social security scheme.',
       achievements: [
-        'Delivered comprehensive patient-centered care across 500+ diverse medical cases annually',
-        'Collaborated with multidisciplinary teams on data-driven treatment protocols',
-        'Implemented healthcare data workflows that improved patient outcomes by 25%',
+        'Provided quality healthcare services to social security patients',
+        'Maintained high standards of patient care and documentation',
+        'Collaborated with multidisciplinary healthcare teams',
       ],
     },
     {
-      period: '2016 - 2018',
-      title: 'General Practitioner',
-      organization: 'Bangson General Clinic',
+      period: 'Jul 2025 - Jan 2026',
+      title: 'General Practitioner – Check-up Department',
+      organization: 'Phyathai Nawamin Hospital',
       location: 'Bangkok, Thailand',
-      description: 'Delivered efficient outpatient care in a fast-paced clinic environment, building strong patient relationships through empathetic communication.',
+      description: 'Conducted general health check-ups and comprehensive patient assessments in the Check-up Department.',
       achievements: [
-        'Provided efficient and compassionate outpatient care to 3000+ patients',
-        'Built lasting patient relationships through empathetic communication',
-        'Developed critical decision-making skills in high-pressure emergency situations',
+        'Founding member of Tele Care Center',
+        'Conducted thorough general health check-ups and assessments',
+        'Provided preventive health recommendations to patients',
       ],
     },
     {
-      period: '2015 - 2016',
-      title: 'General Practitioner',
-      organization: 'Oboun Family Clinic (UC Clinic)',
-      location: 'Thailand',
-      description: 'Managed comprehensive care under Thailand\'s Universal Coverage Scheme, delivering quality healthcare with optimized resources.',
+      period: 'Nov 2025 - Jan 2026',
+      title: 'Occupational Health and Safety Specialist',
+      organization: 'Phyathai Nawamin Hospital',
+      location: 'Bangkok, Thailand',
+      description: 'Part-time role managing occupational health and safety protocols, ensuring workplace safety compliance and employee health standards.',
       achievements: [
-        'Delivered quality care within Universal Coverage Scheme constraints',
-        'Managed comprehensive family medicine services for diverse patient populations',
-        'Developed expertise in resource-optimized healthcare delivery',
+        'Managed occupational health and safety protocols',
+        'Conducted workplace health assessments',
+        'Implemented safety compliance measures',
+      ],
+    },
+    {
+      period: 'Jun 2025 - Present',
+      title: 'Teaching Assistant',
+      organization: 'CMC Training Center',
+      location: 'Thailand',
+      description: 'Part-time Teaching Assistant specializing in Basic Aesthetic Hands-on training programs, providing hands-on guidance to medical professionals.',
+      achievements: [
+        'Specialized in Basic Aesthetic Hands-on training',
+        'Mentored medical professionals in aesthetic techniques',
+        'Contributed to curriculum development',
+      ],
+    },
+    {
+      period: 'May 2025 - Present',
+      title: 'Training Assistant',
+      organization: 'Academy Aesthetic Training',
+      location: 'Thailand',
+      description: 'Part-time Training Assistant for Basic Aesthetic and Advanced Filler Hands-on procedures, supporting professional aesthetic education.',
+      achievements: [
+        'Assisted in Basic Aesthetic training programs',
+        'Supported Advanced Filler Hands-on procedures training',
+        'Provided practical guidance to trainees',
+      ],
+    },
+    {
+      period: 'Jan 2022 - Present',
+      title: 'Digital Commercial Artist',
+      organization: 'Tomodachi T-shirt',
+      location: 'Thailand',
+      description: 'Freelance digital commercial artist creating unique designs that blend scientific precision with creative vision.',
+      achievements: [
+        'Created digital commercial art and designs',
+        'Developed unique visual concepts for merchandise',
+        'Combined artistic skills with commercial applications',
       ],
     },
   ]
@@ -62,7 +98,7 @@ export default function Experience() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Professional Experience</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A decade of dedication to advancing healthcare excellence and patient care
+            A diverse career bridging clinical practice, education, and creative arts
           </p>
         </motion.div>
 

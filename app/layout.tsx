@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Dr. Pattarapornd Suparcha | Aesthetic Medicine & Holistic Wellness',
-  description: 'Bridging advanced aesthetic medicine with traditional Thai healing for transformative care. Offering General Practice, Anti-aging Medicine, Aesthetic Medicine, Thai Massage, Sound Healing, and Creative Wellness.',
-  keywords: ['aesthetic medicine', 'holistic wellness', 'anti-aging', 'Thai massage', 'sound healing', 'general practice', 'Bangkok doctor'],
+  title: 'Dr. Pattarapornd Suparcha | General Practitioner & M.Sc. Candidate',
+  description: 'Medical doctor and General Practitioner with expertise in Occupational Health and Aesthetic Medicine. Currently pursuing M.Sc. in Anti-Aging and Regenerative Science. Teaching Assistant for aesthetic training programs and Digital Commercial Artist based in Bangkok, Thailand.',
+  keywords: ['general practitioner', 'occupational health', 'aesthetic medicine', 'anti-aging', 'regenerative science', 'Bangkok doctor', 'teaching assistant', 'digital artist'],
 }
 
 export default function RootLayout({

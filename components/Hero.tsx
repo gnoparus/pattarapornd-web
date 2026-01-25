@@ -9,9 +9,9 @@ import { heroImages } from '@/lib/unsplashImages'
 
 export default function Hero() {
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '10+' },
-    { icon: GraduationCap, label: 'Certifications', value: '6' },
-    { icon: Users, label: 'Happy Patients', value: '155k+' },
+    { icon: Award, label: 'Years Experience', value: '2+' },
+    { icon: GraduationCap, label: 'Specializations', value: '3' },
+    { icon: Users, label: 'Training Programs', value: '2' },
   ]
 
   return (
@@ -58,7 +58,7 @@ export default function Hero() {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="text-base text-muted-foreground leading-relaxed max-w-xl"
               >
-                Dr. Pattarapornd Suparcha combines aesthetic medicine expertise, anti-aging treatments, and artistic sensibility with traditional Thai healing for naturally beautiful results.
+                Dr. Pattarapornd Suparcha is a General Practitioner with expertise in Occupational Health and Aesthetic Medicine, currently pursuing M.Sc. in Anti-Aging and Regenerative Science while serving as a Teaching Assistant for aesthetic training programs.
               </motion.p>
             </div>
 
@@ -121,15 +121,15 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Experience</div>
-                    <div className="text-3xl font-bold text-foreground">10+ Years</div>
+                    <div className="text-3xl font-bold text-foreground">2+ Years</div>
                   </div>
                   <div>
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Licenses</div>
-                    <div className="text-3xl font-bold text-foreground">3 Board</div>
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Currently</div>
+                    <div className="text-3xl font-bold text-foreground">M.Sc.</div>
                   </div>
                   <div className="col-span-2">
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Patients</div>
-                    <div className="text-3xl font-bold text-foreground">155k+ Happy</div>
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Focus</div>
+                    <div className="text-3xl font-bold text-foreground">Anti-Aging & Regenerative Science</div>
                   </div>
                 </div>
               </div>
