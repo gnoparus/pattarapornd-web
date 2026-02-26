@@ -9,7 +9,20 @@ import { experienceImages } from '@/lib/unsplashImages'
 export default function Experience() {
   const experiences = [
     {
-      period: '2018 - Present',
+      period: '2024 - Present',
+      title: 'Anti-Aging Aesthetics & General Practitioner',
+      organization: 'Inspire IVF Thailand',
+      location: 'Bangkok, Thailand',
+      description: 'Providing anti-aging aesthetics and general practice services at Bangkok\'s premier fertility center. Inspire IVF is a luxurious, state-of-the-art, all-inclusive Fertility Centre offering personalized one-on-one care with access to fertility assessment, IVF, ICSI, IUI, PGD/PGS, Carrier Screening, Fertility Preservation, and comprehensive Assisted Reproductive Technology treatments.',
+      achievements: [
+        'Delivering specialized anti-aging and aesthetic medicine treatments in a world-class fertility center',
+        'Providing comprehensive general practice care with personalized attention to international and local clients',
+        'Integrating holistic wellness approaches with cutting-edge aesthetic and anti-aging treatments',
+      ],
+      image: '/inspire_ivf_clinic101.webp',
+    },
+    {
+      period: '2018 - 2024',
       title: 'General Practitioner',
       organization: 'Phyathai Nawamin Hospital',
       location: 'Bangkok, Thailand',
@@ -104,6 +117,20 @@ export default function Experience() {
               viewport={{ once: true }}
             >
               <Card className="p-8 hover:shadow-xl transition-shadow border-violet-100">
+                {/* Featured Image for Inspire IVF */}
+                {exp.image && (
+                  <div className="mb-6 -mx-8 -mt-8">
+                    <div className="aspect-video relative overflow-hidden">
+                      <Image
+                        src={exp.image}
+                        alt={exp.organization}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                )}
+                
                 <div className="grid lg:grid-cols-4 gap-8">
                   {/* Left - Period & Icon */}
                   <div className="lg:col-span-1">

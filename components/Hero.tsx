@@ -58,7 +58,7 @@ export default function Hero() {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="text-base text-muted-foreground leading-relaxed max-w-xl"
               >
-                Dr. Pattarapornd Suparcha combines aesthetic medicine expertise, anti-aging treatments, and artistic sensibility with traditional Thai healing for naturally beautiful results.
+                Dr. Pattarapornd Suparcha (Ploy) is an Anti-Aging Aesthetics and General Practitioner at Inspire IVF Thailand, Bangkok's premier fertility and wellness center. She combines aesthetic medicine expertise, anti-aging treatments, and artistic sensibility with traditional Thai healing for naturally beautiful results.
               </motion.p>
             </div>
 
