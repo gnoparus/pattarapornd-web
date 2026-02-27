@@ -11,8 +11,16 @@ import { educationImages } from '@/lib/unsplashImages'
 const education = [
   {
     id: 1,
-    degree: 'Doctor of Medicine (M.D.)',
-    institution: 'Rangsit University (Rajavithi Hospital) College of Medicine',
+    degree: 'Master of Science (MS) in Medicine',
+    institution: 'Dhurakij Pundit University (DPU)',
+    year: '2025 - 2027',
+    description: 'Currently pursuing a Master of Science degree in Medicine, advancing clinical research and medical knowledge',
+    icon: GraduationCap,
+  },
+  {
+    id: 2,
+    degree: "Bachelor's Degree, Doctor of Medicine (M.D.)",
+    institution: 'Rangsit University, College of Medicine',
     year: '2015',
     description: 'Emphasized patient-centered care with hands-on training in a clinical environment',
     icon: GraduationCap,
@@ -22,9 +30,9 @@ const education = [
 const certifications = [
   {
     id: 1,
-    title: 'Certificate in Basic Occupational Medicine',
+    title: 'Fundamental Occupational Medicine',
     issuer: 'Chiang Mai University',
-    year: '2016',
+    year: '2023',
     icon: Award,
   },
   {
@@ -100,7 +108,7 @@ export default function Education() {
           aria-hidden="true"
         />
       </div>
-      
+
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -127,7 +135,7 @@ export default function Education() {
           >
             Academic Qualifications
           </motion.h3>
-          
+
           {/* Decorative image banner for academic section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -136,7 +144,7 @@ export default function Education() {
             className="mb-8 rounded-2xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 relative group"
           >
             <div className="relative h-48 md:h-64">
-              <Image 
+              <Image
                 src={educationImages[0].url}
                 alt={educationImages[0].alt}
                 fill
@@ -152,7 +160,7 @@ export default function Education() {
               </div>
             </div>
           </motion.div>
-          
+
           <div className="space-y-6">
             {education.map((edu, index) => {
               const Icon = edu.icon
@@ -168,7 +176,7 @@ export default function Education() {
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex items-start flex-1">
-                          <motion.div 
+                          <motion.div
                             className="mr-4 mt-1"
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             transition={{ duration: 0.3 }}
@@ -203,7 +211,7 @@ export default function Education() {
           >
             Professional Certifications
           </motion.h3>
-          
+
           {/* Decorative image for certifications section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -212,7 +220,7 @@ export default function Education() {
             className="mb-8 rounded-2xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 relative group"
           >
             <div className="relative h-40 md:h-48">
-              <Image 
+              <Image
                 src={educationImages[2].url}
                 alt={educationImages[2].alt}
                 fill
@@ -228,7 +236,7 @@ export default function Education() {
               </div>
             </div>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => {
               const Icon = cert.icon
@@ -242,7 +250,7 @@ export default function Education() {
                 >
                   <Card className="h-full hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-card/80 backdrop-blur-sm border-muted hover:border-primary">
                     <CardContent className="p-6">
-                      <motion.div 
+                      <motion.div
                         className="mb-4"
                         whileHover={{ scale: 1.2, rotate: 10 }}
                         transition={{ duration: 0.3 }}

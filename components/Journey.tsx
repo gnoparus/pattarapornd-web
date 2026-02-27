@@ -8,25 +8,25 @@ import { GraduationCap, Download, Award, Brain } from 'lucide-react'
 export default function Journey() {
   const education = [
     {
-      year: '2015',
-      title: 'Doctor of Medicine (M.D.)',
-      institution: 'Rangsit University',
-      description: 'Graduated with honors, focusing on internal medicine and dermatology fundamentals. Completed comprehensive clinical rotations across Thailand\'s top teaching hospitals.',
+      year: '2025 - 2027',
+      title: 'Master of Science (MS) in Medicine',
+      institution: 'Dhurakij Pundit University (DPU)',
+      description: 'Currently pursuing a Master of Science degree in Medicine, furthering clinical research and medical expertise.',
       icon: GraduationCap,
     },
     {
-      year: '2018',
-      title: 'Aesthetic Medicine',
+      year: '2023',
+      title: 'Fundamental Occupational Medicine',
       institution: 'Chiang Mai University',
-      description: 'Advanced certification in non-invasive cosmetic procedures and facial anatomy.',
+      description: 'Specialized certification in occupational medicine fundamentals, workplace health, and safety protocols.',
       icon: Award,
     },
     {
-      year: '2018',
-      title: 'Anti-Aging Science',
-      institution: 'Dhurakij Pundit University',
-      description: 'Specialized training in integrative wellness and age-management protocols.',
-      icon: Award,
+      year: '2015',
+      title: "Bachelor's Degree, Doctor of Medicine (M.D.)",
+      institution: 'Rangsit University, College of Medicine',
+      description: 'Graduated with comprehensive clinical training, focusing on internal medicine and patient-centered care across Thailand\'s top teaching hospitals.',
+      icon: GraduationCap,
     },
   ]
 
@@ -109,7 +109,7 @@ export default function Journey() {
           <Card className="bg-linear-to-br from-purple-700 to-purple-900 text-white p-12 border-none shadow-2xl overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl" />
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">

@@ -9,52 +9,61 @@ import { experienceImages } from '@/lib/unsplashImages'
 export default function Experience() {
   const experiences = [
     {
-      period: '2024 - Present',
-      title: 'Anti-Aging Aesthetics & General Practitioner',
-      organization: 'Inspire IVF Thailand',
+      period: 'Feb 2026 - Present',
+      title: 'Anti-Aging, Aesthetics & General Practitioner',
+      organization: 'Inspire IVF Thailand — Wellness Department',
       location: 'Bangkok, Thailand',
-      description: 'Providing anti-aging aesthetics and general practice services at Bangkok\'s premier fertility center. Inspire IVF is a luxurious, state-of-the-art, all-inclusive Fertility Centre offering personalized one-on-one care with access to fertility assessment, IVF, ICSI, IUI, PGD/PGS, Carrier Screening, Fertility Preservation, and comprehensive Assisted Reproductive Technology treatments.',
+      description: 'Inspire IVF is a new and luxurious, purpose-built, state-of-the-art, all-inclusive Fertility Centre, located in the heart of Bangkok, Thailand. Dr. Pattarapornd (Ploy) offers personalized one-on-one care and attention in the Wellness Department, combining anti-aging medicine, aesthetic treatments, and general practice with a holistic approach to patient wellbeing.',
       achievements: [
-        'Delivering specialized anti-aging and aesthetic medicine treatments in a world-class fertility center',
+        'Delivering specialized anti-aging and aesthetic medicine treatments in a world-class fertility and wellness center',
         'Providing comprehensive general practice care with personalized attention to international and local clients',
-        'Integrating holistic wellness approaches with cutting-edge aesthetic and anti-aging treatments',
+        'Integrating holistic wellness approaches with cutting-edge medical technology',
       ],
       image: '/inspire_ivf_clinic101.webp',
     },
     {
-      period: '2018 - 2024',
-      title: 'General Practitioner',
+      period: 'Jun 2025 - Present',
+      title: 'Teacher Assistant',
+      organization: 'CMC Training Center',
+      location: 'Bangkok, Thailand',
+      description: 'Assisting in hands-on training sessions for medical professionals seeking to learn and refine aesthetic procedures.',
+      achievements: [
+        'Facilitating Basic Aesthetic Hands-on training courses',
+        'Guiding trainees through practical aesthetic techniques and procedures',
+      ],
+    },
+    {
+      period: 'May 2025 - Present',
+      title: 'Training Assistant',
+      organization: 'Academy Aesthetic Training',
+      location: 'Bangkok, Thailand',
+      description: 'Supporting advanced aesthetic training programs for medical practitioners looking to expand their expertise in facial aesthetics.',
+      achievements: [
+        'Assisting in Basic Aesthetic and Advanced Filler Hands-on training',
+        'Helping trainees develop precision techniques in injectable treatments',
+      ],
+    },
+    {
+      period: 'Dec 2023 - Jan 2026',
+      title: 'General Practitioner & OHS Specialist',
       organization: 'Phyathai Nawamin Hospital',
       location: 'Bangkok, Thailand',
-      description: 'Providing holistic medical care in one of Bangkok\'s premier hospitals, diagnosing complex cases and applying evidence-based medicine in a multidisciplinary environment.',
+      description: 'Served in multiple capacities over 2 years at one of Bangkok\'s premier hospitals, including general practice, occupational health & safety, and founding the Tele Care Center.',
       achievements: [
-        'Delivered comprehensive patient-centered care across 500+ diverse medical cases annually',
-        'Collaborated with multidisciplinary teams on data-driven treatment protocols',
-        'Implemented healthcare data workflows that improved patient outcomes by 25%',
+        'Occupational Health and Safety Specialist in the Check-up Department (Nov 2025 – Jan 2026)',
+        'General Practitioner in the Check-up Department (Jul 2025 – Jan 2026)',
+        'Founding member of the Tele Care Center, SSO Department (Dec 2023 – Jan 2026)',
       ],
     },
     {
-      period: '2016 - 2018',
-      title: 'General Practitioner',
-      organization: 'Bangson General Clinic',
-      location: 'Bangkok, Thailand',
-      description: 'Delivered efficient outpatient care in a fast-paced clinic environment, building strong patient relationships through empathetic communication.',
-      achievements: [
-        'Provided efficient and compassionate outpatient care to 3000+ patients',
-        'Built lasting patient relationships through empathetic communication',
-        'Developed critical decision-making skills in high-pressure emergency situations',
-      ],
-    },
-    {
-      period: '2015 - 2016',
-      title: 'General Practitioner',
-      organization: 'Oboun Family Clinic (UC Clinic)',
+      period: 'Jan 2022 - Present',
+      title: 'Digital Commercial Artist',
+      organization: 'Tomodachi T-shirt',
       location: 'Thailand',
-      description: 'Managed comprehensive care under Thailand\'s Universal Coverage Scheme, delivering quality healthcare with optimized resources.',
+      description: 'Creating digital commercial artwork and designs for a creative apparel brand, combining artistic sensibility with commercial design.',
       achievements: [
-        'Delivered quality care within Universal Coverage Scheme constraints',
-        'Managed comprehensive family medicine services for diverse patient populations',
-        'Developed expertise in resource-optimized healthcare delivery',
+        'Producing original digital artwork for commercial merchandise',
+        'Blending artistic creativity with commercial brand identity',
       ],
     },
   ]
@@ -90,16 +99,17 @@ export default function Experience() {
           <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
             <div className="aspect-21/9 lg:aspect-16/5 relative group">
               <Image
-                src={experienceImages[0].url}
-                alt={experienceImages[0].alt}
+                src="/inspire_ivf_clinic101.webp"
+                alt="Inspire IVF Thailand Fertility Clinic"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                priority
               />
               <div className="absolute inset-0 bg-linear-to-r from-violet-900/70 via-purple-900/50 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-start px-12">
                 <div className="text-white max-w-xl">
                   <h3 className="text-3xl lg:text-4xl font-bold mb-3">Professional Excellence</h3>
-                  <p className="text-base lg:text-lg text-white/90">Delivering exceptional patient care through innovation, compassion, and expertise</p>
+                  <p className="text-base lg:text-lg text-white/90">Working as Anti-Aging, Aesthetics & General Practitioner at Inspire IVF — Wellness Department</p>
                 </div>
               </div>
             </div>
@@ -130,7 +140,7 @@ export default function Experience() {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="grid lg:grid-cols-4 gap-8">
                   {/* Left - Period & Icon */}
                   <div className="lg:col-span-1">
@@ -150,7 +160,7 @@ export default function Experience() {
                     <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
                     <p className="text-primary font-semibold mb-4">{exp.organization}</p>
                     <p className="text-muted-foreground leading-relaxed mb-6">{exp.description}</p>
-                    
+
                     <div>
                       <h4 className="font-semibold text-sm uppercase tracking-wider text-foreground mb-3">Key Achievements</h4>
                       <ul className="space-y-2">
