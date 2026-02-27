@@ -10,18 +10,18 @@ export default function About() {
   const services = [
     {
       icon: Sparkles,
-      title: 'Aesthetic Medicine & Training',
-      description: 'Expert in filler and aesthetic techniques, actively contributing as a Teaching Assistant for hands-on aesthetic training programs. Delivering natural beauty enhancement with medical precision and artistic vision.',
+      title: 'Aesthetic Artistry',
+      description: 'Merging medical precision with artistic vision for natural beauty enhancement. Advanced injectables, laser treatments, and skin rejuvenation delivered with an artist\'s eye for harmony and balance.',
     },
     {
       icon: Heart,
-      title: 'Anti-Aging & Regenerative Science',
-      description: 'Currently pursuing M.Sc. in Anti-Aging and Regenerative Science, serving as Class President. Combining cutting-edge regenerative medicine with evidence-based anti-aging treatments for holistic vitality.',
+      title: 'Anti-Aging & Wellness',
+      description: 'Cellular rejuvenation and regenerative medicine techniques that turn back time naturally. Combining cutting-edge anti-aging treatments with traditional healing practices for holistic vitality.',
     },
     {
       icon: Activity,
-      title: 'Occupational Health & General Practice',
-      description: 'Comprehensive healthcare services including occupational health and safety protocols, general health check-ups, and patient assessments. A founding member of Tele Care Center initiatives.',
+      title: 'Holistic Integration',
+      description: 'Drawing, Thai massage, and singing bowl therapy complement medical treatments. A creative, multidimensional approach to healing that addresses physical, emotional, and aesthetic wellbeing.',
     },
   ]
 
@@ -39,14 +39,14 @@ export default function About() {
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
             <span className="text-primary text-sm font-semibold uppercase tracking-wider">About the Doctor</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Meet Dr. Pattarapornd</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Meet Dr. Pattarapornd (Ploy)</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A dedicated medical doctor and General Practitioner with expertise in Occupational Health and Aesthetic Medicine. Currently pursuing an M.Sc. in Anti-Aging and Regenerative Science at Dhurakij Pundit University, Dr. Suparcha bridges clinical practice with education as a Teaching Assistant for aesthetic training programs, while bringing creative vision to every project as a Digital Commercial Artist.
+            A physician who approaches medicine as an art form. Currently serving as an Anti-Aging Aesthetics and General Practitioner at Inspire IVF Thailand, Dr. Suparcha specializes in aesthetic medicine, anti-aging treatments, and holistic wellness, believing true beauty emerges when medical precision meets artistic vision.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Left - Doctor Image */}
+          {/* Left - Doctor Image Gallery */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,22 +54,57 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 bg-linear-to-br from-violet-100 via-purple-50 to-pink-50">
-              <div className="aspect-3/4 relative group flex items-center justify-center p-8">
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                  src="/avatar with bg.JPG"
-                  alt="Dr. Pattarapornd Suparcha"
+            {/* Main Featured Image */}
+            <div className="relative rounded-3xl overflow-hidden shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500 bg-white">
+              <div className="aspect-[3/4] relative group">
+                <Image
+                  src="/studio-photo-1.jpg"
+                  alt="Dr. Pattarapornd Suparcha - Professional Portrait"
                   fill
-                  className="object-contain object-center transition-transform duration-700 scale-[0.7] group-hover:scale-[0.75]"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   priority
-                  />
-                </div>
+                />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-black/70 via-black/40 to-transparent">
                   <h3 className="text-2xl font-bold mb-1 text-white">Dr. Pattarapornd Suparcha</h3>
-                  <p className="text-sm text-white/90">M.D. | General Practitioner | M.Sc. Candidate</p>
+                  <p className="text-sm text-white/90">M.D., Aesthetic Medicine Specialist</p>
                 </div>
               </div>
+            </div>
+
+            {/* Secondary Images Grid */}
+            <div className="grid grid-cols-2 gap-4 mt-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="aspect-[3/4] relative group">
+                  <Image
+                    src="/studio-photo-2.jpg"
+                    alt="Dr. Pattarapornd Suparcha"
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="aspect-[3/4] relative group">
+                  <Image
+                    src="/studio-photo-3.jpg"
+                    alt="Dr. Pattarapornd Suparcha"
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </motion.div>
             </div>
 
             {/* Floating credentials badge */}
@@ -78,12 +113,12 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               viewport={{ once: true }}
-              className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 border border-violet-100"
+              className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-2xl p-6 border border-violet-100"
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">M.D.</div>
-                <div className="text-xs text-muted-foreground mt-1">General Practitioner</div>
-                <div className="text-xs text-muted-foreground">M.Sc. Candidate</div>
+                <div className="text-xs text-muted-foreground mt-1">Aesthetic Medicine</div>
+                <div className="text-xs text-muted-foreground">Specialist</div>
               </div>
             </motion.div>
           </motion.div>
@@ -141,7 +176,7 @@ export default function About() {
                 </div>
                 <div className="text-left">
                   <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                  <div className="text-sm text-muted-foreground">M.D., General Practitioner · Digital Artist · Cat Lover 🐱</div>
+                  <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist · Cat Lover 🐱</div>
                 </div>
               </div>
             </div>

@@ -9,75 +9,62 @@ import { experienceImages } from '@/lib/unsplashImages'
 export default function Experience() {
   const experiences = [
     {
-      period: 'Dec 2023 - Jan 2026',
-      title: 'General Practitioner – SSO Department',
-      organization: 'Phyathai Nawamin Hospital',
+      period: 'Feb 2026 - Present',
+      title: 'Anti-Aging, Aesthetics & General Practitioner',
+      organization: 'Inspire IVF Thailand — Wellness Department',
       location: 'Bangkok, Thailand',
-      description: 'Served as a General Practitioner within the Social Security Office (SSO) department, providing comprehensive medical care to patients covered under the social security scheme.',
+      description: 'Inspire IVF is a new and luxurious, purpose-built, state-of-the-art, all-inclusive Fertility Centre, located in the heart of Bangkok, Thailand. Dr. Pattarapornd (Ploy) offers personalized one-on-one care and attention in the Wellness Department, combining anti-aging medicine, aesthetic treatments, and general practice with a holistic approach to patient wellbeing.',
       achievements: [
-        'Provided quality healthcare services to social security patients',
-        'Maintained high standards of patient care and documentation',
-        'Collaborated with multidisciplinary healthcare teams',
+        'Delivering specialized anti-aging and aesthetic medicine treatments in a world-class fertility and wellness center',
+        'Providing comprehensive general practice care with personalized attention to international and local clients',
+        'Integrating holistic wellness approaches with cutting-edge medical technology',
       ],
-    },
-    {
-      period: 'Jul 2025 - Jan 2026',
-      title: 'General Practitioner – Check-up Department',
-      organization: 'Phyathai Nawamin Hospital',
-      location: 'Bangkok, Thailand',
-      description: 'Conducted general health check-ups and comprehensive patient assessments in the Check-up Department.',
-      achievements: [
-        'Founding member of Tele Care Center',
-        'Conducted thorough general health check-ups and assessments',
-        'Provided preventive health recommendations to patients',
-      ],
-    },
-    {
-      period: 'Nov 2025 - Jan 2026',
-      title: 'Occupational Health and Safety Specialist',
-      organization: 'Phyathai Nawamin Hospital',
-      location: 'Bangkok, Thailand',
-      description: 'Part-time role managing occupational health and safety protocols, ensuring workplace safety compliance and employee health standards.',
-      achievements: [
-        'Managed occupational health and safety protocols',
-        'Conducted workplace health assessments',
-        'Implemented safety compliance measures',
-      ],
+      image: '/inspire_ivf_clinic101.webp',
     },
     {
       period: 'Jun 2025 - Present',
-      title: 'Teaching Assistant',
+      title: 'Teacher Assistant',
       organization: 'CMC Training Center',
-      location: 'Thailand',
-      description: 'Part-time Teaching Assistant specializing in Basic Aesthetic Hands-on training programs, providing hands-on guidance to medical professionals.',
+      location: 'Bangkok, Thailand',
+      description: 'Assisting in hands-on training sessions for medical professionals seeking to learn and refine aesthetic procedures.',
       achievements: [
-        'Specialized in Basic Aesthetic Hands-on training',
-        'Mentored medical professionals in aesthetic techniques',
-        'Contributed to curriculum development',
+        'Facilitating Basic Aesthetic Hands-on training courses',
+        'Guiding trainees through practical aesthetic techniques and procedures',
       ],
     },
     {
       period: 'May 2025 - Present',
       title: 'Training Assistant',
       organization: 'Academy Aesthetic Training',
-      location: 'Thailand',
-      description: 'Part-time Training Assistant for Basic Aesthetic and Advanced Filler Hands-on procedures, supporting professional aesthetic education.',
+      location: 'Bangkok, Thailand',
+      description: 'Supporting advanced aesthetic training programs for medical practitioners looking to expand their expertise in facial aesthetics.',
       achievements: [
-        'Assisted in Basic Aesthetic training programs',
-        'Supported Advanced Filler Hands-on procedures training',
-        'Provided practical guidance to trainees',
+        'Assisting in Basic Aesthetic and Advanced Filler Hands-on training',
+        'Helping trainees develop precision techniques in injectable treatments',
       ],
+    },
+    {
+      period: 'Dec 2023 - Jan 2026',
+      title: 'General Practitioner & OHS Specialist',
+      organization: 'Phyathai Nawamin Hospital',
+      location: 'Bangkok, Thailand',
+      description: 'Served in multiple capacities over 2 years at one of Bangkok\'s premier hospitals, including general practice, occupational health & safety, and founding the Tele Care Center.',
+      achievements: [
+        'Occupational Health and Safety Specialist in the Check-up Department (Nov 2025 – Jan 2026)',
+        'General Practitioner in the Check-up Department (Jul 2025 – Jan 2026)',
+        'Founding member of the Tele Care Center, SSO Department (Dec 2023 – Jan 2026)',
+      ],
+      image: '/pattarapornd-phayathai-navamin-hospital101.png',
     },
     {
       period: 'Jan 2022 - Present',
       title: 'Digital Commercial Artist',
       organization: 'Tomodachi T-shirt',
       location: 'Thailand',
-      description: 'Freelance digital commercial artist creating unique designs that blend scientific precision with creative vision.',
+      description: 'Creating digital commercial artwork and designs for a creative apparel brand, combining artistic sensibility with commercial design.',
       achievements: [
-        'Created digital commercial art and designs',
-        'Developed unique visual concepts for merchandise',
-        'Combined artistic skills with commercial applications',
+        'Producing original digital artwork for commercial merchandise',
+        'Blending artistic creativity with commercial brand identity',
       ],
     },
   ]
@@ -98,7 +85,7 @@ export default function Experience() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Professional Experience</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A diverse career bridging clinical practice, education, and creative arts
+            A decade of dedication to advancing healthcare excellence and patient care
           </p>
         </motion.div>
 
@@ -113,16 +100,17 @@ export default function Experience() {
           <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
             <div className="aspect-21/9 lg:aspect-16/5 relative group">
               <Image
-                src={experienceImages[0].url}
-                alt={experienceImages[0].alt}
+                src="/pattarapornd-abstract-blur-defocused-shopping-mall.jpg"
+                alt="Abstract blur defocused shopping mall"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                priority
               />
               <div className="absolute inset-0 bg-linear-to-r from-violet-900/70 via-purple-900/50 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-start px-12">
                 <div className="text-white max-w-xl">
                   <h3 className="text-3xl lg:text-4xl font-bold mb-3">Professional Excellence</h3>
-                  <p className="text-base lg:text-lg text-white/90">Delivering exceptional patient care through innovation, compassion, and expertise</p>
+                  <p className="text-base lg:text-lg text-white/90">Working as Anti-Aging, Aesthetics & General Practitioner at Inspire IVF — Wellness Department</p>
                 </div>
               </div>
             </div>
@@ -140,6 +128,20 @@ export default function Experience() {
               viewport={{ once: true }}
             >
               <Card className="p-8 hover:shadow-xl transition-shadow border-violet-100">
+                {/* Featured Image for Inspire IVF */}
+                {exp.image && (
+                  <div className="mb-6 -mx-8 -mt-8">
+                    <div className="aspect-video relative overflow-hidden">
+                      <Image
+                        src={exp.image}
+                        alt={exp.organization}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                )}
+
                 <div className="grid lg:grid-cols-4 gap-8">
                   {/* Left - Period & Icon */}
                   <div className="lg:col-span-1">
@@ -159,7 +161,7 @@ export default function Experience() {
                     <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
                     <p className="text-primary font-semibold mb-4">{exp.organization}</p>
                     <p className="text-muted-foreground leading-relaxed mb-6">{exp.description}</p>
-                    
+
                     <div>
                       <h4 className="font-semibold text-sm uppercase tracking-wider text-foreground mb-3">Key Achievements</h4>
                       <ul className="space-y-2">

@@ -5,13 +5,13 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Award, Users, GraduationCap } from 'lucide-react'
-import { heroImages } from '@/lib/unsplashImages'
+
 
 export default function Hero() {
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '2+' },
-    { icon: GraduationCap, label: 'Specializations', value: '3' },
-    { icon: Users, label: 'Training Programs', value: '2' },
+    { icon: Award, label: 'Years Experience', value: '10+' },
+    { icon: GraduationCap, label: 'Certifications', value: '6' },
+    { icon: Users, label: 'Happy Patients', value: '155k+' },
   ]
 
   return (
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 -left-40 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl" />
       </div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -58,7 +58,7 @@ export default function Hero() {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="text-base text-muted-foreground leading-relaxed max-w-xl"
               >
-                Dr. Pattarapornd Suparcha is a General Practitioner with expertise in Occupational Health and Aesthetic Medicine, currently pursuing M.Sc. in Anti-Aging and Regenerative Science while serving as a Teaching Assistant for aesthetic training programs.
+                Dr. Pattarapornd Suparcha (Ploy) is an Anti-Aging Aesthetics and General Practitioner at Inspire IVF Thailand, Bangkok's premier fertility and wellness center. She combines aesthetic medicine expertise, anti-aging treatments, and artistic sensibility with traditional Thai healing for naturally beautiful results.
               </motion.p>
             </div>
 
@@ -109,8 +109,8 @@ export default function Hero() {
             <Card className="overflow-hidden bg-white border-violet-100 shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
               <div className="aspect-4/3 relative overflow-hidden group">
                 <Image
-                  src={heroImages[2].url}
-                  alt={heroImages[2].alt}
+                  src="/pattarapornd-female-cosmetology-studio-procedures.jpg"
+                  alt="Dr. Pattarapornd performing aesthetic cosmetology procedures in studio"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
@@ -121,15 +121,15 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Experience</div>
-                    <div className="text-3xl font-bold text-foreground">2+ Years</div>
+                    <div className="text-3xl font-bold text-foreground">10+ Years</div>
                   </div>
                   <div>
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Currently</div>
-                    <div className="text-3xl font-bold text-foreground">M.Sc.</div>
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Licenses</div>
+                    <div className="text-3xl font-bold text-foreground">3 Board</div>
                   </div>
                   <div className="col-span-2">
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Focus</div>
-                    <div className="text-3xl font-bold text-foreground">Anti-Aging & Regenerative Science</div>
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Patients</div>
+                    <div className="text-3xl font-bold text-foreground">155k+ Happy</div>
                   </div>
                 </div>
               </div>

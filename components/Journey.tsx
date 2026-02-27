@@ -1,31 +1,33 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { GraduationCap, Download, Award, Brain } from 'lucide-react'
+import { journeyImages } from '@/lib/unsplashImages'
 
 export default function Journey() {
   const education = [
     {
-      year: '2025-2027',
-      title: 'M.Sc. in Anti-Aging and Regenerative Science',
-      institution: 'Dhurakij Pundit University',
-      description: 'Currently pursuing advanced studies in anti-aging and regenerative medicine. Serving as Class President and Union Committee of the Graduate Student.',
+      year: '2025 - 2027',
+      title: 'Master of Science (MS) in Medicine',
+      institution: 'Dhurakij Pundit University (DPU)',
+      description: 'Currently pursuing a Master of Science degree in Medicine, furthering clinical research and medical expertise.',
       icon: GraduationCap,
     },
     {
       year: '2023',
       title: 'Fundamental Occupational Medicine',
       institution: 'Chiang Mai University',
-      description: 'Specialized certification in occupational medicine fundamentals and workplace health management.',
+      description: 'Specialized certification in occupational medicine fundamentals, workplace health, and safety protocols.',
       icon: Award,
     },
     {
       year: '2015',
-      title: 'Doctor of Medicine (M.D.)',
-      institution: 'Rangsit University',
-      description: 'Comprehensive medical training with emphasis on patient-centered care. Active in Union Committee of Medical College.',
+      title: "Bachelor's Degree, Doctor of Medicine (M.D.)",
+      institution: 'Rangsit University, College of Medicine',
+      description: 'Graduated with comprehensive clinical training, focusing on internal medicine and patient-centered care across Thailand\'s top teaching hospitals.',
       icon: GraduationCap,
     },
   ]
@@ -46,7 +48,7 @@ export default function Journey() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">The Journey to Holistic Excellence</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Bridging clinical practice with education and creative artistry. From rigorous medical foundations at Rangsit University to advanced anti-aging science at Dhurakij Pundit University.
+            Bridging the gap between timeless medical wisdom and futuristic technology. From rigorous foundations at Rangsit University to the forefront of AI-driven aesthetic medicine.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mt-8">
             <Button size="lg" variant="outline" className="rounded-full">
@@ -57,6 +59,33 @@ export default function Journey() {
               View Certificates
             </Button>
           </div>
+        </motion.div>
+
+        {/* Banner Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
+            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+              <Image
+                src="/pattarapornd-group-surgeons-wearing-safety-masks-performing-operation-medicine-concept-surgery-medicine-people-concept-group-surgeons-operation-operating-room-hospital.jpg"
+                alt="Group of surgeons performing operation in operating room"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-violet-900/70 via-purple-900/50 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-start px-12">
+                <div className="text-white max-w-xl">
+                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Academic Excellence</h3>
+                  <p className="text-base lg:text-lg text-white/90">From rigorous medical training to the forefront of aesthetic and anti-aging medicine</p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </motion.div>
 
         {/* Timeline */}
@@ -106,10 +135,17 @@ export default function Journey() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <Card className="bg-linear-to-br from-purple-700 to-purple-900 text-white p-12 border-none shadow-2xl overflow-hidden relative">
+          <Card className="text-white p-12 border-none shadow-2xl overflow-hidden relative">
+            <Image
+              src="/pattarapornd-team-industrial-scientists-engineers-developers-innovating-new-vaccine-doctor-pointing-tablet-explaining-virus-evolution-coworker.jpg"
+              alt="Team of scientists and engineers innovating new vaccine"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-linear-to-br from-purple-900/85 via-purple-800/75 to-purple-900/80" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl" />
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
@@ -117,21 +153,18 @@ export default function Journey() {
                 </div>
                 <div>
                   <div className="text-white/70 text-sm font-semibold uppercase tracking-wider">● Current Focus</div>
-                  <h3 className="text-3xl font-bold">Anti-Aging & Regenerative Science</h3>
+                  <h3 className="text-3xl font-bold">AI-Driven Healthcare Integration</h3>
                 </div>
               </div>
               <p className="text-xl text-white/90 mb-6 leading-relaxed max-w-3xl">
-                Pursuing M.Sc. in Anti-Aging and Regenerative Science while contributing to aesthetic medicine education as a Teaching Assistant. Combining clinical practice with academic excellence.
+                Pioneering the use of artificial intelligence for hyper-personalized skin analysis and predictive aging models. Combining data science with dermatology.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30">
-                  Class President
+                  Machine Learning
                 </span>
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30">
-                  Teaching Assistant
-                </span>
-                <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30">
-                  Digital Artist
+                  Data Analysis
                 </span>
               </div>
             </div>
@@ -149,7 +182,7 @@ export default function Journey() {
           <div className="max-w-4xl mx-auto">
             <div className="text-6xl text-primary/20 mb-4">"</div>
             <blockquote className="text-2xl lg:text-3xl font-display italic text-foreground mb-6 leading-relaxed">
-              My mission is to help patients feel confident and healthy, blending the precision of medical science with the art of regenerative medicine and creative expression.
+              True aesthetic medicine isn't just about correcting flaws; it's about understanding the biological narrative of the patient and using technology to rewrite it for longevity.
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -157,7 +190,7 @@ export default function Journey() {
               </div>
               <div className="text-left">
                 <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                <div className="text-sm text-muted-foreground">M.D., M.Sc. Candidate</div>
+                <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist</div>
               </div>
             </div>
           </div>
