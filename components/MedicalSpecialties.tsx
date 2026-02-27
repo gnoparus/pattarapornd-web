@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Stethoscope, Sparkles, Activity, Wind, Music, Palette } from 'lucide-react'
+import { medicalSpecialtiesImages } from '@/lib/unsplashImages'
 
 export default function MedicalSpecialties() {
   const services = [
@@ -68,6 +70,33 @@ export default function MedicalSpecialties() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Blending modern medical science with traditional healing practices for complete wellness
           </p>
+        </motion.div>
+
+        {/* Banner Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
+            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+              <Image
+                src="/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg"
+                alt="Team of doctors standing in conference hospital room discussing treatment"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-purple-900/70 via-violet-900/50 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-start px-12">
+                <div className="text-white max-w-xl">
+                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Expert Medical Care</h3>
+                  <p className="text-base lg:text-lg text-white/90">Combining modern medical science with traditional healing for complete wellness</p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </motion.div>
 
         {/* Services Grid */}

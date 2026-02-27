@@ -54,6 +54,7 @@ export default function Experience() {
         'General Practitioner in the Check-up Department (Jul 2025 – Jan 2026)',
         'Founding member of the Tele Care Center, SSO Department (Dec 2023 – Jan 2026)',
       ],
+      image: '/pattarapornd-phayathai-navamin-hospital101.png',
     },
     {
       period: 'Jan 2022 - Present',
@@ -99,8 +100,8 @@ export default function Experience() {
           <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
             <div className="aspect-21/9 lg:aspect-16/5 relative group">
               <Image
-                src="/inspire_ivf_clinic101.webp"
-                alt="Inspire IVF Thailand Fertility Clinic"
+                src="/pattarapornd-abstract-blur-defocused-shopping-mall.jpg"
+                alt="Abstract blur defocused shopping mall"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority

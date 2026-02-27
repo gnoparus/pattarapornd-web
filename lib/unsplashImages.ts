@@ -1,27 +1,8 @@
 /**
- * Unsplash Image Configuration
+ * Site Image Configuration
  * 
- * This module contains pre-selected Unsplash images for use throughout the application.
- * All images are carefully chosen to align with the medical professional theme.
- * 
- * HOW TO UPDATE IMAGES:
- * 1. Visit https://unsplash.com to find new medical-themed images
- * 2. Select high-quality, professional images that match the section's purpose
- * 3. Use Unsplash's URL API to specify size parameters for optimization:
- *    - &w=WIDTH: Set width (e.g., &w=1920 for full width backgrounds)
- *    - &h=HEIGHT: Set height
- *    - &fit=crop: Crop to fit dimensions
- *    - &q=80: Set quality (80 is good balance between quality and file size)
- * 4. Update the relevant image URL below
- * 5. Test the page to ensure images load properly and look good
- * 
- * RESPONSIVE IMAGES:
- * - Use smaller images for mobile by adjusting the &w parameter
- * - Utilize Next.js Image component for automatic optimization
- * 
- * IMAGE ATTRIBUTION:
- * Unsplash photos are free to use under the Unsplash License.
- * Attribution is appreciated but not required.
+ * Stock images for use throughout the application.
+ * All images are stored locally in the /public directory.
  */
 
 export interface UnsplashImage {
@@ -37,25 +18,25 @@ export interface UnsplashImage {
  */
 export const heroImages: UnsplashImage[] = [
   {
-    // Main hero background - Elegant spa/aesthetic medicine setting
-    url: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Elegant aesthetic medicine spa setting',
-    photographer: 'Patrick Malleret',
-    photographerUrl: 'https://unsplash.com/@patrick_malleret'
+    // Main hero background - Elegant blurred lobby setting
+    url: '/pattarapornd-abstract-blur-defocused-shopping-mall.jpg',
+    alt: 'Elegant modern medical facility lobby',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Professional portrait - Medical doctor
-    url: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80',
-    alt: 'Professional medical doctor in modern setting',
-    photographer: 'CDC',
-    photographerUrl: 'https://unsplash.com/@cdc'
+    // Cosmetic botox treatment
+    url: '/pattarapornd-cosmetic-botox-injection-female-forehead.jpg',
+    alt: 'Professional cosmetic injection treatment',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Modern hospital lobby - Clean architecture
-    url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Modern hospital lobby with clean architecture',
-    photographer: 'Ani Kolleshi',
-    photographerUrl: 'https://unsplash.com/@anikolleshi'
+    // Spa concept with stone therapy - warm and inviting for hero card
+    url: '/pattarapornd-spa-concept-with-sideview-woman-with-long-dark-hair.jpg',
+    alt: 'Spa stone therapy and holistic wellness treatment',
+    photographer: '',
+    photographerUrl: ''
   }
 ]
 
@@ -65,25 +46,25 @@ export const heroImages: UnsplashImage[] = [
  */
 export const educationImages: UnsplashImage[] = [
   {
-    // Medical education and learning
-    url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
-    alt: 'Medical education and academic excellence',
-    photographer: 'National Cancer Institute',
-    photographerUrl: 'https://unsplash.com/@nci'
+    // Team of doctors conferencing - academic/professional
+    url: '/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg',
+    alt: 'Medical team discussing patient treatment in hospital conference room',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Medical textbooks and research
-    url: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80',
-    alt: 'Medical research and academic study',
-    photographer: 'Yudi Ela Lesnussa',
-    photographerUrl: 'https://unsplash.com/@yudiela'
+    // Cosmetology studio - professional procedures
+    url: '/pattarapornd-female-cosmetology-studio-procedures.jpg',
+    alt: 'Professional cosmetology studio procedures',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Graduation and achievement
-    url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80',
-    alt: 'Academic achievement and graduation',
-    photographer: 'Joshua Hoehne',
-    photographerUrl: 'https://unsplash.com/@mrthetrain'
+    // Singing bowl / candle prayer - holistic healing
+    url: '/pattarapornd-side-view-candles-prayer-being-lit.jpg',
+    alt: 'Singing bowl and candle healing ceremony',
+    photographer: '',
+    photographerUrl: ''
   }
 ]
 
@@ -93,32 +74,32 @@ export const educationImages: UnsplashImage[] = [
  */
 export const experienceImages: UnsplashImage[] = [
   {
-    // Modern hospital corridor - Professional environment
-    url: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Modern hospital corridor with professional atmosphere',
-    photographer: 'Olga Guryanova',
-    photographerUrl: 'https://unsplash.com/@designer4u'
+    // Phayathai Nawamin Hospital - actual workplace
+    url: '/pattarapornd-phayathai-navamin-hospital101.png',
+    alt: 'Phayathai Nawamin Hospital interior',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Healthcare technology and innovation
-    url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
-    alt: 'Advanced medical technology and innovation',
-    photographer: 'National Cancer Institute',
-    photographerUrl: 'https://unsplash.com/@nci'
+    // Botox injection - aesthetic treatment expertise
+    url: '/pattarapornd-cosmetic-botox-injection-female-forehead.jpg',
+    alt: 'Professional cosmetic botox injection treatment',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Medical professional consultation
-    url: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=800&q=80',
-    alt: 'Medical consultation and professional expertise',
-    photographer: 'Tima Miroshnichenko',
-    photographerUrl: 'https://unsplash.com/@tima_photographer'
+    // Woman in therapy - close-up treatment
+    url: '/pattarapornd-close-up-blurry-woman-therapy.jpg',
+    alt: 'Woman relaxing during wellness therapy session',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Clean medical examination room
-    url: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
-    alt: 'Clean modern medical examination room',
-    photographer: 'Mufid Majnun',
-    photographerUrl: 'https://unsplash.com/@mufidpwt'
+    // Female cosmetology studio procedures
+    url: '/pattarapornd-female-cosmetology-studio-procedures.jpg',
+    alt: 'Professional cosmetology studio setting',
+    photographer: '',
+    photographerUrl: ''
   }
 ]
 
@@ -128,52 +109,112 @@ export const experienceImages: UnsplashImage[] = [
  */
 export const contactImages: UnsplashImage[] = [
   {
-    // Welcoming medical facility
-    url: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Welcoming medical facility entrance',
-    photographer: 'Martha Dominguez de Gouveia',
-    photographerUrl: 'https://unsplash.com/@mdominguezfoto'
+    // Welcoming environment - elegant blurred lobby
+    url: '/pattarapornd-abstract-blur-defocused-shopping-mall.jpg',
+    alt: 'Welcoming modern medical facility',
+    photographer: '',
+    photographerUrl: ''
   },
   {
-    // Professional communication
-    url: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Professional healthcare communication',
-    photographer: 'Toa Heftiba',
-    photographerUrl: 'https://unsplash.com/@heftiba'
+    // Spa massage - relaxing wellness
+    url: '/pattarapornd-young-beautiful-woman-relaxing-massage-spa-salon.jpg',
+    alt: 'Relaxing spa and wellness experience',
+    photographer: '',
+    photographerUrl: ''
   }
 ]
 
 /**
+ * Medical Specialties / Services Section Images
+ * Theme: Treatment procedures, patient care, modern aesthetics
+ */
+export const medicalSpecialtiesImages: UnsplashImage[] = [
+  {
+    // Cosmetic treatment - showcasing aesthetic procedures
+    url: '/pattarapornd-cosmetic-botox-injection-female-forehead.jpg',
+    alt: 'Professional cosmetic injection treatment',
+    photographer: '',
+    photographerUrl: ''
+  },
+  {
+    // Relaxing spa massage - massage therapy service
+    url: '/pattarapornd-young-beautiful-woman-relaxing-massage-spa-salon.jpg',
+    alt: 'Relaxing spa and wellness massage experience',
+    photographer: '',
+    photographerUrl: ''
+  },
+  {
+    // Singing bowl / candle healing - sound healing service
+    url: '/pattarapornd-side-view-candles-prayer-being-lit.jpg',
+    alt: 'Singing bowl and candle healing ceremony',
+    photographer: '',
+    photographerUrl: ''
+  },
+]
+
+/**
+ * Journey / CV Section Images
+ * Theme: Academic, professional growth, healing arts
+ */
+export const journeyImages: UnsplashImage[] = [
+  {
+    // Team of doctors - academic/professional setting
+    url: '/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg',
+    alt: 'Medical team discussing patient treatment in hospital conference room',
+    photographer: '',
+    photographerUrl: ''
+  },
+  {
+    // Cosmetology studio - professional procedures
+    url: '/pattarapornd-female-cosmetology-studio-procedures.jpg',
+    alt: 'Professional cosmetology studio procedures',
+    photographer: '',
+    photographerUrl: ''
+  },
+]
+
+/**
+ * Skills Section Images
+ * Theme: Professional expertise, precision, patient care  
+ */
+export const skillsImages: UnsplashImage[] = [
+  {
+    // Close-up therapy - patient care expertise
+    url: '/pattarapornd-close-up-blurry-woman-therapy.jpg',
+    alt: 'Close-up of professional therapy session',
+    photographer: '',
+    photographerUrl: ''
+  },
+  {
+    // Spa concept - holistic skills
+    url: '/pattarapornd-spa-concept-with-sideview-woman-with-long-dark-hair.jpg',
+    alt: 'Spa stone therapy and holistic wellness treatment',
+    photographer: '',
+    photographerUrl: ''
+  },
+]
+
+/**
  * Helper function to get optimized image URL with custom dimensions
- * @param image - The Unsplash image object
- * @param width - Desired width in pixels
- * @param quality - Image quality (1-100, default: 80)
- * @returns Optimized image URL
+ * For local images, returns the URL as-is since Next.js Image handles optimization
  */
 export function getOptimizedImageUrl(
   image: UnsplashImage,
   width: number,
   quality: number = 80
 ): string {
-  const url = new URL(image.url)
-  url.searchParams.set('w', width.toString())
-  url.searchParams.set('q', quality.toString())
-  url.searchParams.set('auto', 'format')
-  url.searchParams.set('fit', 'crop')
-  return url.toString()
+  return image.url
 }
 
 /**
  * Helper function to get responsive image srcset
- * @param image - The Unsplash image object
- * @param widths - Array of widths for responsive images
- * @returns srcset string for responsive images
+ * For local images, Next.js Image component handles responsive sizing automatically
  */
 export function getResponsiveSrcSet(
   image: UnsplashImage,
   widths: number[] = [640, 1024, 1920]
 ): string {
   return widths
-    .map(width => `${getOptimizedImageUrl(image, width)} ${width}w`)
+    .map(width => `${image.url} ${width}w`)
     .join(', ')
 }

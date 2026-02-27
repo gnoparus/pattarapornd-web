@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Brain, Lightbulb, Users, Cpu } from 'lucide-react'
+import { skillsImages } from '@/lib/unsplashImages'
 
 export default function Skills() {
   const technicalSkills = [
@@ -68,6 +70,33 @@ export default function Skills() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Essential competencies that drive excellence in modern healthcare delivery and patient care
           </p>
+        </motion.div>
+
+        {/* Banner Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
+            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+              <Image
+                src={skillsImages[0].url}
+                alt={skillsImages[0].alt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-l from-violet-900/70 via-purple-900/50 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-end px-12">
+                <div className="text-white max-w-xl text-right">
+                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Clinical Expertise</h3>
+                  <p className="text-base lg:text-lg text-white/90">Precision, artistry, and patient-centered care in every treatment</p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </motion.div>
 
         {/* Technical Skills */}

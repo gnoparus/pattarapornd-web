@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { GraduationCap, Download, Award, Brain } from 'lucide-react'
+import { journeyImages } from '@/lib/unsplashImages'
 
 export default function Journey() {
   const education = [
@@ -59,6 +61,33 @@ export default function Journey() {
           </div>
         </motion.div>
 
+        {/* Banner Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
+            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+              <Image
+                src="/pattarapornd-group-surgeons-wearing-safety-masks-performing-operation-medicine-concept-surgery-medicine-people-concept-group-surgeons-operation-operating-room-hospital.jpg"
+                alt="Group of surgeons performing operation in operating room"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-violet-900/70 via-purple-900/50 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-start px-12">
+                <div className="text-white max-w-xl">
+                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Academic Excellence</h3>
+                  <p className="text-base lg:text-lg text-white/90">From rigorous medical training to the forefront of aesthetic and anti-aging medicine</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
@@ -106,7 +135,14 @@ export default function Journey() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <Card className="bg-linear-to-br from-purple-700 to-purple-900 text-white p-12 border-none shadow-2xl overflow-hidden relative">
+          <Card className="text-white p-12 border-none shadow-2xl overflow-hidden relative">
+            <Image
+              src="/pattarapornd-team-industrial-scientists-engineers-developers-innovating-new-vaccine-doctor-pointing-tablet-explaining-virus-evolution-coworker.jpg"
+              alt="Team of scientists and engineers innovating new vaccine"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-linear-to-br from-purple-900/85 via-purple-800/75 to-purple-900/80" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl" />
 
