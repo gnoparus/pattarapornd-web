@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin, Linkedin, Clock } from 'lucide-react'
+import { Mail, MapPin, Linkedin, Clock } from 'lucide-react'
 import { contactImages } from '@/lib/unsplashImages'
 
 export default function Contact() {
@@ -12,26 +12,20 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      subtitle: 'Contact via email',
+      subtitle: 'pattarapornd.s57@gmail.com',
       detail: 'Reach out for professional inquiries',
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      subtitle: 'Available for consultation',
-      detail: 'Schedule a call',
     },
     {
       icon: MapPin,
       title: 'Location',
-      subtitle: 'Healthcare Facility',
+      subtitle: 'Bangkok, Thailand',
       detail: 'Professional practice location',
     },
     {
       icon: Linkedin,
       title: 'LinkedIn',
-      subtitle: 'Professional Network',
-      detail: 'Connect professionally',
+      subtitle: 'Connect on LinkedIn',
+      detail: 'www.linkedin.com/in/pattarapornd-suparcha-914858392',
     },
   ]
 
@@ -57,7 +51,7 @@ export default function Contact() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Ready to Transform Your Health?</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Let's collaborate on your wellness journey
+            Let's collaborate on healthcare and wellness initiatives
           </p>
         </motion.div>
 
@@ -236,7 +230,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="font-semibold text-foreground">Dr. Pattarapornd</div>
-                <div className="text-sm text-muted-foreground">Expert aesthetic medicine and holistic wellness<br/>in the heart of the city.</div>
+                <div className="text-sm text-muted-foreground">General Practitioner specializing in Occupational Health,<br/>Aesthetic Medicine, and Anti-Aging Science.</div>
               </div>
             </div>
 
