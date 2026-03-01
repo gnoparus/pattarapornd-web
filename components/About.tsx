@@ -66,7 +66,7 @@ export default function About() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-black/70 via-black/40 to-transparent">
                   <h3 className="text-2xl font-bold mb-1 text-white">Dr. Pattarapornd Suparcha</h3>
-                  <p className="text-sm text-white/90">M.D., Aesthetic Medicine Specialist</p>
+                  <p className="text-sm text-white/90">M.D., Anti-Aging & Aesthetic Physician</p>
                 </div>
               </div>
             </div>
@@ -117,8 +117,8 @@ export default function About() {
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">M.D.</div>
-                <div className="text-xs text-muted-foreground mt-1">Aesthetic Medicine</div>
-                <div className="text-xs text-muted-foreground">Specialist</div>
+                <div className="text-xs text-muted-foreground mt-1">Anti-Aging &</div>
+                <div className="text-xs text-muted-foreground">Aesthetics</div>
               </div>
             </motion.div>
           </motion.div>
@@ -163,20 +163,20 @@ export default function About() {
               <blockquote className="text-2xl lg:text-3xl font-display italic text-foreground mb-8 leading-relaxed">
                 My mission is to help patients feel confident and peaceful in their own skin, blending the precision of medical science with the timeless art of healing.
               </blockquote>
-                <div className="flex items-center justify-center gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20 bg-white">
                   <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src="/avatar transparent bg.png"
-                    alt="Dr. Pattarapornd Suparcha"
-                    fill
-                    className="object-contain object-center transform scale-[0.95]"
-                  />
+                    <Image
+                      src="/avatar transparent bg.png"
+                      alt="Dr. Pattarapornd Suparcha"
+                      fill
+                      className="object-contain object-center transform scale-[0.95]"
+                    />
                   </div>
                 </div>
                 <div className="text-left">
                   <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                  <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist · Cat Lover 🐱</div>
+                  <div className="text-sm text-muted-foreground">M.D., Aesthetic Physician · Cat Lover 🐱</div>
                 </div>
               </div>
             </div>

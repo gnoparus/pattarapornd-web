@@ -47,12 +47,12 @@ export default function Experience() {
     },
     {
       period: 'Dec 2023 - Jan 2026',
-      title: 'General Practitioner & OHS Specialist',
+      title: 'General Practitioner & Occupational Health Physician',
       organization: 'Phyathai Nawamin Hospital',
       location: 'Bangkok, Thailand',
       description: 'Served in multiple capacities over 2 years at one of Bangkok\'s premier hospitals, including general practice, occupational health & safety, and founding the Tele Care Center.',
       achievements: [
-        'Occupational Health and Safety Specialist in the Check-up Department (Nov 2025 – Jan 2026)',
+        'Occupational Health and Safety Physician in the Check-up Department (Nov 2025 – Jan 2026)',
         'General Practitioner in the Check-up Department (Jul 2025 – Jan 2026)',
         'Founding member of the Tele Care Center, SSO Department (Dec 2023 – Jan 2026)',
       ],

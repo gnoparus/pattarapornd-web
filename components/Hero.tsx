@@ -11,7 +11,7 @@ export default function Hero() {
   const stats = [
     { icon: Award, label: 'Years Experience', value: '10+' },
     { icon: GraduationCap, label: 'Certifications', value: '6' },
-    { icon: Users, label: 'Happy Patients', value: '155k+' },
+    { icon: Users, label: 'Happy Patients', value: '55k+' },
   ]
 
   return (
@@ -124,12 +124,12 @@ export default function Hero() {
                     <div className="text-3xl font-bold text-foreground">10+ Years</div>
                   </div>
                   <div>
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Licenses</div>
-                    <div className="text-3xl font-bold text-foreground">3 Board</div>
+                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Training</div>
+                    <div className="text-3xl font-bold text-foreground">6 Certs</div>
                   </div>
                   <div className="col-span-2">
                     <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Patients</div>
-                    <div className="text-3xl font-bold text-foreground">155k+ Happy</div>
+                    <div className="text-3xl font-bold text-foreground">55k+ Happy</div>
                   </div>
                 </div>
               </div>
@@ -147,8 +147,8 @@ export default function Hero() {
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs text-muted-foreground">Board Certified</div>
-                  <div className="text-sm font-semibold">Licensed Professional</div>
+                  <div className="text-xs text-muted-foreground">Aesthetic Medicine</div>
+                  <div className="text-sm font-semibold">M.D. Practitioner</div>
                 </div>
               </div>
             </motion.div>
