@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 import { GraduationCap, Download, Award, Brain } from 'lucide-react'
 import { journeyImages } from '@/lib/unsplashImages'
 
@@ -51,10 +52,14 @@ export default function Journey() {
             Bridging the gap between timeless medical wisdom and futuristic technology. From rigorous foundations at Rangsit University to the forefront of AI-driven aesthetic medicine.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mt-8">
-            <Button size="lg" variant="outline" className="rounded-full">
+            <a
+              href="/cv-dr-pattarapornd-suparcha-md-2026.pdf"
+              download="CV Dr. Pattarapornd Suparcha, M.D. 2026.pdf"
+              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-full")}
+            >
               <Download className="w-4 h-4 mr-2" />
               Download Full CV
-            </Button>
+            </a>
             <Button size="lg" variant="ghost" className="rounded-full">
               View Certificates
             </Button>
