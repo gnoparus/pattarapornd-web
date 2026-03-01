@@ -31,6 +31,7 @@ export default function Experience() {
         'Facilitating Basic Aesthetic Hands-on training courses',
         'Guiding trainees through practical aesthetic techniques and procedures',
       ],
+      image: '/pattarapornd-female-cosmetology-studio-procedures.jpg',
     },
     {
       period: 'May 2025 - Present',
@@ -42,6 +43,7 @@ export default function Experience() {
         'Assisting in Basic Aesthetic and Advanced Filler Hands-on training',
         'Helping trainees develop precision techniques in injectable treatments',
       ],
+      image: '/pattarapornd-cosmetic-botox-injection-female-forehead.jpg',
     },
     {
       period: 'Dec 2023 - Jan 2026',

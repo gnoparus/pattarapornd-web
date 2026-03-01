@@ -109,8 +109,8 @@ export default function Hero() {
             <Card className="overflow-hidden bg-white border-violet-100 shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
               <div className="aspect-4/3 relative overflow-hidden group">
                 <Image
-                  src="/pattarapornd-female-cosmetology-studio-procedures.jpg"
-                  alt="Dr. Pattarapornd performing aesthetic cosmetology procedures in studio"
+                  src="/studio-photo-202.jpg"
+                  alt="Dr. Pattarapornd Suparcha studio portrait"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
