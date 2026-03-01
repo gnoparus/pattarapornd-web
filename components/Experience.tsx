@@ -68,6 +68,7 @@ export default function Experience() {
         'Producing original digital artwork for commercial merchandise',
         'Blending artistic creativity with commercial brand identity',
       ],
+      image: '/avatar with bg.JPG',
     },
   ]
 
