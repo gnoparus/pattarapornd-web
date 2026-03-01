@@ -195,7 +195,7 @@ export default function Journey() {
               </div>
               <div className="text-left">
                 <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                <div className="text-sm text-muted-foreground">M.D., Aesthetic Specialist</div>
+                <div className="text-sm text-muted-foreground">M.D., Aesthetic Physician</div>
               </div>
             </div>
           </div>
