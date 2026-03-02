@@ -7,6 +7,7 @@ import { Button, buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { GraduationCap, Download, Award, Brain } from 'lucide-react'
 import { journeyImages } from '@/lib/unsplashImages'
+import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 
 export default function Journey() {
   const education = [
@@ -194,8 +195,8 @@ export default function Journey() {
                 <span className="text-primary-foreground font-bold">P</span>
               </div>
               <div className="text-left">
-                <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
-                <div className="text-xs text-muted-foreground">ภัทรภร ทรัพย์อาชา</div>
+                <div className="font-semibold text-foreground">{DOCTOR_NAME_EN}</div>
+                <div lang="th" className="text-xs text-muted-foreground">{DOCTOR_NAME_TH}</div>
                 <div className="text-sm text-muted-foreground">M.D., Aesthetic Physician</div>
               </div>
             </div>
