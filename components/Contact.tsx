@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { MapPin, Linkedin, Facebook } from 'lucide-react'
+import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 
 export default function Contact() {
   const contactLinks = [
@@ -82,6 +83,7 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-gradient-to-t from-violet-900/60 via-violet-900/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Dr. Pattarapornd</h3>
+                  <p lang="th" className="text-white/80 text-sm mb-1">{DOCTOR_NAME_TH}</p>
                   <p className="text-white/90 text-sm leading-relaxed">
                     General Practitioner specializing in Occupational Health,
                     Aesthetic Medicine, and Anti-Aging Science.
@@ -178,6 +180,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="font-semibold text-foreground">Dr. Pattarapornd</div>
+                <div lang="th" className="text-xs text-muted-foreground">{DOCTOR_NAME_TH}</div>
                 <div className="text-sm text-muted-foreground">General Practitioner specializing in Occupational Health,<br />Aesthetic Medicine, and Anti-Aging Science.</div>
               </div>
             </div>
