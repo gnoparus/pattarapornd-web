@@ -66,6 +66,7 @@ export default function About() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-black/70 via-black/40 to-transparent">
                   <h3 className="text-2xl font-bold mb-1 text-white">Dr. Pattarapornd Suparcha</h3>
+                  <p className="text-sm text-white/80 mb-0.5">ภัทรภร ทรัพย์อาชา</p>
                   <p className="text-sm text-white/90">M.D., Anti-Aging & Aesthetic Physician</p>
                 </div>
               </div>
@@ -176,6 +177,7 @@ export default function About() {
                 </div>
                 <div className="text-left">
                   <div className="font-semibold text-foreground">Dr. Pattarapornd Suparcha</div>
+                  <div className="text-xs text-muted-foreground">ภัทรภร ทรัพย์อาชา</div>
                   <div className="text-sm text-muted-foreground">M.D., Aesthetic Physician · Cat Lover 🐱</div>
                 </div>
               </div>
