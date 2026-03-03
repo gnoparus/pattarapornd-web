@@ -8,6 +8,7 @@ import Journey from '@/components/Journey'
 import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
 import AchievementsVolunteering from '@/components/AchievementsVolunteering'
+import BMICalculator from '@/components/BMICalculator'
 import Contact from '@/components/Contact'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <AchievementsVolunteering />
+        <BMICalculator />
         <Contact />
       </main>
     </>

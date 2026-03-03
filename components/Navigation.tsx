@@ -13,6 +13,7 @@ export default function Navigation() {
     { name: 'Services', href: '#services' },
     { name: 'Education', href: '#education' },
     { name: 'Experience', href: '#experience' },
+    { name: 'BMI Calculator', href: '#bmi-calculator' },
     { name: 'Contact', href: '#contact' },
   ]
 
