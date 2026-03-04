@@ -76,7 +76,7 @@ export default function Journey() {
           className="mb-16"
         >
           <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
-            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+            <div className="aspect-[3/2] sm:aspect-21/9 lg:aspect-16/5 relative group min-h-[200px]">
               <Image
                 src="/pattarapornd-group-surgeons-wearing-safety-masks-performing-operation-medicine-concept-surgery-medicine-people-concept-group-surgeons-operation-operating-room-hospital.jpg"
                 alt="Group of surgeons performing operation in operating room"
@@ -84,12 +84,18 @@ export default function Journey() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-r from-violet-900/70 via-purple-900/50 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-start px-12">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="absolute inset-0 flex items-center justify-start px-6 sm:px-12"
+              >
                 <div className="text-white max-w-xl">
-                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Academic Excellence</h3>
-                  <p className="text-base lg:text-lg text-white/90">From rigorous medical training to the forefront of aesthetic and anti-aging medicine</p>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Academic Excellence</h3>
+                  <p className="text-sm sm:text-base lg:text-lg text-white/90">From rigorous medical training to the forefront of aesthetic and anti-aging medicine</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </Card>
         </motion.div>
@@ -105,6 +111,8 @@ export default function Journey() {
                 key={item.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative grid lg:grid-cols-2 gap-8 items-center ${index % 2 === 0 ? '' : 'lg:grid-flow-dense'}`}

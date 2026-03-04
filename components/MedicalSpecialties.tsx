@@ -81,7 +81,7 @@ export default function MedicalSpecialties() {
           className="mb-16"
         >
           <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
-            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+            <div className="aspect-[3/2] sm:aspect-21/9 lg:aspect-16/5 relative group min-h-[200px]">
               <Image
                 src="/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg"
                 alt="Team of doctors standing in conference hospital room discussing treatment"
@@ -89,12 +89,18 @@ export default function MedicalSpecialties() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-r from-purple-900/70 via-violet-900/50 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-start px-12">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="absolute inset-0 flex items-center justify-start px-6 sm:px-12"
+              >
                 <div className="text-white max-w-xl">
-                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Expert Medical Care</h3>
-                  <p className="text-base lg:text-lg text-white/90">Combining modern medical science with traditional healing for complete wellness</p>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Expert Medical Care</h3>
+                  <p className="text-sm sm:text-base lg:text-lg text-white/90">Combining modern medical science with traditional healing for complete wellness</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </Card>
         </motion.div>
@@ -106,6 +112,8 @@ export default function MedicalSpecialties() {
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+              whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >

@@ -18,8 +18,16 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-violet-50 via-white to-purple-50">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 -left-40 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl" />
+        <motion.div
+          animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.8, 0.4] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute top-1/2 -left-40 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-20">
@@ -89,8 +97,9 @@ export default function Hero() {
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                   transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
-                  className="text-center"
+                  className="text-center cursor-default"
                 >
                   <div className="text-3xl lg:text-4xl font-bold text-primary">{stat.value}</div>
                   <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wide">{stat.label}</div>
@@ -140,12 +149,17 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-              className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-violet-100"
+              whileHover={{ scale: 1.05, rotate: -3, transition: { duration: 0.2 } }}
+              className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-violet-100 cursor-default"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <motion.div
+                  animate={{ rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                  className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
+                >
                   <Award className="w-6 h-6 text-primary" />
-                </div>
+                </motion.div>
                 <div>
                   <div className="text-xs text-muted-foreground">Aesthetic Medicine</div>
                   <div className="text-sm font-semibold">M.D. Practitioner</div>
