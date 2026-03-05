@@ -81,7 +81,7 @@ export default function Skills() {
           className="mb-12"
         >
           <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
-            <div className="aspect-21/9 lg:aspect-16/5 relative group">
+            <div className="aspect-[3/2] sm:aspect-21/9 lg:aspect-16/5 relative group min-h-[200px]">
               <Image
                 src={skillsImages[0].url}
                 alt={skillsImages[0].alt}
@@ -89,12 +89,18 @@ export default function Skills() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-l from-violet-900/70 via-purple-900/50 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-end px-12">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="absolute inset-0 flex items-center justify-end px-6 sm:px-12"
+              >
                 <div className="text-white max-w-xl text-right">
-                  <h3 className="text-3xl lg:text-4xl font-bold mb-3">Clinical Expertise</h3>
-                  <p className="text-base lg:text-lg text-white/90">Precision, artistry, and patient-centered care in every treatment</p>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Clinical Expertise</h3>
+                  <p className="text-sm sm:text-base lg:text-lg text-white/90">Precision, artistry, and patient-centered care in every treatment</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </Card>
         </motion.div>
@@ -140,6 +146,8 @@ export default function Skills() {
               key={skill.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >

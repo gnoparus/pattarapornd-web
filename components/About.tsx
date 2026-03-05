@@ -115,13 +115,19 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               viewport={{ once: true }}
-              className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-2xl p-6 border border-violet-100"
+              className="absolute -top-4 -right-4"
             >
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">M.D.</div>
-                <div className="text-xs text-muted-foreground mt-1">Anti-Aging &</div>
-                <div className="text-xs text-muted-foreground">Aesthetics</div>
-              </div>
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                className="bg-white rounded-2xl shadow-2xl p-6 border border-violet-100"
+              >
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">M.D.</div>
+                  <div className="text-xs text-muted-foreground mt-1">Anti-Aging &</div>
+                  <div className="text-xs text-muted-foreground">Aesthetics</div>
+                </div>
+              </motion.div>
             </motion.div>
           </motion.div>
 
@@ -132,6 +138,8 @@ export default function About() {
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
