@@ -116,7 +116,7 @@ export default function Hero() {
             className="relative"
           >
             <Card className="overflow-hidden bg-white border-violet-100 shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
-              <div className="aspect-[4/3] relative overflow-hidden group">
+              <div className="aspect-[3/4] relative overflow-hidden group">
                 <Image
                   src="/studio-photo-202.jpg"
                   alt="Dr. Pattarapornd Suparcha studio portrait"
