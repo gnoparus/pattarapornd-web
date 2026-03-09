@@ -116,15 +116,14 @@ export default function Hero() {
             className="relative"
           >
             <Card className="overflow-hidden bg-white border-violet-100 shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
-              <div className="aspect-4/3 relative overflow-hidden group">
+              <div className="aspect-[3/4] relative overflow-hidden group">
                 <Image
                   src="/studio-photo-202.jpg"
                   alt="Dr. Pattarapornd Suparcha studio portrait"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
-                <div className="absolute inset-0 bg-linear-to-br from-violet-900/20 to-purple-900/20" />
               </div>
               <div className="p-8">
                 <div className="grid grid-cols-2 gap-8">
