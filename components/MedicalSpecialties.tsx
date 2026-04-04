@@ -2,139 +2,147 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Card } from '@/components/ui/card'
 import { Stethoscope, Sparkles, Activity, Wind, Music, Palette } from 'lucide-react'
-import { medicalSpecialtiesImages } from '@/lib/unsplashImages'
 
 export default function MedicalSpecialties() {
   const services = [
     {
       icon: Stethoscope,
       title: 'General Practice',
-      description: 'Comprehensive primary care with preventive medicine, evidence-based treatment, and patient-centered approach. Experienced in SSO and Check-up departments.',
-      color: 'from-blue-500/10 to-blue-600/10',
-      iconColor: 'text-blue-600',
+      description:
+        'Comprehensive primary care with preventive medicine, evidence-based treatment, and patient-centered approach. Experienced in SSO and check-up departments.',
     },
     {
       icon: Activity,
       title: 'Occupational Health',
-      description: 'Specialized in occupational health and safety protocols, workplace health assessments, and ensuring employee health standards compliance.',
-      color: 'from-green-500/10 to-green-600/10',
-      iconColor: 'text-green-600',
+      description:
+        'Specialized in occupational health and safety protocols, workplace health assessments, and ensuring employee health standards compliance.',
     },
     {
       icon: Sparkles,
       title: 'Aesthetic Medicine',
-      description: 'Expert in filler techniques and aesthetic procedures. Teaching Assistant for hands-on aesthetic training programs at CMC Training Center and Academy Aesthetic Training.',
-      color: 'from-purple-500/10 to-purple-600/10',
-      iconColor: 'text-purple-600',
+      description:
+        'Expert in filler techniques and aesthetic procedures. Teaching Assistant for hands-on aesthetic training at CMC Training Center and Academy Aesthetic Training.',
     },
     {
       icon: Wind,
-      title: 'Anti-Aging & Regenerative Science',
-      description: 'Currently pursuing M.Sc. in Anti-Aging and Regenerative Science, applying cutting-edge regenerative medicine approaches for holistic wellness.',
-      color: 'from-orange-500/10 to-orange-600/10',
-      iconColor: 'text-orange-600',
+      title: 'Anti-Aging & Regenerative',
+      description:
+        'Currently pursuing M.Sc. in Anti-Aging and Regenerative Science, applying cutting-edge regenerative medicine approaches for holistic wellness.',
     },
     {
       icon: Music,
       title: 'Traditional Healing',
-      description: 'Certified in Traditional Thai Massage and Tibetan Singing Bowl Sound Healing, integrating ancient techniques with modern medical practice.',
-      color: 'from-pink-500/10 to-pink-600/10',
-      iconColor: 'text-pink-600',
+      description:
+        'Certified in Traditional Thai Massage and Tibetan Singing Bowl Sound Healing, integrating ancient techniques with modern medical practice.',
     },
     {
       icon: Palette,
       title: 'Digital Commercial Art',
-      description: 'Passionate Digital Commercial Artist, bringing a unique blend of scientific precision and creative vision to every project.',
-      color: 'from-teal-500/10 to-teal-600/10',
-      iconColor: 'text-teal-600',
+      description:
+        'Passionate Digital Commercial Artist, bringing a unique blend of scientific precision and creative vision to every project.',
     },
   ]
 
   return (
-    <section id="services" className="relative py-24 bg-linear-to-br from-violet-50/50 to-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+    <section id="services" className="bg-[#f5f5f7] py-28 sm:py-36 overflow-hidden">
+      <div className="max-w-[980px] mx-auto px-6 sm:px-8">
+        {/* Section header */}
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#6e6e73] text-[17px] font-medium text-center mb-4"
         >
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">Our Services</span>
+          Our Services
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#1d1d1f] font-bold text-center leading-tight mb-5"
+          style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)' }}
+        >
+          Comprehensive Care
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-16"
+        >
+          Bridging clinical practice with education and creative artistry.
+        </motion.p>
+
+        {/* Banner image */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-60px' }}
+          className="mb-16 rounded-3xl overflow-hidden shadow-apple group"
+        >
+          <div className="relative min-h-[200px]" style={{ aspectRatio: '16/5' }}>
+            <Image
+              src="/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg"
+              alt="Team of doctors in conference room"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1d1d1f]/70 via-[#1d1d1f]/40 to-transparent" />
+            <motion.div
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+              className="absolute inset-0 flex items-center px-8 sm:px-14"
+            >
+              <div className="text-white max-w-lg pr-8 sm:pr-0">
+                <h3 className="font-bold leading-tight mb-2" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)' }}>
+                  Expert Medical Care
+                </h3>
+                <p className="text-white/80 text-[15px]">
+                  Combining modern medical science with traditional healing for complete wellness
+                </p>
+              </div>
+            </motion.div>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Comprehensive Care Services</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Bridging clinical practice with education and creative artistry
-          </p>
         </motion.div>
 
-        {/* Banner Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
-            <div className="aspect-[3/2] sm:aspect-21/9 lg:aspect-16/5 relative group min-h-[200px]">
-              <Image
-                src="/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg"
-                alt="Team of doctors standing in conference hospital room discussing treatment"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-r from-purple-900/70 via-violet-900/50 to-transparent" />
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="absolute inset-0 flex items-center justify-start px-6 sm:px-12"
-              >
-                <div className="text-white max-w-xl">
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Expert Medical Care</h3>
-                  <p className="text-sm sm:text-base lg:text-lg text-white/90">Combining modern medical science with traditional healing for complete wellness</p>
-                </div>
-              </motion.div>
-            </div>
-          </Card>
-        </motion.div>
-
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: (index % 3) * 0.08,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
+              viewport={{ once: true, margin: '-40px' }}
+              whileHover={{ y: -4, transition: { duration: 0.2, ease: 'easeOut' } }}
+              className="bg-white rounded-2xl p-7 shadow-apple cursor-default group"
             >
-              <Card className="p-8 h-full hover:shadow-2xl transition-all duration-300 border-violet-100 group cursor-pointer">
-                <div className={`w-16 h-16 rounded-2xl bg-linear-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <service.icon className={`w-8 h-8 ${service.iconColor}`} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                <div className="mt-6 flex items-center text-primary text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                  Learn more <span className="ml-2">→</span>
-                </div>
-              </Card>
+              <div className="w-10 h-10 bg-[#f5f5f7] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#e8e8ed] transition-colors duration-200">
+                <service.icon className="w-5 h-5 text-[#1d1d1f]" />
+              </div>
+              <h3 className="text-[#1d1d1f] font-semibold text-[17px] mb-2 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
+                {service.title}
+              </h3>
+              <p className="text-[#6e6e73] text-[14px] leading-relaxed">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-40 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-40 -right-20 w-80 h-80 bg-purple-200/30 rounded-full blur-3xl -z-10" />
     </section>
   )
 }

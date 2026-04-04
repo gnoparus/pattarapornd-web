@@ -1,10 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { Card } from '@/components/ui/card'
 import { Brain, Lightbulb, Users, Cpu } from 'lucide-react'
-import { skillsImages } from '@/lib/unsplashImages'
 
 export default function Skills() {
   const technicalSkills = [
@@ -19,9 +16,9 @@ export default function Skills() {
     {
       category: 'Computer Skills',
       items: [
-        { name: 'Microsoft Word', level: 'Good' },
-        { name: 'Microsoft Excel', level: 'Good' },
-        { name: 'Microsoft PowerPoint', level: 'Good' },
+        { name: 'Microsoft Word', level: 'Proficient' },
+        { name: 'Microsoft Excel', level: 'Proficient' },
+        { name: 'Microsoft PowerPoint', level: 'Proficient' },
       ],
     },
   ]
@@ -30,164 +27,146 @@ export default function Skills() {
     {
       icon: Brain,
       title: 'Aesthetic Precision & Artistry',
-      description: 'Exceptional eye for facial symmetry and aesthetic harmony, combining medical expertise with artistic sensibility to achieve naturally beautiful results',
+      description:
+        'Exceptional eye for facial symmetry and aesthetic harmony, combining medical expertise with artistic sensibility for naturally beautiful results.',
       proficiency: 98,
     },
     {
       icon: Lightbulb,
       title: 'Holistic Treatment Design',
-      description: 'Creating personalized treatment plans that blend aesthetic medicine, anti-aging therapies, and traditional healing for comprehensive wellness',
+      description:
+        'Creating personalized treatment plans blending aesthetic medicine, anti-aging therapies, and traditional healing for comprehensive wellness.',
       proficiency: 95,
     },
     {
       icon: Users,
       title: 'Patient-Centered Communication',
-      description: 'Building trust through empathetic listening and clear communication, ensuring patients feel heard, understood, and confident in their care',
+      description:
+        'Building trust through empathetic listening and clear communication, ensuring patients feel heard, understood, and confident.',
       proficiency: 98,
     },
     {
       icon: Cpu,
       title: 'Advanced Aesthetic Technology',
-      description: 'Mastery of cutting-edge aesthetic devices, laser systems, and FDA-approved treatments for safe, effective beauty enhancement',
+      description:
+        'Mastery of cutting-edge aesthetic devices, laser systems, and FDA-approved treatments for safe, effective beauty enhancement.',
       proficiency: 92,
     },
   ]
 
   return (
-    <section id="skills" className="relative py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+    <section id="skills" className="bg-white py-28 sm:py-36 overflow-hidden">
+      <div className="max-w-[980px] mx-auto px-6 sm:px-8">
+        {/* Section header */}
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#6e6e73] text-[17px] font-medium text-center mb-4"
         >
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">Core Competencies</span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Professional Skills</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Essential competencies that drive excellence in modern healthcare delivery and patient care
-          </p>
-        </motion.div>
+          Core Competencies
+        </motion.p>
 
-        {/* Banner Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-12"
+          transition={{ duration: 0.7, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#1d1d1f] font-bold text-center leading-tight mb-5"
+          style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)' }}
         >
-          <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-shadow duration-500">
-            <div className="aspect-[3/2] sm:aspect-21/9 lg:aspect-16/5 relative group min-h-[200px]">
-              <Image
-                src={skillsImages[0].url}
-                alt={skillsImages[0].alt}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-l from-violet-900/70 via-purple-900/50 to-transparent" />
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="absolute inset-0 flex items-center justify-end px-6 sm:px-12"
-              >
-                <div className="text-white max-w-xl text-right">
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Clinical Expertise</h3>
-                  <p className="text-sm sm:text-base lg:text-lg text-white/90">Precision, artistry, and patient-centered care in every treatment</p>
-                </div>
-              </motion.div>
-            </div>
-          </Card>
-        </motion.div>
+          Professional Skills
+        </motion.h2>
 
-        {/* Technical Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-12"
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-20"
         >
-          <Card className="p-8 border-violet-100">
-            <h3 className="text-2xl font-bold mb-6">Technical Proficiencies</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              {technicalSkills.map((category, catIndex) => (
-                <motion.div
-                  key={category.category}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-lg font-semibold mb-4 text-primary">{category.category}</h4>
-                  <div className="space-y-3">
-                    {category.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="flex justify-between items-center">
-                        <span className="text-foreground">{item.name}</span>
-                        <span className="text-sm font-semibold text-muted-foreground">{item.level}</span>
+          Essential competencies that drive excellence in modern healthcare and patient care.
+        </motion.p>
+
+        {/* Technical proficiencies */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-60px' }}
+          className="bg-[#f5f5f7] rounded-2xl p-8 mb-16"
+        >
+          <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-8">Technical Proficiencies</h3>
+          <div className="grid sm:grid-cols-2 gap-10">
+            {technicalSkills.map((category, catIndex) => (
+              <div key={category.category}>
+                <p className="text-[var(--apple-accent)] text-[13px] font-semibold uppercase tracking-wider mb-4">
+                  {category.category}
+                </p>
+                <div className="space-y-0">
+                  {category.items.map((item, i) => (
+                    <div key={i}>
+                      <div className="h-px bg-[#d2d2d7]" />
+                      <div className="flex justify-between items-center py-3">
+                        <span className="text-[#1d1d1f] text-[15px]">{item.name}</span>
+                        <span className="text-[#6e6e73] text-[13px]">{item.level}</span>
                       </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </Card>
+                    </div>
+                  ))}
+                  <div className="h-px bg-[#d2d2d7]" />
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
-        {/* Core Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Core skills grid */}
+        <div className="grid sm:grid-cols-2 gap-5">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{
+                duration: 0.7,
+                delay: (index % 2) * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
+              viewport={{ once: true, margin: '-40px' }}
+              whileHover={{ y: -4, transition: { duration: 0.2, ease: 'easeOut' } }}
+              className="bg-[#f5f5f7] rounded-2xl p-7 group cursor-default"
             >
-              <Card className="p-8 h-full hover:shadow-xl transition-shadow border-violet-100">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-14 h-14 shrink-0 bg-primary/10 rounded-2xl flex items-center justify-center">
-                    <skill.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">{skill.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm">{skill.description}</p>
-                  </div>
-                </div>
+              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-5">
+                <skill.icon className="w-5 h-5 text-[#1d1d1f]" />
+              </div>
+              <h3 className="text-[#1d1d1f] font-semibold text-[17px] mb-3 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
+                {skill.title}
+              </h3>
+              <p className="text-[#6e6e73] text-[14px] leading-relaxed mb-5">
+                {skill.description}
+              </p>
 
-                {/* Proficiency Bar */}
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-semibold text-foreground">Proficiency</span>
-                    <span className="text-sm font-bold text-primary">{skill.proficiency}%</span>
-                  </div>
-                  <div className="w-full h-3 bg-muted rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.proficiency}%` }}
-                      transition={{ duration: 1, delay: index * 0.2 }}
-                      viewport={{ once: true }}
-                      className="h-full bg-linear-to-r from-primary to-purple-600 rounded-full"
-                    />
-                  </div>
+              {/* Proficiency bar */}
+              <div>
+                <div className="flex justify-between items-center mb-1.5">
+                  <span className="text-[#6e6e73] text-[12px]">Proficiency</span>
+                  <span className="text-[#1d1d1f] text-[12px] font-semibold">{skill.proficiency}%</span>
                 </div>
-              </Card>
+                <div className="w-full h-1.5 bg-[#d2d2d7] rounded-full overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.proficiency}%` }}
+                    transition={{ duration: 1.2, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    viewport={{ once: true }}
+                    className="h-full bg-[#1d1d1f] rounded-full"
+                  />
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-0 w-64 h-64 bg-purple-100/30 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-20 left-0 w-80 h-80 bg-violet-100/20 rounded-full blur-3xl -z-10" />
     </section>
   )
 }

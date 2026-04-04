@@ -1,137 +1,131 @@
 'use client'
 
 import { motion } from 'framer-motion'
-
-import { Card } from '@/components/ui/card'
-import { Award, Heart, Users } from 'lucide-react'
-
+import { Award, Heart } from 'lucide-react'
 
 export default function AchievementsVolunteering() {
   const achievements = [
     {
       year: '2014',
       title: 'Rajavithi Advanced Trauma Course for Medical Students',
-      description: 'Gained advanced skills in trauma care and emergency medicine, mastering real-time critical decision-making in high-pressure medical situations',
+      description:
+        'Gained advanced skills in trauma care and emergency medicine, mastering real-time critical decision-making in high-pressure medical situations.',
     },
     {
       year: '2020',
       title: 'Prince Mahidol Award Youth Program Conference 2020',
-      description: 'Engaged with global health innovators and leaders, expanding knowledge of current healthcare challenges and innovative approaches to public health',
+      description:
+        'Engaged with global health innovators and leaders, expanding knowledge of current healthcare challenges and innovative approaches to public health.',
     },
   ]
 
   const volunteering = [
-    'Less Luxury Project - Spearheaded a charity initiative, honing project management and community engagement skills',
-    'In the Name of Love Ep. 2 - Contributed to mental health awareness events, promoting understanding and support for mental health in the community',
-    'Srithanya Charity Run - Participated in community health and wellness initiatives, promoting active lifestyles and charitable giving',
-    'Crazy Run 2019 - Led and participated in public health initiatives, fostering skills in communication and health promotion',
-    '"I Can Detect! Let\'s Talk About Depression" - Educational project focused on mental health awareness and early detection of depression in the community',
-    'Change 5th Med RSU - Organized medical education events to bridge knowledge gaps and promote continuous learning among medical students',
+    'Less Luxury Project — Spearheaded a charity initiative, honing project management and community engagement skills',
+    'In the Name of Love Ep. 2 — Contributed to mental health awareness events, promoting understanding and support for mental health in the community',
+    'Srithanya Charity Run — Participated in community health and wellness initiatives, promoting active lifestyles and charitable giving',
+    'Crazy Run 2019 — Led and participated in public health initiatives, fostering skills in communication and health promotion',
+    '"I Can Detect! Let\'s Talk About Depression" — Educational project focused on mental health awareness and early detection of depression',
+    'Change 5th Med RSU — Organized medical education events to bridge knowledge gaps among medical students',
   ]
 
   return (
-    <section id="achievements" className="relative py-24 bg-linear-to-br from-violet-50/30 to-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+    <section id="achievements" className="bg-[#f5f5f7] py-28 sm:py-36 overflow-hidden">
+      <div className="max-w-[980px] mx-auto px-6 sm:px-8">
+        {/* Section header */}
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#1d1d1f] font-bold text-center leading-tight mb-5"
+          style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)' }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Achievements & Community Service</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Commitment to professional excellence and giving back to the community
-          </p>
-        </motion.div>
+          Achievements &amp; Community Service
+        </motion.h2>
 
-        {/* Professional Achievements */}
-        <div className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-8"
-          >
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">Professional Achievements</span>
-          </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-20"
+        >
+          Commitment to professional excellence and giving back to the community.
+        </motion.p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={achievement.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="p-8 h-full hover:shadow-xl transition-shadow border-violet-100">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 shrink-0 bg-primary/10 rounded-xl flex items-center justify-center">
-                      <Award className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-primary font-bold text-sm mb-2">{achievement.year}</div>
-                      <h3 className="text-lg font-bold mb-3">{achievement.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{achievement.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+        {/* Achievements */}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true }}
+          className="text-[#1d1d1f] font-semibold text-[17px] mb-6"
+        >
+          Professional Achievements
+        </motion.p>
+
+        <div className="grid sm:grid-cols-2 gap-5 mb-16">
+          {achievements.map((achievement, index) => (
+            <motion.div
+              key={achievement.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true, margin: '-40px' }}
+              whileHover={{ y: -4, transition: { duration: 0.2, ease: 'easeOut' } }}
+              className="bg-white rounded-2xl p-7 shadow-apple group cursor-default"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 bg-[#f5f5f7] rounded-xl flex items-center justify-center">
+                  <Award className="w-4.5 h-4.5 text-[#1d1d1f]" />
+                </div>
+                <span className="text-[var(--apple-accent)] text-[13px] font-semibold">{achievement.year}</span>
+              </div>
+              <h3 className="text-[#1d1d1f] font-semibold text-[16px] mb-3 group-hover:text-[var(--apple-accent)] transition-colors duration-200 leading-snug">
+                {achievement.title}
+              </h3>
+              <p className="text-[#6e6e73] text-[14px] leading-relaxed">{achievement.description}</p>
+            </motion.div>
+          ))}
         </div>
 
         {/* Volunteering */}
-        <div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="inline-block px-4 py-2 bg-pink-500/10 rounded-full mb-8"
-          >
-            <span className="text-pink-600 text-sm font-semibold uppercase tracking-wider">Extracurricular Activities & Volunteering</span>
-          </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true }}
+          className="text-[#1d1d1f] font-semibold text-[17px] mb-6"
+        >
+          Extracurricular &amp; Volunteering
+        </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Card className="p-10 border-violet-100 bg-white">
-              <div className="grid md:grid-cols-2 gap-6">
-                {volunteering.map((activity, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-4 group"
-                  >
-                    <div className="w-10 h-10 shrink-0 bg-pink-500/10 rounded-lg flex items-center justify-center group-hover:bg-pink-500/20 transition-colors">
-                      <Heart className="w-5 h-5 text-pink-600" />
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed text-sm">{activity}</p>
-                  </motion.div>
-                ))}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-40px' }}
+          className="bg-white rounded-2xl p-8 shadow-apple"
+        >
+          <div className="space-y-0">
+            {volunteering.map((activity, index) => (
+              <div key={index}>
+                {index > 0 && <div className="h-px bg-[#d2d2d7]" />}
+                <motion.div
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  viewport={{ once: true }}
+                  className="flex items-start gap-3 py-4"
+                >
+                  <Heart className="w-4 h-4 text-[#6e6e73] shrink-0 mt-0.5" />
+                  <p className="text-[#6e6e73] text-[13px] leading-relaxed">{activity}</p>
+                </motion.div>
               </div>
-            </Card>
-          </motion.div>
-        </div>
-
-
+            ))}
+          </div>
+        </motion.div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-40 -left-20 w-64 h-64 bg-pink-200/20 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-40 -right-20 w-80 h-80 bg-violet-100/30 rounded-full blur-3xl -z-10" />
     </section>
   )
 }
