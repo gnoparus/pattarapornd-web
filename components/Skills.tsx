@@ -13,6 +13,7 @@ export default function Skills() {
       items: [
         { name: 'Thai', level: 'Native' },
         { name: 'English', level: 'Intermediate' },
+        { name: 'Arabic', level: 'Beginner' },
       ],
     },
     {
