@@ -107,7 +107,7 @@ export default function AchievementsVolunteering() {
           viewport={{ once: true, margin: '-40px' }}
           className="bg-white rounded-2xl p-8 shadow-apple"
         >
-          <div className="grid sm:grid-cols-2 gap-0">
+          <div className="space-y-0">
             {volunteering.map((activity, index) => (
               <div key={index}>
                 {index > 0 && <div className="h-px bg-[#d2d2d7]" />}
@@ -116,7 +116,7 @@ export default function AchievementsVolunteering() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-3 py-4 group"
+                  className="flex items-start gap-3 py-4"
                 >
                   <Heart className="w-4 h-4 text-[#6e6e73] shrink-0 mt-0.5" />
                   <p className="text-[#6e6e73] text-[13px] leading-relaxed">{activity}</p>

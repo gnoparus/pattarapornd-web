@@ -176,16 +176,16 @@ export default function Contact() {
         <div className="max-w-[980px] mx-auto px-6 sm:px-8 py-12">
           <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-10">
             {/* Brand */}
-            <div>
+            <div className="max-w-xs">
               <p className="text-[#1d1d1f] font-semibold text-[15px] mb-1">{DOCTOR_NAME_EN}</p>
               <p lang="th" className="text-[#6e6e73] text-[13px] mb-1">{DOCTOR_NAME_TH}</p>
-              <p className="text-[#6e6e73] text-[12px] max-w-xs leading-relaxed">
+              <p className="text-[#6e6e73] text-[12px] leading-relaxed">
                 General Practitioner specializing in Occupational Health, Aesthetic Medicine, and Anti-Aging Science.
               </p>
             </div>
 
             {/* Links */}
-            <div className="flex gap-16 text-[13px]">
+            <div className="flex flex-wrap gap-8 sm:gap-12 text-[13px]">
               <div>
                 <p className="text-[#1d1d1f] font-semibold mb-3">Menu</p>
                 <ul className="space-y-2">
