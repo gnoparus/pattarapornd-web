@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Card } from '@/components/ui/card'
 import { MapPin, Linkedin, Facebook } from 'lucide-react'
 import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 
@@ -12,12 +11,8 @@ export default function Contact() {
       icon: Linkedin,
       title: 'LinkedIn',
       subtitle: 'Pattarapornd Suparcha',
-      detail: 'Connect with me professionally',
+      detail: 'Connect professionally',
       href: 'https://www.linkedin.com/in/pattarapornd-suparcha-914858392',
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
-      iconColor: 'text-blue-600',
-      hoverBorder: 'hover:border-blue-200',
     },
     {
       icon: MapPin,
@@ -25,191 +20,201 @@ export default function Contact() {
       subtitle: 'Bangkok, Thailand',
       detail: 'Professional practice location',
       href: undefined,
-      color: 'from-violet-500 to-purple-600',
-      bgColor: 'bg-violet-50',
-      iconColor: 'text-violet-600',
-      hoverBorder: 'hover:border-violet-200',
     },
     {
       icon: Facebook,
       title: 'Facebook',
       subtitle: 'Pattarapornd Suparcha',
-      detail: 'Follow me on Facebook',
+      detail: 'Follow on Facebook',
       href: 'https://www.facebook.com/ploy.soiynnarak/',
-      color: 'from-indigo-500 to-blue-500',
-      bgColor: 'bg-indigo-50',
-      iconColor: 'text-indigo-600',
-      hoverBorder: 'hover:border-indigo-200',
     },
   ]
 
   return (
-    <section id="contact" className="relative py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+    <section id="contact" className="bg-white py-28 sm:py-36 overflow-hidden">
+      <div className="max-w-[980px] mx-auto px-6 sm:px-8">
+        {/* Section header */}
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#6e6e73] text-[17px] font-medium text-center mb-4"
         >
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">Get in Touch</span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold font-display mb-4">Let's Connect</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Reach out through any of these channels — I'd love to hear from you
-          </p>
-        </motion.div>
+          Get in Touch
+        </motion.p>
 
-        {/* Main Content: Photo + Contact Cards */}
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#1d1d1f] font-bold text-center leading-tight mb-5"
+          style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)' }}
+        >
+          Let&apos;s Connect
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-20"
+        >
+          Reach out through any of these channels — I&apos;d love to hear from you.
+        </motion.p>
+
+        {/* Two column: photo + contact */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Left - Featured Image */}
+          {/* Featured image */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+            viewport={{ once: true, margin: '-80px' }}
+            className="relative rounded-3xl overflow-hidden shadow-apple-lg group"
           >
-            <Card className="overflow-hidden border-violet-100 shadow-elevated hover:shadow-elevated-lg transition-all duration-500 group">
-              <div className="aspect-[4/5] relative">
-                <Image
-                  src="/studio-photo-203.jpg"
-                  alt="Dr. Pattarapornd Suparcha"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-violet-900/60 via-violet-900/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Dr. Pattarapornd</h3>
-                  <p lang="th" className="text-white/80 text-sm mb-1">{DOCTOR_NAME_TH}</p>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    General Practitioner specializing in Occupational Health,
-                    Aesthetic Medicine, and Anti-Aging Science.
-                  </p>
-                </div>
+            <div className="relative" style={{ aspectRatio: '4/5' }}>
+              <Image
+                src="/studio-photo-203.jpg"
+                alt="Dr. Pattarapornd Suparcha"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <p className="font-semibold text-[17px] mb-1">Dr. Pattarapornd</p>
+                <p lang="th" className="text-white/75 text-[13px] mb-2">{DOCTOR_NAME_TH}</p>
+                <p className="text-white/80 text-[13px] leading-relaxed">
+                  General Practitioner · Occupational Health · Aesthetic Medicine · Anti-Aging Science
+                </p>
               </div>
-            </Card>
+            </div>
           </motion.div>
 
-          {/* Right - Contact Cards */}
-          <div className="space-y-5">
+          {/* Contact cards */}
+          <div className="space-y-4">
             {contactLinks.map((link, index) => {
-              const CardContent = (
-                <Card
-                  className={`p-6 border transition-all duration-300 ${link.hoverBorder} hover:shadow-lg group cursor-pointer`}
-                >
-                  <div className="flex items-center gap-5">
-                    <div
-                      className={`w-14 h-14 shrink-0 ${link.bgColor} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <link.icon className={`w-7 h-7 ${link.iconColor}`} />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-bold text-foreground text-lg mb-0.5">{link.title}</h4>
-                      <p className={`text-sm font-medium ${link.iconColor} mb-0.5`}>{link.subtitle}</p>
-                      <p className="text-xs text-muted-foreground">{link.detail}</p>
-                    </div>
-                    {link.href && (
-                      <div className={`w-10 h-10 rounded-full ${link.bgColor} flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
-                        <svg className={`w-5 h-5 ${link.iconColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </div>
-                    )}
-                  </div>
-                </Card>
-              )
-
-              return (
+              const CardInner = (
                 <motion.div
-                  key={link.title}
-                  initial={{ opacity: 0, x: 30 }}
+                  initial={{ opacity: 0, x: 24 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: index * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  whileHover={{ y: -3, transition: { duration: 0.2, ease: 'easeOut' } }}
+                  className="flex items-center gap-5 bg-[#f5f5f7] rounded-2xl p-6 group cursor-pointer"
                 >
-                  {link.href ? (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="block">
-                      {CardContent}
-                    </a>
-                  ) : (
-                    CardContent
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-200">
+                    <link.icon className="w-5 h-5 text-[#1d1d1f]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[#1d1d1f] font-semibold text-[15px] mb-0.5">{link.title}</p>
+                    <p className="text-[#7c3aed] text-[13px] font-medium mb-0.5">{link.subtitle}</p>
+                    <p className="text-[#6e6e73] text-[12px]">{link.detail}</p>
+                  </div>
+                  {link.href && (
+                    <svg
+                      className="w-4 h-4 text-[#86868b] opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
                   )}
                 </motion.div>
               )
+
+              return link.href ? (
+                <a
+                  key={link.title}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                  aria-label={`${link.title}: ${link.subtitle}`}
+                >
+                  {CardInner}
+                </a>
+              ) : (
+                <div key={link.title}>{CardInner}</div>
+              )
             })}
 
-            {/* Tagline */}
+            {/* Availability note */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
-              className="pt-4"
+              className="rounded-2xl border border-[#d2d2d7] px-6 py-5"
             >
-              <div className="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-6 border border-violet-100">
-                <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                  🌟 Open to collaborations in healthcare, wellness, and aesthetic medicine.
-                  Feel free to connect through any channel above.
-                </p>
-              </div>
+              <p className="text-[#6e6e73] text-[13px] text-center leading-relaxed">
+                Open to collaborations in healthcare, wellness, and aesthetic medicine.
+                Feel free to connect through any channel above.
+              </p>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-0 w-64 h-64 bg-purple-100/30 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-20 left-0 w-80 h-80 bg-violet-100/20 rounded-full blur-3xl -z-10" />
-
       {/* Footer */}
-      <motion.div
+      <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="mt-24 border-t border-border pt-12"
+        className="border-t border-[#d2d2d7]"
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">P</span>
-              </div>
-              <div>
-                <div className="font-semibold text-foreground">Dr. Pattarapornd</div>
-                <div lang="th" className="text-xs text-muted-foreground">{DOCTOR_NAME_TH}</div>
-                <div className="text-sm text-muted-foreground">General Practitioner specializing in Occupational Health,<br />Aesthetic Medicine, and Anti-Aging Science.</div>
-              </div>
+        <div className="max-w-[980px] mx-auto px-6 sm:px-8 py-12">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-10">
+            {/* Brand */}
+            <div>
+              <p className="text-[#1d1d1f] font-semibold text-[15px] mb-1">{DOCTOR_NAME_EN}</p>
+              <p lang="th" className="text-[#6e6e73] text-[13px] mb-1">{DOCTOR_NAME_TH}</p>
+              <p className="text-[#6e6e73] text-[12px] max-w-xs leading-relaxed">
+                General Practitioner specializing in Occupational Health, Aesthetic Medicine, and Anti-Aging Science.
+              </p>
             </div>
 
-            <div className="flex flex-wrap gap-8 text-sm">
+            {/* Links */}
+            <div className="flex gap-16 text-[13px]">
               <div>
-                <h4 className="font-semibold text-foreground mb-2">Menu</h4>
-                <ul className="space-y-1">
-                  <li><a href="#home" className="text-muted-foreground hover:text-primary">Home</a></li>
-                  <li><a href="#services" className="text-muted-foreground hover:text-primary">Services</a></li>
-                  <li><a href="#about" className="text-muted-foreground hover:text-primary">About</a></li>
-                  <li><a href="#contact" className="text-muted-foreground hover:text-primary">Contact</a></li>
+                <p className="text-[#1d1d1f] font-semibold mb-3">Menu</p>
+                <ul className="space-y-2">
+                  {['#home', '#services', '#about', '#contact'].map((href) => (
+                    <li key={href}>
+                      <a href={href} className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 capitalize">
+                        {href.replace('#', '')}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-2">Legal</h4>
-                <ul className="space-y-1">
-                  <li><a href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-primary">Terms of Service</a></li>
+                <p className="text-[#1d1d1f] font-semibold mb-3">Legal</p>
+                <ul className="space-y-2">
+                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200">Privacy Policy</a></li>
+                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200">Terms of Service</a></li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2026 Dr. Pattarapornd Suparcha. All rights reserved.
+          <div className="border-t border-[#d2d2d7] pt-6">
+            <p className="text-[#6e6e73] text-[12px] text-center">
+              Copyright © 2026 Dr. Pattarapornd Suparcha. All rights reserved.
+            </p>
           </div>
         </div>
-      </motion.div>
+      </motion.footer>
     </section>
   )
 }

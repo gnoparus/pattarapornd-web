@@ -1,188 +1,147 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { Award, Users, GraduationCap } from 'lucide-react'
-
 
 export default function Hero() {
-  const stats = [
-    { icon: Award, label: 'Years Experience', value: '10+' },
-    { icon: GraduationCap, label: 'Certifications', value: '6' },
-    { icon: Users, label: 'Happy Patients', value: '55k+' },
-  ]
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  })
+
+  const textY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.08])
+  const imageOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.4])
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-violet-50 via-white to-purple-50">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
+    <section
+      ref={ref}
+      id="home"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#f5f5f7]"
+    >
+      {/* Background image with scroll-driven parallax */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{ scale: imageScale, opacity: imageOpacity }}
+      >
+        <Image
+          src="/studio-photo-202.jpg"
+          alt="Dr. Pattarapornd Suparcha"
+          fill
+          className="object-cover object-top"
+          priority
+          sizes="100vw"
         />
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.8, 0.4] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute top-1/2 -left-40 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"
-        />
-      </div>
+        {/* Gradient overlay — dark at bottom, lighter at top */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/75" />
+      </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+      {/* Centered text content */}
+      <motion.div
+        style={{ y: textY, opacity: textOpacity }}
+        className="relative z-10 text-center px-6 max-w-4xl mx-auto"
+      >
+        {/* Eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-white/80 text-[17px] font-medium tracking-wide mb-5"
+        >
+          Anti-Aging &amp; Aesthetic Medicine · Bangkok, Thailand
+        </motion.p>
+
+        {/* Main headline — Apple-scale typography */}
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-white font-bold leading-none tracking-tight mb-6"
+          style={{ fontSize: 'clamp(2.8rem, 8vw, 6.5rem)' }}
+        >
+          Art Meets<br />
+          <span className="text-white/90">Aesthetic Medicine.</span>
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-white/75 text-[19px] leading-relaxed max-w-2xl mx-auto mb-10"
+        >
+          Dr. Pattarapornd Suparcha blends medical precision with artistic vision — 
+          delivering naturally beautiful results through evidence-based aesthetic care.
+        </motion.p>
+
+        {/* CTA Links — Apple-style pill buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="flex flex-wrap gap-4 justify-center"
+        >
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-white text-[#1d1d1f] text-[15px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200"
           >
-            <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.8 }}
-              >
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="text-foreground">Art Meets </span>
-                  <span className="bg-linear-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent font-display">Aesthetic Medicine</span>
-                </h1>
-              </motion.div>
+            Book Consultation
+          </a>
+          <a
+            href="#services"
+            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full border border-white/50 text-white text-[15px] font-medium hover:bg-white/10 active:scale-95 transition-all duration-200"
+          >
+            Explore Services
+          </a>
+        </motion.div>
+      </motion.div>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-xl text-muted-foreground leading-relaxed"
-              >
-                Where Medical Science Becomes Artistry
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-base text-muted-foreground leading-relaxed max-w-xl"
-              >
-                Dr. Pattarapornd Suparcha (Ploy) is an Anti-Aging Aesthetics and General Practitioner at Inspire IVF Thailand, Bangkok's premier fertility and wellness center. She combines aesthetic medicine expertise, anti-aging treatments, and artistic sensibility with traditional Thai healing for naturally beautiful results.
-              </motion.p>
+      {/* Stats bar — Apple-style minimal metrics */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="absolute bottom-16 left-0 right-0 z-10 flex justify-center gap-12 sm:gap-20"
+      >
+        {[
+          { value: '10+', label: 'Years Experience' },
+          { value: '6', label: 'Certifications' },
+          { value: '55k+', label: 'Happy Patients' },
+        ].map((stat) => (
+          <div key={stat.label} className="text-center">
+            <div className="text-white text-2xl sm:text-3xl font-bold leading-none mb-1">
+              {stat.value}
             </div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-wrap gap-4"
-            >
-              <Button size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 text-base">
-                <a href="#contact">Book Consultation</a>
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 text-base">
-                <a href="#services">Explore Services</a>
-              </Button>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="grid grid-cols-3 gap-6 pt-8"
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-                  transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
-                  className="text-center cursor-default"
-                >
-                  <div className="text-3xl lg:text-4xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wide">{stat.label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Right Content - Image/Stats Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
-          >
-            <Card className="overflow-hidden bg-white border-violet-100 shadow-elevated-lg hover:shadow-2xl transition-shadow duration-500">
-              <div className="aspect-[3/4] relative overflow-hidden group">
-                <Image
-                  src="/studio-photo-202.jpg"
-                  alt="Dr. Pattarapornd Suparcha studio portrait"
-                  fill
-                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  priority
-                />
-              </div>
-              <div className="p-8">
-                <div className="grid grid-cols-2 gap-8">
-                  <div>
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Experience</div>
-                    <div className="text-3xl font-bold text-foreground">10+ Years</div>
-                  </div>
-                  <div>
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Training</div>
-                    <div className="text-3xl font-bold text-foreground">6 Certs</div>
-                  </div>
-                  <div className="col-span-2">
-                    <div className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-2">Patients</div>
-                    <div className="text-3xl font-bold text-foreground">55k+ Happy</div>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-              whileHover={{ scale: 1.05, rotate: -3, transition: { duration: 0.2 } }}
-              className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-violet-100 cursor-default"
-            >
-              <div className="flex items-center gap-3">
-                <motion.div
-                  animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                  className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
-                >
-                  <Award className="w-6 h-6 text-primary" />
-                </motion.div>
-                <div>
-                  <div className="text-xs text-muted-foreground">Aesthetic Medicine</div>
-                  <div className="text-sm font-semibold">M.D. Practitioner</div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
+            <div className="text-white/60 text-[11px] uppercase tracking-widest">
+              {stat.label}
+            </div>
+          </div>
+        ))}
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+        aria-hidden="true"
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center pt-2"
-        >
-          <div className="w-1.5 h-3 bg-primary rounded-full" />
-        </motion.div>
+        <div className="animate-scroll-pulse">
+          <svg
+            width="20"
+            height="30"
+            viewBox="0 0 20 30"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect x="1" y="1" width="18" height="28" rx="9" stroke="white" strokeOpacity="0.5" strokeWidth="1.5" />
+            <rect x="8.5" y="6" width="3" height="7" rx="1.5" fill="white" fillOpacity="0.7" />
+          </svg>
+        </div>
       </motion.div>
     </section>
   )
