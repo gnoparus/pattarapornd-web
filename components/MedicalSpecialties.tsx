@@ -102,7 +102,7 @@ export default function MedicalSpecialties() {
               viewport={{ once: true }}
               className="absolute inset-0 flex items-center px-8 sm:px-14"
             >
-              <div className="text-white max-w-lg">
+              <div className="text-white max-w-lg pr-8 sm:pr-0">
                 <h3 className="font-bold leading-tight mb-2" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)' }}>
                   Expert Medical Care
                 </h3>
