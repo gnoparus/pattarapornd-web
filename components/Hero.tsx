@@ -31,13 +31,12 @@ export default function Hero() {
           src="/studio-photo-202.jpg"
           alt="Dr. Pattarapornd Suparcha"
           fill
-          className="object-cover"
-          style={{ objectPosition: 'center 25%' }}
+          className="object-cover object-[center_10%] md:object-[center_25%]"
           priority
           sizes="100vw"
         />
-        {/* Gradient overlay — stronger at bottom so text is legible */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/80" />
+        {/* Gradient overlay — transparent at top on mobile so face shows, stronger at bottom for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/85 md:from-black/10 md:via-black/30 md:to-black/80" />
       </motion.div>
 
       {/* Text content — centered on mobile, bottom-left on desktop */}
@@ -61,7 +60,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-white font-bold leading-none tracking-tight mb-5"
-          style={{ fontSize: 'clamp(2.8rem, 6.5vw, 5rem)' }}
+          style={{ fontSize: 'clamp(2rem, 9vw, 5rem)' }}
         >
           Art Meets<br />
           <span className="text-white/90">Aesthetic Medicine.</span>
