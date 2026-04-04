@@ -133,7 +133,7 @@ export default function MedicalSpecialties() {
               <div className="w-10 h-10 bg-[#f5f5f7] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#e8e8ed] transition-colors duration-200">
                 <service.icon className="w-5 h-5 text-[#1d1d1f]" />
               </div>
-              <h3 className="text-[#1d1d1f] font-semibold text-[17px] mb-2 group-hover:text-[#7c3aed] transition-colors duration-200">
+              <h3 className="text-[#1d1d1f] font-semibold text-[17px] mb-2 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
                 {service.title}
               </h3>
               <p className="text-[#6e6e73] text-[14px] leading-relaxed">

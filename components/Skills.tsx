@@ -101,7 +101,7 @@ export default function Skills() {
           <div className="grid sm:grid-cols-2 gap-10">
             {technicalSkills.map((category, catIndex) => (
               <div key={category.category}>
-                <p className="text-[#7c3aed] text-[13px] font-semibold uppercase tracking-wider mb-4">
+                <p className="text-[var(--apple-accent)] text-[13px] font-semibold uppercase tracking-wider mb-4">
                   {category.category}
                 </p>
                 <div className="space-y-0">
@@ -140,7 +140,7 @@ export default function Skills() {
               <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-5">
                 <skill.icon className="w-5 h-5 text-[#1d1d1f]" />
               </div>
-              <h3 className="text-[#1d1d1f] font-semibold text-[17px] mb-3 group-hover:text-[#7c3aed] transition-colors duration-200">
+              <h3 className="text-[#1d1d1f] font-semibold text-[17px] mb-3 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
                 {skill.title}
               </h3>
               <p className="text-[#6e6e73] text-[14px] leading-relaxed mb-5">

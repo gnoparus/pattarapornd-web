@@ -79,9 +79,9 @@ export default function AchievementsVolunteering() {
                 <div className="w-9 h-9 bg-[#f5f5f7] rounded-xl flex items-center justify-center">
                   <Award className="w-4.5 h-4.5 text-[#1d1d1f]" />
                 </div>
-                <span className="text-[#7c3aed] text-[13px] font-semibold">{achievement.year}</span>
+                <span className="text-[var(--apple-accent)] text-[13px] font-semibold">{achievement.year}</span>
               </div>
-              <h3 className="text-[#1d1d1f] font-semibold text-[16px] mb-3 group-hover:text-[#7c3aed] transition-colors duration-200 leading-snug">
+              <h3 className="text-[#1d1d1f] font-semibold text-[16px] mb-3 group-hover:text-[var(--apple-accent)] transition-colors duration-200 leading-snug">
                 {achievement.title}
               </h3>
               <p className="text-[#6e6e73] text-[14px] leading-relaxed">{achievement.description}</p>
@@ -110,7 +110,7 @@ export default function AchievementsVolunteering() {
           <div className="grid sm:grid-cols-2 gap-0">
             {volunteering.map((activity, index) => (
               <div key={index}>
-                {index < volunteering.length && <div className="h-px bg-[#d2d2d7]" />}
+                {index > 0 && <div className="h-px bg-[#d2d2d7]" />}
                 <motion.div
                   initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}

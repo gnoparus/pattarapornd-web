@@ -135,15 +135,15 @@ export default function Journey() {
                 {/* Year + icon */}
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                    item.current ? 'bg-[#7c3aed]' : 'bg-[#e8e8ed]'
+                    item.current ? 'bg-[var(--apple-accent)]' : 'bg-[#e8e8ed]'
                   }`}>
                     <item.icon className={`w-4 h-4 ${item.current ? 'text-white' : 'text-[#6e6e73]'}`} />
                   </div>
-                  <span className={`text-[14px] font-semibold ${item.current ? 'text-[#7c3aed]' : 'text-[#6e6e73]'}`}>
+                  <span className={`text-[14px] font-semibold ${item.current ? 'text-[var(--apple-accent)]' : 'text-[#6e6e73]'}`}>
                     {item.year}
                   </span>
                   {item.current && (
-                    <span className="px-2 py-0.5 bg-[#7c3aed]/10 text-[#7c3aed] text-[11px] font-semibold rounded-full">
+                    <span className="px-2 py-0.5 bg-[var(--apple-accent)]/10 text-[var(--apple-accent)] text-[11px] font-semibold rounded-full">
                       Current
                     </span>
                   )}

@@ -150,10 +150,10 @@ export default function Experience() {
 
               {/* Card content */}
               <div className="p-7">
-                <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-1 group-hover:text-[#7c3aed] transition-colors duration-200">
+                <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-1 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
                   {exp.title}
                 </h3>
-                <p className="text-[#7c3aed] text-[14px] font-medium mb-4">{exp.organization}</p>
+                <p className="text-[var(--apple-accent)] text-[14px] font-medium mb-4">{exp.organization}</p>
                 <p className="text-[#6e6e73] text-[14px] leading-relaxed mb-5">{exp.description}</p>
 
                 <div className="space-y-2">

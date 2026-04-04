@@ -126,7 +126,7 @@ export default function About() {
               >
                 {/* Thin top separator */}
                 <div className="h-px bg-[#d2d2d7] mb-8" />
-                <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-3 group-hover:text-[#7c3aed] transition-colors duration-200">
+                <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-3 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
                   {service.title}
                 </h3>
                 <p className="text-[#6e6e73] text-[15px] leading-relaxed">

@@ -52,7 +52,7 @@ export default function Contact() {
           className="text-[#1d1d1f] font-bold text-center leading-tight mb-5"
           style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)' }}
         >
-          Let&apos;s Connect
+          Let's Connect
         </motion.h2>
 
         <motion.p
@@ -62,7 +62,7 @@ export default function Contact() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-20"
         >
-          Reach out through any of these channels — I&apos;d love to hear from you.
+          Reach out through any of these channels — I'd love to hear from you.
         </motion.p>
 
         {/* Two column: photo + contact */}
@@ -110,7 +110,7 @@ export default function Contact() {
                   </div>
                   <div className="flex-1">
                     <p className="text-[#1d1d1f] font-semibold text-[15px] mb-0.5">{link.title}</p>
-                    <p className="text-[#7c3aed] text-[13px] font-medium mb-0.5">{link.subtitle}</p>
+                    <p className="text-[var(--apple-accent)] text-[13px] font-medium mb-0.5">{link.subtitle}</p>
                     <p className="text-[#6e6e73] text-[12px]">{link.detail}</p>
                   </div>
                   {link.href && (
