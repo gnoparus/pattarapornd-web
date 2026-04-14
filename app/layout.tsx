@@ -1,11 +1,54 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
+import { SITE_URL } from '@/lib/site'
+import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: `${DOCTOR_NAME_EN} (${DOCTOR_NAME_TH}) | General Practitioner & M.Sc. Candidate`,
-  description: 'Medical doctor and General Practitioner with expertise in Occupational Health and Aesthetic Medicine. Currently pursuing M.Sc. in Anti-Aging and Regenerative Science. Teaching Assistant for aesthetic training programs and Digital Commercial Artist based in Bangkok, Thailand.',
-  keywords: ['general practitioner', 'occupational health', 'aesthetic medicine', 'anti-aging', 'regenerative science', 'Bangkok doctor', 'teaching assistant', 'digital artist', DOCTOR_NAME_TH, 'pattarapornd suparcha'],
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${DOCTOR_NAME_EN} - Aesthetic & Anti-Aging Physician`,
+    template: `%s | ${DOCTOR_NAME_EN} - Aesthetic & Anti-Aging Physician`,
+  },
+  description:
+    'Professional medical portfolio of Dr. Pattarapornd Suparcha, an aesthetic and anti-aging physician in Bangkok specializing in wellness, preventive care, and regenerative medicine.',
+  keywords: [
+    'Dr. Pattarapornd Suparcha',
+    'Aesthetic physician Bangkok',
+    'Anti-aging physician Bangkok',
+    'Wellness doctor Bangkok',
+    'Preventive medicine',
+    'Regenerative medicine',
+    'Medical portfolio',
+    DOCTOR_NAME_TH,
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: SITE_URL,
+    siteName: DOCTOR_NAME_EN,
+    title: `${DOCTOR_NAME_EN} - Aesthetic & Anti-Aging Physician`,
+    description:
+      'Discover the medical portfolio of Dr. Pattarapornd Suparcha, aesthetic and anti-aging physician based in Bangkok, Thailand.',
+    locale: 'en_US',
+    images: [
+      {
+        url: '/studio-photo-1.jpg',
+        width: 1200,
+        height: 630,
+        alt: `${DOCTOR_NAME_EN} medical portfolio`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${DOCTOR_NAME_EN} - Aesthetic & Anti-Aging Physician`,
+    description:
+      'Professional portfolio of Dr. Pattarapornd Suparcha, aesthetic and anti-aging physician in Bangkok.',
+    images: ['/studio-photo-1.jpg'],
+  },
 }
 
 export default function RootLayout({
@@ -16,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased bg-white">
+        <SchemaMarkup />
         {children}
       </body>
     </html>
