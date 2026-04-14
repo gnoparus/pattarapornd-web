@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
+import { SITE_URL } from '@/lib/site'
 import SchemaMarkup from '@/components/SchemaMarkup'
-
-const SITE_URL = 'https://pattarapornd.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,7 +33,6 @@ export const metadata: Metadata = {
     description:
       'Discover the medical portfolio of Dr. Pattarapornd Suparcha, aesthetic and anti-aging physician based in Bangkok, Thailand.',
     locale: 'en_US',
-    alternateLocale: ['th_TH'],
     images: [
       {
         url: '/studio-photo-1.jpg',
