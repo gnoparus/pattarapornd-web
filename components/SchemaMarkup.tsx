@@ -23,10 +23,12 @@ const physicianSchema = {
 }
 
 export default function SchemaMarkup() {
+  const safeJsonLd = JSON.stringify(physicianSchema).replace(/</g, '\\u003c')
+
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd }}
     />
   )
 }
