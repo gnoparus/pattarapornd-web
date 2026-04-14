@@ -12,7 +12,7 @@ export default function Contact() {
       title: 'LinkedIn',
       subtitle: 'Pattarapornd Suparcha',
       detail: 'Connect professionally',
-      href: 'https://www.linkedin.com/in/pattarapornd-suparcha-914858392',
+      href: 'https://www.linkedin.com/in/dr-pattarapornd-suparcha-914858392',
     },
     {
       icon: MapPin,
