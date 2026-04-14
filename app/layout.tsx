@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     title: `${DOCTOR_NAME_EN} - Aesthetic & Anti-Aging Physician`,
     description:
       'Discover the medical portfolio of Dr. Pattarapornd Suparcha, aesthetic and anti-aging physician based in Bangkok, Thailand.',
-    locale: 'th_TH',
-    alternateLocale: ['en_US'],
+    locale: 'en_US',
+    alternateLocale: ['th_TH'],
     images: [
       {
         url: '/studio-photo-1.jpg',
@@ -59,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="th" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body className="antialiased bg-white">
         <SchemaMarkup />
         {children}
