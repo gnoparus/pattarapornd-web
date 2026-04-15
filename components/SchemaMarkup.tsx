@@ -7,7 +7,7 @@ const physicianSchema = {
   name: DOCTOR_NAME_EN,
   alternateName: DOCTOR_NAME_TH,
   url: SITE_URL,
-  image: `${SITE_URL}/studio-photo-1.jpg`,
+  image: `${SITE_URL}/studio-photo-202.jpg`,
   description:
     'Aesthetic and anti-aging physician based in Bangkok, Thailand, focused on wellness, preventive care, and regenerative medicine.',
   medicalSpecialty: ['Aesthetic Medicine', 'Preventive Medicine', 'Anti-Aging Medicine'],
