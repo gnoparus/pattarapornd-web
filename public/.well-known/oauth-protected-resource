@@ -1,13 +1,15 @@
 {
-  "resource": "https://pattarapornd.com/",
+  "resource": "https://pattarapornd.com",
   "authorization_servers": [
     "https://pattarapornd.com"
   ],
   "scopes_supported": [
+    "site:read",
     "profile:read",
-    "site:read"
+    "status:read"
   ],
   "bearer_methods_supported": [
     "header"
-  ]
+  ],
+  "resource_documentation": "https://pattarapornd.com/llms.txt"
 }
