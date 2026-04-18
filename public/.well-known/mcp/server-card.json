@@ -1,0 +1,18 @@
+{
+  "serverInfo": {
+    "name": "pattarapornd-web",
+    "title": "Pattarapornd.com Agent Context",
+    "version": "1.0.0"
+  },
+  "transports": [
+    {
+      "type": "https",
+      "url": "https://pattarapornd.com/"
+    }
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Pattarapornd.com Site Discovery API",
+    "version": "1.0.0",
+    "description": "Static discovery-oriented endpoints for automated agents."
+  },
+  "servers": [
+    {
+      "url": "https://pattarapornd.com"
+    }
+  ],
+  "paths": {
+    "/.well-known/status": {
+      "get": {
+        "summary": "Get static service status",
+        "responses": {
+          "200": {
+            "description": "Service is available"
+          }
+        }
+      }
+    }
+  }
+}

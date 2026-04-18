@@ -1,0 +1,24 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://pattarapornd.com/",
+      "item": [
+        {
+          "href": "https://pattarapornd.com/.well-known/openapi.json",
+          "rel": "service-desc",
+          "type": "application/openapi+json"
+        },
+        {
+          "href": "https://pattarapornd.com/llms.txt",
+          "rel": "service-doc",
+          "type": "text/plain"
+        },
+        {
+          "href": "https://pattarapornd.com/.well-known/status",
+          "rel": "status",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}
