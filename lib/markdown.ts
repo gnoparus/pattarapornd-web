@@ -1,4 +1,4 @@
-# Dr. Pattarapornd Suparcha
+export const homePageMarkdown = `# Dr. Pattarapornd Suparcha
 
 Professional medical portfolio for Dr. Pattarapornd Suparcha, an aesthetic and anti-aging physician in Bangkok, Thailand.
 
@@ -23,3 +23,7 @@ Dr. Pattarapornd Suparcha specializes in:
 ## Curriculum Vitae
 
 - CV (PDF): https://pattarapornd.com/cv-dr-pattarapornd-suparcha-md-2026.pdf
+`
+
+export const homePageMarkdownTokens =
+  'title,summary,links,resources,cv,about'
