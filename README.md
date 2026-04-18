@@ -33,14 +33,14 @@ A modern portfolio website showcasing Dr. Pattarapornd Suparcha's medical expert
 
 | Category | Technology |
 |---|---|
-| **Framework** | Next.js 16 (App Router, Static Export) |
+| **Framework** | Next.js 16 (App Router) |
 | **Language** | TypeScript |
 | **UI Components** | shadcn/ui (Card, Button) |
 | **3D Graphics** | Three.js, React Three Fiber, Drei |
 | **Animations** | Framer Motion |
 | **Styling** | Tailwind CSS v4 with custom purple palette |
 | **Icons** | Lucide React |
-| **Deployment** | GitHub Pages with custom domain |
+| **Deployment** | Vercel with custom domain |
 
 ## 📁 Project Structure
 
@@ -64,8 +64,8 @@ A modern portfolio website showcasing Dr. Pattarapornd Suparcha's medical expert
 ├── lib/
 │   ├── unsplashImages.ts       # Image configuration
 │   └── utils.ts                # Utility functions (cn)
-├── public/                     # Static assets (photos, CV PDF, CNAME)
-├── next.config.js              # Static export & image config
+├── public/                     # Static assets (photos, CV PDF)
+├── next.config.js              # Next.js config & image settings
 └── tsconfig.json               # TypeScript configuration
 ```
 
@@ -84,7 +84,7 @@ npm install
 # Run development server
 npm run dev
 
-# Build for production (static export)
+# Build for production
 npm run build
 ```
 
@@ -92,14 +92,13 @@ Open [http://localhost:3000](http://localhost:3000) to view the website locally.
 
 ## 🌐 Deployment
 
-### GitHub Pages with Custom Domain
+### Vercel
 
-The site is automatically deployed to GitHub Pages on push to `main`:
+Deploy by connecting the repository in Vercel. It will detect Next.js automatically and use:
 
+- **Build:** `next build`
+- **Output:** `.next`
 - **Domain:** [pattarapornd.com](https://pattarapornd.com)
-- **Build:** Static export via `next build` → `out/` directory
-- **CI/CD:** GitHub Actions workflow handles build and deploy
-- **DNS:** CNAME configured to point to GitHub Pages
 
 ## 🎨 Design System
 

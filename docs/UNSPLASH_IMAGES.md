@@ -31,14 +31,7 @@ The application uses Next.js's built-in `Image` component for:
 Unsplash images are configured in `next.config.js` with:
 ```javascript
 images: {
-  unoptimized: true,  // Required for static export
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'images.unsplash.com',
-      pathname: '/**',
-    },
-  ],
+  unoptimized: true,  // Keep unoptimized for Unsplash URLs without extra config
 }
 ```
 
