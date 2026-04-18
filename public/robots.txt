@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /.well-known/private/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /cv-dr-pattarapornd-suparcha-md-2026.pdf
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /cv-dr-pattarapornd-suparcha-md-2026.pdf
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /cv-dr-pattarapornd-suparcha-md-2026.pdf
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /cv-dr-pattarapornd-suparcha-md-2026.pdf
+
+Content-Signal: ai-train=no, search=yes, ai-input=no
+Sitemap: https://pattarapornd.com/sitemap.xml

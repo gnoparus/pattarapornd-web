@@ -9,10 +9,12 @@ import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
 import AchievementsVolunteering from '@/components/AchievementsVolunteering'
 import Contact from '@/components/Contact'
+import WebMcpProvider from '@/components/WebMcpProvider'
 
 export default function Home() {
   return (
     <>
+      <WebMcpProvider />
       <Navigation />
       <main className="min-h-screen">
         <Hero />

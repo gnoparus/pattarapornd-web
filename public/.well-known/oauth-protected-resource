@@ -1,0 +1,13 @@
+{
+  "resource": "https://pattarapornd.com/",
+  "authorization_servers": [
+    "https://pattarapornd.com"
+  ],
+  "scopes_supported": [
+    "profile:read",
+    "site:read"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agentskills.io/schema/agent-skills-index-v0.2.0.json",
+  "skills": [
+    {
+      "name": "robots-txt",
+      "type": "documentation",
+      "description": "Crawler and AI crawler policy rules for this site.",
+      "url": "https://pattarapornd.com/.well-known/agent-skills/robots-txt.md",
+      "sha256": "f4725991500296d2b21bdf4fc59d7d74ffda1e490957761e7a3b27a91941bdd1"
+    },
+    {
+      "name": "sitemap",
+      "type": "documentation",
+      "description": "Canonical URL discovery for this site.",
+      "url": "https://pattarapornd.com/.well-known/agent-skills/sitemap.md",
+      "sha256": "c5f6030fb4950c667ae0dd4589da768caf0b30054442a2fd961526a2ca89da8b"
+    },
+    {
+      "name": "webmcp",
+      "type": "documentation",
+      "description": "WebMCP tool surface exposed by the homepage.",
+      "url": "https://pattarapornd.com/.well-known/agent-skills/webmcp.md",
+      "sha256": "b7824c558d5ab5ed211bd7411f9fda5e3a6a13c9fc3a026ada44fb7af0185d48"
+    }
+  ]
+}
