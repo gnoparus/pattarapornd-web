@@ -5,6 +5,7 @@ import { homePageMarkdown, homePageMarkdownTokens } from '@/lib/markdown'
 const homeLinkHeaders = [
   '</.well-known/api-catalog>; rel="api-catalog"',
   '</.well-known/openapi.json>; rel="service-desc"; type="application/openapi+json"',
+  '</.well-known/oauth-protected-resource>; rel="oauth-protected-resource"; type="application/json"',
   '</llms.txt>; rel="service-doc"; type="text/plain"',
   '</.well-known/agent-skills/index.json>; rel="describedby"; type="application/json"',
   '</index.md>; rel="alternate"; type="text/markdown"',
