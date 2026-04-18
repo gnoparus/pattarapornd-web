@@ -4,6 +4,7 @@ import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 import { SITE_URL } from '@/lib/site'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -63,6 +64,7 @@ export default function RootLayout({
         <SchemaMarkup />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
