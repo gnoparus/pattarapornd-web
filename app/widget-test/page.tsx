@@ -14,7 +14,7 @@ export default function WidgetTestPage() {
         bottom-right corner.
       </p>
       <script
-        src="/widget.iife.js"
+        src="https://staging.impactchat.app/widget.iife.js"
         data-api-base="https://staging.impactchat.app"
         data-lang="th"
         defer
