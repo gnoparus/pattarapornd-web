@@ -59,7 +59,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-white font-bold leading-tight tracking-tight mb-5"
-          style={{ fontSize: 'clamp(1.9rem, 9vw, 2.8rem)' }}
+          style={{ fontSize: 'clamp(1.9rem, 9vw, 2.8rem)', textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}
         >
           Art Meets<br />
           <span className="text-white/90">Aesthetic Medicine.</span>
@@ -97,7 +97,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-white font-bold leading-none tracking-tight mb-5"
-          style={{ fontSize: 'clamp(2rem, 9vw, 5rem)' }}
+          style={{ fontSize: 'clamp(2rem, 9vw, 5rem)', textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}
         >
           Art Meets<br />
           <span className="text-white/90">Aesthetic Medicine.</span>

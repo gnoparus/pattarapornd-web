@@ -107,7 +107,7 @@ export default function Journey() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#1d1d1f]/70 via-[#1d1d1f]/40 to-transparent" />
             <div className="absolute inset-0 flex items-center px-8 sm:px-14">
               <div className="text-white max-w-[55%] sm:max-w-lg">
-                <h3 className="font-bold leading-tight mb-2 pr-4 sm:pr-0" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)' }}>
+                <h3 className="font-bold leading-tight mb-2 pr-4 sm:pr-0" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}>
                   Academic Excellence
                 </h3>
                 <p className="text-white/80 text-[15px] pr-4 sm:pr-0">
