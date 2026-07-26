@@ -17,6 +17,7 @@ export default function Experience() {
         'Delivering aesthetic treatments tailored to each patient\'s goals',
         'Building an ongoing patient care schedule alongside her other clinic roles',
       ],
+      image: '/studio-photo-301.jpg',
       current: true,
     },
     {
