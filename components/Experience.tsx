@@ -93,19 +93,6 @@ export default function Experience() {
       image: '/pattarapornd-phayathai-navamin-hospital101.png',
       current: false,
     },
-    {
-      period: 'Jan 2022 — Present',
-      title: 'Digital Commercial Artist',
-      organization: 'Tomodachi T-shirt',
-      location: 'Thailand',
-      description:
-        'Creating digital commercial artwork and designs for a creative apparel brand, combining artistic sensibility with commercial design — a creative pursuit outside her medical practice.',
-      achievements: [
-        'Producing original digital artwork for commercial merchandise',
-        'Blending artistic creativity with commercial brand identity',
-      ],
-      current: true,
-    },
   ]
 
   return (
