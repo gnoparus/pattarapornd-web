@@ -91,14 +91,14 @@ export default function Navigation() {
                 onClick={(e) => handleNavClick(e, '#contact')}
                 className="text-[13px] font-medium text-white bg-[#1d1d1f] rounded-full px-4 py-1.5 hover:bg-[#1d1d1f]/80 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
               >
-                Book Consultation
+                Contact for Consultation
               </a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 -mr-2 rounded-lg text-[#1d1d1f]/70 hover:text-[#1d1d1f] transition-colors touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+              className="md:hidden p-3 -mr-3 rounded-lg text-[#1d1d1f]/70 hover:text-[#1d1d1f] transition-colors touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
             >
@@ -192,7 +192,7 @@ export default function Navigation() {
                     onClick={(e) => handleNavClick(e, '#contact')}
                     className="block text-center py-4 text-[17px] font-semibold text-white bg-[#1d1d1f] rounded-2xl hover:bg-[#1d1d1f]/80 active:scale-[0.98] transition-all touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                   >
-                    Book Consultation
+                    Contact for Consultation
                   </a>
                 </motion.div>
               </nav>

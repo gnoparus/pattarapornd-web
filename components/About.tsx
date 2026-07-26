@@ -60,7 +60,8 @@ export default function About() {
           className="text-[#6e6e73] text-[19px] leading-relaxed text-center max-w-2xl mx-auto mb-20"
         >
           A physician who approaches medicine as an art form — specializing in aesthetic
-          medicine, anti-aging treatments, and holistic wellness at Inspire IVF Thailand.
+          medicine, anti-aging treatments, and holistic wellness. She currently practices
+          at Izee Clinic and NURA Bangkok.
         </motion.p>
 
         {/* Two-column: image + services */}

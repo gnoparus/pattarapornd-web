@@ -59,7 +59,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-white font-bold leading-tight tracking-tight mb-5"
-          style={{ fontSize: 'clamp(1.9rem, 9vw, 2.8rem)' }}
+          style={{ fontSize: 'clamp(1.9rem, 9vw, 2.8rem)', textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}
         >
           Art Meets<br />
           <span className="text-white/90">Aesthetic Medicine.</span>
@@ -70,9 +70,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-white text-[#1d1d1f] text-[14px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-[#1d1d1f] text-[14px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
-          Book Consultation
+          Contact for Consultation
         </motion.a>
       </motion.div>
 
@@ -97,7 +97,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-white font-bold leading-none tracking-tight mb-5"
-          style={{ fontSize: 'clamp(2rem, 9vw, 5rem)' }}
+          style={{ fontSize: 'clamp(2rem, 9vw, 5rem)', textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}
         >
           Art Meets<br />
           <span className="text-white/90">Aesthetic Medicine.</span>
@@ -114,7 +114,7 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-white text-[#1d1d1f] text-[15px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Book Consultation
+            Contact for Consultation
           </a>
           <a
             href="#services"

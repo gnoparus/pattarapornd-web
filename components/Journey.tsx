@@ -82,7 +82,7 @@ export default function Journey() {
           <a
             href="/cv-dr-pattarapornd-suparcha-md-2026.pdf"
             download="CV Dr. Pattarapornd Suparcha, M.D. 2026.pdf"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#d2d2d7] text-[#1d1d1f] text-[14px] font-medium hover:bg-[#f5f5f7] active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#d2d2d7] text-[#1d1d1f] text-[14px] font-medium hover:bg-[#f5f5f7] active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
           >
             <Download className="w-4 h-4" />
             Download Full CV
@@ -97,7 +97,7 @@ export default function Journey() {
           viewport={{ once: true, margin: '-60px' }}
           className="mb-20 rounded-3xl overflow-hidden shadow-apple group"
         >
-          <div className="relative min-h-[200px]" style={{ aspectRatio: '16/5' }}>
+          <div className="relative w-full" style={{ aspectRatio: '16/5', minHeight: '200px' }}>
             <Image
               src="/pattarapornd-group-surgeons-wearing-safety-masks-performing-operation-medicine-concept-surgery-medicine-people-concept-group-surgeons-operation-operating-room-hospital.jpg"
               alt="Surgeons performing operation in operating room"
@@ -107,7 +107,7 @@ export default function Journey() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#1d1d1f]/70 via-[#1d1d1f]/40 to-transparent" />
             <div className="absolute inset-0 flex items-center px-8 sm:px-14">
               <div className="text-white max-w-[55%] sm:max-w-lg">
-                <h3 className="font-bold leading-tight mb-2 pr-4 sm:pr-0" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)' }}>
+                <h3 className="font-bold leading-tight mb-2 pr-4 sm:pr-0" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}>
                   Academic Excellence
                 </h3>
                 <p className="text-white/80 text-[15px] pr-4 sm:pr-0">

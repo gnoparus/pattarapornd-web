@@ -87,7 +87,7 @@ export default function MedicalSpecialties() {
           viewport={{ once: true, margin: '-60px' }}
           className="mb-16 rounded-3xl overflow-hidden shadow-apple group"
         >
-          <div className="relative min-h-[200px]" style={{ aspectRatio: '16/5' }}>
+          <div className="relative w-full" style={{ aspectRatio: '16/5', minHeight: '200px' }}>
             <Image
               src="/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg"
               alt="Team of doctors in conference room"
@@ -103,7 +103,7 @@ export default function MedicalSpecialties() {
               className="absolute inset-0 flex items-center px-8 sm:px-14"
             >
               <div className="text-white max-w-[55%] sm:max-w-lg">
-                <h3 className="font-bold leading-tight mb-2" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)' }}>
+                <h3 className="font-bold leading-tight mb-2" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}>
                   Expert Medical Care
                 </h3>
                 <p className="text-white/80 text-[15px]">
