@@ -82,7 +82,7 @@ export default function Journey() {
           <a
             href="/cv-dr-pattarapornd-suparcha-md-2026.pdf"
             download="CV Dr. Pattarapornd Suparcha, M.D. 2026.pdf"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#d2d2d7] text-[#1d1d1f] text-[14px] font-medium hover:bg-[#f5f5f7] active:scale-95 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#d2d2d7] text-[#1d1d1f] text-[14px] font-medium hover:bg-[#f5f5f7] active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
           >
             <Download className="w-4 h-4" />
             Download Full CV

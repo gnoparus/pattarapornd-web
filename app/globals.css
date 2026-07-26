@@ -181,21 +181,6 @@ html {
   transform: scale(1.04);
 }
 
-/* Apple-style frosted glass */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-}
-
-/* Gradient text (accent) */
-.gradient-text {
-  background: linear-gradient(135deg, #7c3aed, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* Subtle floating animation */
 @keyframes float {
   0%, 100% {

@@ -67,7 +67,7 @@ export default function Navigation() {
             <motion.a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="text-[15px] font-semibold tracking-tight text-[#1d1d1f] hover:opacity-70 transition-opacity duration-200"
+              className="text-[15px] font-semibold tracking-tight text-[#1d1d1f] hover:opacity-70 transition-opacity duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
               whileTap={{ scale: 0.97 }}
               aria-label="Dr. Pattarapornd — home"
             >
@@ -81,7 +81,7 @@ export default function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-[13px] text-[#1d1d1f]/70 hover:text-[#1d1d1f] transition-colors duration-200"
+                  className="text-[13px] text-[#1d1d1f]/70 hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                 >
                   {link.name}
                 </a>
@@ -89,7 +89,7 @@ export default function Navigation() {
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="text-[13px] font-medium text-white bg-[#1d1d1f] rounded-full px-4 py-1.5 hover:bg-[#1d1d1f]/80 transition-colors duration-200"
+                className="text-[13px] font-medium text-white bg-[#1d1d1f] rounded-full px-4 py-1.5 hover:bg-[#1d1d1f]/80 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
               >
                 Book Consultation
               </a>
@@ -98,7 +98,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 -mr-2 rounded-lg text-[#1d1d1f]/70 hover:text-[#1d1d1f] transition-colors touch-manipulation"
+              className="md:hidden p-2 -mr-2 rounded-lg text-[#1d1d1f]/70 hover:text-[#1d1d1f] transition-colors touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
             >
@@ -161,7 +161,7 @@ export default function Navigation() {
                       <a
                         href={link.href}
                         onClick={(e) => handleNavClick(e, link.href)}
-                        className="flex items-center justify-between px-4 py-4 text-[18px] font-medium text-[#1d1d1f] rounded-2xl hover:bg-black/5 active:bg-black/10 transition-colors touch-manipulation"
+                        className="flex items-center justify-between px-4 py-4 text-[18px] font-medium text-[#1d1d1f] rounded-2xl hover:bg-black/5 active:bg-black/10 transition-colors touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                       >
                         {link.name}
                         <svg
@@ -190,7 +190,7 @@ export default function Navigation() {
                   <a
                     href="#contact"
                     onClick={(e) => handleNavClick(e, '#contact')}
-                    className="block text-center py-4 text-[17px] font-semibold text-white bg-[#1d1d1f] rounded-2xl hover:bg-[#1d1d1f]/80 active:scale-[0.98] transition-all touch-manipulation"
+                    className="block text-center py-4 text-[17px] font-semibold text-white bg-[#1d1d1f] rounded-2xl hover:bg-[#1d1d1f]/80 active:scale-[0.98] transition-all touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                   >
                     Book Consultation
                   </a>
