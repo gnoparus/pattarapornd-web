@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-26T00:00:00.000Z",
+  "title": "Design System: Dr. Pattarapornd Suparcha — Medical Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "warm-amethyst": { "role": "primary", "displayName": "Warm Amethyst", "canonical": "oklch(54% 0.24 295)", "tonalRamp": ["#2e1065", "#4c1d95", "#5b21b6", "#6d28d9", "#7c3aed", "#9061f9", "#a78bfa", "#ddd6fe"] },
+      "ink-black": { "role": "neutral", "displayName": "Ink Black", "canonical": "oklch(21% 0 0)", "tonalRamp": ["#000000", "#1d1d1f", "#2c2c2e", "#3a3a3c", "#48484a", "#636366", "#8e8e93", "#c7c7cc"] },
+      "cloud-6": { "role": "neutral", "displayName": "Cloud 6", "canonical": "oklch(97% 0 0)", "tonalRamp": ["#d2d2d7", "#e8e8ed", "#f0f0f2", "#f5f5f7", "#f7f7f9", "#fafafb", "#fcfcfd", "#ffffff"] },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "oklch(100% 0 0)", "tonalRamp": ["#e8e8ed", "#f0f0f2", "#f5f5f7", "#f9f9fa", "#fbfbfc", "#fdfdfd", "#fefefe", "#ffffff"] },
+      "signal-red": { "role": "destructive", "displayName": "Signal Red", "canonical": "oklch(58% 0.22 27)", "tonalRamp": ["#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#e3342f", "#ef4444", "#f87171", "#fca5a5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only — the single largest text moment on the page." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (About, Specialties, Journey, Experience, Skills, Contact)." },
+      "title": { "displayName": "Title", "purpose": "Card or entry titles within a section." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy — bios, philosophy statements, descriptions." },
+      "label": { "displayName": "Label", "purpose": "Eyebrow/kicker text only, never body or button copy." }
+    },
+    "shadows": [
+      { "name": "shadow-apple-sm", "value": "0 1px 2px 0 rgba(0,0,0,0.04), 0 4px 12px -2px rgba(0,0,0,0.06)", "purpose": "Resting elevation for small elements — buttons, chips, nav bar." },
+      { "name": "shadow-apple", "value": "0 2px 4px 0 rgba(0,0,0,0.04), 0 8px 24px -4px rgba(0,0,0,0.08)", "purpose": "Default card elevation." },
+      { "name": "shadow-apple-lg", "value": "0 4px 8px 0 rgba(0,0,0,0.04), 0 16px 48px -8px rgba(0,0,0,0.12)", "purpose": "Featured cards, modals — anything that should feel like it's floating." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default easing for image-scale-hover and state transitions." },
+      { "name": "float", "value": "float 4s ease-in-out infinite", "purpose": "Subtle floating idle animation on decorative elements." },
+      { "name": "fade-up", "value": "fade-up 0.6s ease-out", "purpose": "Section reveal on scroll." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA action (e.g. Contact, Book Consultation).",
+      "html": "<button class=\"ds-btn-primary\">Get in touch</button>",
+      "css": ".ds-btn-primary { background: #7c3aed; color: #ffffff; height: 36px; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; border: none; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04), 0 4px 12px -2px rgba(0,0,0,0.06); transition: background-color 0.15s ease, transform 0.15s ease; } .ds-btn-primary:hover { background: rgba(124,58,237,0.9); } .ds-btn-primary:focus-visible { outline: 1px solid #7c3aed; outline-offset: 2px; } .ds-btn-primary:active { transform: scale(0.95); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action alongside a primary CTA (e.g. Download CV).",
+      "html": "<button class=\"ds-btn-outline\">Download CV</button>",
+      "css": ".ds-btn-outline { background: #ffffff; color: #1d1d1f; height: 36px; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; border: 1px solid #e8e8ed; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04); transition: background-color 0.15s ease; } .ds-btn-outline:hover { background: #f5f5f7; }"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Specialty, journey, or experience entry card.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Aesthetic Medicine</h3><p class=\"ds-card-desc\">Non-invasive treatments tailored to natural, lasting results.</p></div>",
+      "css": ".ds-card { background: #ffffff; color: #1d1d1f; border: 1px solid #e8e8ed; border-radius: 8px; padding: 24px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.04), 0 8px 24px -4px rgba(0,0,0,0.08); transition: box-shadow 0.2s ease; } .ds-card:hover { box-shadow: 0 4px 8px 0 rgba(0,0,0,0.04), 0 16px 48px -8px rgba(0,0,0,0.12); } .ds-card-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; } .ds-card-desc { font-size: 14px; color: #6e6e73; line-height: 1.5; }"
+    },
+    {
+      "name": "Sticky Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Frosted-glass sticky top nav — the one deliberate glassmorphism use in the system.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-link ds-nav-link--active\">About</span><span class=\"ds-nav-link\">Specialties</span><span class=\"ds-nav-link\">Contact</span></nav>",
+      "css": ".ds-nav { display: flex; gap: 24px; align-items: center; padding: 12px 24px; background: rgba(255,255,255,0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04), 0 4px 12px -2px rgba(0,0,0,0.06); } .ds-nav-link { font-size: 14px; font-weight: 500; color: #6e6e73; cursor: pointer; transition: color 0.15s ease; } .ds-nav-link:hover { color: #1d1d1f; } .ds-nav-link--active { color: #7c3aed; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Wellness Atelier",
+    "overview": "The site reads as a boutique consultation, not a hospital intake form. Apple-derived restraint (monochrome ink-and-cloud neutrals, generous whitespace, soft diffuse shadows) carries the credibility; a single warm amethyst accent carries the personality. The palette and type scale stay minimal so the content — Dr. Pattarapornd's real journey, specialties, and experience — does the persuading, not decoration. This system explicitly rejects the salesy aesthetic-clinic playbook: no discount banners, no countdown urgency, no stock-photo clutter, no pushy CTAs. It also rejects the cold, impersonal end of \"luxury minimal\" — the warmth has to be legible in the type, the copy, and the motion, not just implied by restraint.",
+    "keyCharacteristics": [
+      "One accent color (warm amethyst), used sparingly against a near-monochrome ink/cloud neutral system",
+      "Soft, ambient shadows (shadow-apple-*) rather than hard drop shadows or flat cards",
+      "Large, confident display type for hero moments, tightly tracked negative letter-spacing",
+      "Small tracked-uppercase labels used only for eyebrow/kicker text, never for body copy",
+      "Calm, physics-based motion (float, fade-up, scroll-pulse) — nothing bouncy or attention-grabbing"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Warm Amethyst is the only saturated color in the system. It never appears as a background fill larger than a button or icon chip — its rarity is what makes it feel considered rather than decorative.", "section": "colors" },
+      { "name": "The No-Gradient-Text Rule", "body": "The existing .gradient-text utility (amethyst-to-lighter-violet background-clip) is prohibited going forward — gradient text reads as decorative flourish, not brand voice. Use solid Warm Amethyst or Ink Black and lean on weight/size for emphasis instead.", "section": "colors" },
+      { "name": "The Single-Family Rule", "body": "Every weight on the page traces back to the system-font stack. Do not introduce a second typeface for \"editorial contrast\" — the restraint is the point.", "section": "typography" },
+      { "name": "The Ambient-Not-Reactive Rule", "body": "Shadows describe a surface's resting elevation, not its interaction state. Don't add shadow only on hover — if a card should feel raised, it's raised at rest; hover can deepen it slightly (shadow-apple → shadow-apple-lg), never invent it from nothing.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Warm Amethyst (#7c3aed) to a single accent role — CTAs, active states, key numerals. Its rarity is the point.",
+      "Do use soft, ambient shadows (shadow-apple-*) for any surface that needs to feel raised; keep blur high and opacity low (≤0.12).",
+      "Do cap body paragraph width at 65–75ch and keep line-height at 1.6 for the warm, readable feel the brand personality calls for.",
+      "Do use prefers-reduced-motion fallbacks for every animation (float, fade-up, scroll-pulse) — already implemented in globals.css; keep it that way for any new motion.",
+      "Do let real content (credentials, timeline, specialties) carry credibility, per PRODUCT.md's \"credibility through specificity\" principle."
+    ],
+    "donts": [
+      "Don't ship a salesy aesthetic-clinic ad: no discount banners, countdown timers, before/after sliders, or urgency-driven CTAs. This is a direct PRODUCT.md anti-reference.",
+      "Don't let the site read as a generic corporate hospital site — no stock-photo grids, no impersonal boilerplate copy.",
+      "Don't use .gradient-text (background-clip gradient) going forward — solid amethyst or ink black only.",
+      "Don't introduce a second typeface. The single-system-font restraint is deliberate, not a placeholder.",
+      "Don't use the 13px tracked-uppercase label style for anything but a true eyebrow/kicker — never for buttons, nav, or body text.",
+      "Don't add glassmorphism anywhere except the sticky nav, where it solves a real legibility problem. Anywhere else, it's decoration."
+    ]
+  }
+}

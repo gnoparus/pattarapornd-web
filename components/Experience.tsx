@@ -7,19 +7,48 @@ import { Check } from 'lucide-react'
 export default function Experience() {
   const experiences = [
     {
-      period: 'Feb 2026 — Present',
+      period: 'Jul 2026 — Present',
+      title: 'Aesthetic Physician',
+      organization: 'Izee Clinic',
+      location: 'Bangkok, Thailand',
+      description:
+        'Providing aesthetic medicine consultations and treatments at Izee Clinic, with a weekday schedule that varies week to week.',
+      achievements: [
+        'Delivering aesthetic treatments tailored to each patient\'s goals',
+        'Building an ongoing patient care schedule alongside her other clinic roles',
+      ],
+      current: true,
+    },
+    {
+      period: 'Jul 2026 — Present',
+      title: 'General Practitioner',
+      organization: 'NURA Bangkok',
+      location: 'Bangkok, Thailand',
+      description:
+        'Serving as a check-up physician at NURA Bangkok, reviewing medical history, recommending age- and gender-specific screening packages, and guiding patients through their results.',
+      achievements: [
+        'Reviewing personal and family medical history, lifestyle habits, and risk factors',
+        'Recommending screening programs matched to age, gender, and risk profile',
+        'Performing physical exams and supervising diagnostics (imaging, lab work)',
+        'Interpreting results and advising on lifestyle changes or specialist referrals',
+      ],
+      image: '/nura-bangkok-lobby.jpg',
+      current: true,
+    },
+    {
+      period: 'Feb 2026 — May 2026',
       title: 'Anti-Aging, Aesthetics & General Practitioner',
       organization: 'Inspire IVF Thailand — Wellness Department',
       location: 'Bangkok, Thailand',
       description:
-        'Dr. Pattarapornd (Ploy) offers personalized one-on-one care in the Wellness Department of Bangkok\'s premier fertility and wellness centre, combining anti-aging medicine, aesthetic treatments, and general practice with a holistic approach.',
+        'Dr. Pattarapornd (Ploy) offered personalized one-on-one care in the Wellness Department of Bangkok\'s premier fertility and wellness centre, combining anti-aging medicine, aesthetic treatments, and general practice with a holistic approach.',
       achievements: [
-        'Delivering specialized anti-aging and aesthetic medicine in a world-class fertility and wellness center',
-        'Providing comprehensive general practice care to international and local clients',
-        'Integrating holistic wellness approaches with cutting-edge medical technology',
+        'Delivered specialized anti-aging and aesthetic medicine in a world-class fertility and wellness center',
+        'Provided comprehensive general practice care to international and local clients',
+        'Integrated holistic wellness approaches with cutting-edge medical technology',
       ],
       image: '/inspire_ivf_clinic101.webp',
-      current: true,
+      current: false,
     },
     {
       period: 'Jun 2025 — Present',
@@ -70,12 +99,11 @@ export default function Experience() {
       organization: 'Tomodachi T-shirt',
       location: 'Thailand',
       description:
-        'Creating digital commercial artwork and designs for a creative apparel brand, combining artistic sensibility with commercial design.',
+        'Creating digital commercial artwork and designs for a creative apparel brand, combining artistic sensibility with commercial design — a creative pursuit outside her medical practice.',
       achievements: [
         'Producing original digital artwork for commercial merchandise',
         'Blending artistic creativity with commercial brand identity',
       ],
-      image: '/avatar with bg.JPG',
       current: true,
     },
   ]
@@ -128,12 +156,20 @@ export default function Experience() {
             >
               {/* Card image */}
               <div className="relative overflow-hidden" style={{ aspectRatio: '16/7' }}>
-                <Image
-                  src={exp.image}
-                  alt={exp.organization}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
+                {exp.image ? (
+                  <Image
+                    src={exp.image}
+                    alt={exp.organization}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[#1d1d1f] flex items-center justify-center">
+                    <span className="text-white/30 text-2xl font-semibold tracking-tight">
+                      {exp.organization}
+                    </span>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
                   <div>

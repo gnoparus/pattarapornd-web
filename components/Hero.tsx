@@ -70,7 +70,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-white text-[#1d1d1f] text-[14px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200"
+          className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-white text-[#1d1d1f] text-[14px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Book Consultation
         </motion.a>
@@ -103,25 +103,6 @@ export default function Hero() {
           <span className="text-white/90">Aesthetic Medicine.</span>
         </motion.h1>
 
-        {/* Stats row */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="flex gap-12 mb-8 pb-8 border-b border-white/20"
-        >
-          {[
-            { value: '10+', label: 'Years Experience' },
-            { value: '6', label: 'Certifications' },
-            { value: '55k+', label: 'Happy Patients' },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="text-white text-3xl font-bold leading-none mb-1">{stat.value}</div>
-              <div className="text-white/60 text-[11px] uppercase tracking-widest">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
-
         {/* CTA Links */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -131,13 +112,13 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-white text-[#1d1d1f] text-[15px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200"
+            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-white text-[#1d1d1f] text-[15px] font-medium hover:bg-white/90 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Book Consultation
           </a>
           <a
             href="#services"
-            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full border border-white/50 text-white text-[15px] font-medium hover:bg-white/10 active:scale-95 transition-all duration-200"
+            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full border border-white/50 text-white text-[15px] font-medium hover:bg-white/10 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Explore Services
           </a>

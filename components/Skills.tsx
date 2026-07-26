@@ -29,28 +29,24 @@ export default function Skills() {
       title: 'Aesthetic Precision & Artistry',
       description:
         'Exceptional eye for facial symmetry and aesthetic harmony, combining medical expertise with artistic sensibility for naturally beautiful results.',
-      proficiency: 98,
     },
     {
       icon: Lightbulb,
       title: 'Holistic Treatment Design',
       description:
         'Creating personalized treatment plans blending aesthetic medicine, anti-aging therapies, and traditional healing for comprehensive wellness.',
-      proficiency: 95,
     },
     {
       icon: Users,
       title: 'Patient-Centered Communication',
       description:
         'Building trust through empathetic listening and clear communication, ensuring patients feel heard, understood, and confident.',
-      proficiency: 98,
     },
     {
       icon: Cpu,
       title: 'Advanced Aesthetic Technology',
       description:
         'Mastery of cutting-edge aesthetic devices, laser systems, and FDA-approved treatments for safe, effective beauty enhancement.',
-      proficiency: 92,
     },
   ]
 
@@ -143,26 +139,9 @@ export default function Skills() {
               <h3 className="text-[#1d1d1f] font-semibold text-[17px] mb-3 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
                 {skill.title}
               </h3>
-              <p className="text-[#6e6e73] text-[14px] leading-relaxed mb-5">
+              <p className="text-[#6e6e73] text-[14px] leading-relaxed">
                 {skill.description}
               </p>
-
-              {/* Proficiency bar */}
-              <div>
-                <div className="flex justify-between items-center mb-1.5">
-                  <span className="text-[#6e6e73] text-[12px]">Proficiency</span>
-                  <span className="text-[#1d1d1f] text-[12px] font-semibold">{skill.proficiency}%</span>
-                </div>
-                <div className="w-full h-1.5 bg-[#d2d2d7] rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.proficiency}%` }}
-                    transition={{ duration: 1.2, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    viewport={{ once: true }}
-                    className="h-full bg-[#1d1d1f] rounded-full"
-                  />
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>

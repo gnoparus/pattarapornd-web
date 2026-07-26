@@ -2,31 +2,38 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { MapPin, Linkedin, Facebook } from 'lucide-react'
+import { Phone, Mail, MapPin, Linkedin, Facebook } from 'lucide-react'
 import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 
 export default function Contact() {
-  const contactLinks = [
+  const clinics = [
+    {
+      name: 'Izee Clinic',
+      role: 'Aesthetic Physician',
+      phone: '097 923 4455',
+      phoneHref: 'tel:+66979234455',
+      email: 'izeeclinic@gmail.com',
+      facebookHref: 'https://www.facebook.com/profile.php?id=61591016570239&mibextid=wwXIfr',
+      mapsHref: 'https://maps.app.goo.gl/gGCs3Dvgx5avhPfU8?g_st=ic',
+    },
+    {
+      name: 'NURA Bangkok',
+      role: 'General Practitioner',
+      phone: '02-056-6999 / 088-989-8666',
+      phoneHref: 'tel:+6620566999',
+      email: 'hello@nurathailand.com',
+      facebookHref: 'https://www.facebook.com/nurabangkok/',
+      websiteHref: 'https://nurathailand.com/',
+    },
+  ]
+
+  const socialLinks = [
     {
       icon: Linkedin,
       title: 'LinkedIn',
       subtitle: 'Pattarapornd Suparcha',
       detail: 'Connect professionally',
       href: 'https://www.linkedin.com/in/dr-pattarapornd-suparcha-914858392',
-    },
-    {
-      icon: MapPin,
-      title: 'Location',
-      subtitle: 'Bangkok, Thailand',
-      detail: 'Professional practice location',
-      href: undefined,
-    },
-    {
-      icon: Facebook,
-      title: 'Facebook',
-      subtitle: 'Pattarapornd Suparcha',
-      detail: 'Follow on Facebook',
-      href: 'https://www.facebook.com/ploy.soiynnarak/',
     },
   ]
 
@@ -62,7 +69,8 @@ export default function Contact() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-20"
         >
-          Reach out through any of these channels — I'd love to hear from you.
+          She practices across two clinics on different days of the week —
+          reach out to whichever fits your schedule.
         </motion.p>
 
         {/* Two column: photo + contact */}
@@ -95,72 +103,89 @@ export default function Contact() {
 
           {/* Contact cards */}
           <div className="space-y-4">
-            {contactLinks.map((link, index) => {
-              const CardInner = (
-                <motion.div
-                  initial={{ opacity: 0, x: 24 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  whileHover={{ y: -3, transition: { duration: 0.2, ease: 'easeOut' } }}
-                  className="flex items-center gap-5 bg-[#f5f5f7] rounded-2xl p-6 group cursor-pointer"
-                >
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-200">
-                    <link.icon className="w-5 h-5 text-[#1d1d1f]" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-[#1d1d1f] font-semibold text-[15px] mb-0.5">{link.title}</p>
-                    <p className="text-[var(--apple-accent)] text-[13px] font-medium mb-0.5">{link.subtitle}</p>
-                    <p className="text-[#6e6e73] text-[12px]">{link.detail}</p>
-                  </div>
-                  {link.href && (
-                    <svg
-                      className="w-4 h-4 text-[#86868b] opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      aria-hidden="true"
+            {clinics.map((clinic, index) => (
+              <motion.div
+                key={clinic.name}
+                initial={{ opacity: 0, x: 24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true, margin: '-40px' }}
+                className="bg-[#f5f5f7] rounded-2xl p-6"
+              >
+                <p className="text-[#1d1d1f] font-semibold text-[16px] mb-0.5">{clinic.name}</p>
+                <p className="text-[var(--apple-accent)] text-[13px] font-medium mb-4">{clinic.role}</p>
+
+                <div className="space-y-2 mb-4">
+                  <a
+                    href={clinic.phoneHref}
+                    className="flex items-center gap-3 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                  >
+                    <Phone className="w-4 h-4 text-[#6e6e73] shrink-0" />
+                    {clinic.phone}
+                  </a>
+                  <a
+                    href={`mailto:${clinic.email}`}
+                    className="flex items-center gap-3 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                  >
+                    <Mail className="w-4 h-4 text-[#6e6e73] shrink-0" />
+                    {clinic.email}
+                  </a>
+                </div>
+
+                <div className="flex gap-4 text-[13px]">
+                  <a
+                    href={clinic.facebookHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                  >
+                    <Facebook className="w-3.5 h-3.5" />
+                    Facebook
+                  </a>
+                  {clinic.mapsHref && (
+                    <a
+                      href={clinic.mapsHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
+                      <MapPin className="w-3.5 h-3.5" />
+                      Directions
+                    </a>
                   )}
-                </motion.div>
-              )
+                  {clinic.websiteHref && (
+                    <a
+                      href={clinic.websiteHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                    >
+                      Website
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
 
-              return link.href ? (
-                <a
-                  key={link.title}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                  aria-label={`${link.title}: ${link.subtitle}`}
-                >
-                  {CardInner}
-                </a>
-              ) : (
-                <div key={link.title}>{CardInner}</div>
-              )
-            })}
-
-            {/* Availability note */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-              className="rounded-2xl border border-[#d2d2d7] px-6 py-5"
-            >
-              <p className="text-[#6e6e73] text-[13px] text-center leading-relaxed">
-                Open to collaborations in healthcare, wellness, and aesthetic medicine.
-                Feel free to connect through any channel above.
-              </p>
-            </motion.div>
+            {socialLinks.map((link) => (
+              <a
+                key={link.title}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-5 bg-[#f5f5f7] rounded-2xl p-6 group cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                aria-label={`${link.title}: ${link.subtitle}`}
+              >
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-200">
+                  <link.icon className="w-5 h-5 text-[#1d1d1f]" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-[#1d1d1f] font-semibold text-[15px] mb-0.5">{link.title}</p>
+                  <p className="text-[var(--apple-accent)] text-[13px] font-medium mb-0.5">{link.subtitle}</p>
+                  <p className="text-[#6e6e73] text-[12px]">{link.detail}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -189,10 +214,19 @@ export default function Contact() {
               <div>
                 <p className="text-[#1d1d1f] font-semibold mb-3">Menu</p>
                 <ul className="space-y-2">
-                  {['#home', '#services', '#about', '#contact'].map((href) => (
+                  {[
+                    { href: '#home', label: 'Home' },
+                    { href: '#about', label: 'About' },
+                    { href: '#services', label: 'Services' },
+                    { href: '#education', label: 'Education' },
+                    { href: '#experience', label: 'Experience' },
+                    { href: '#skills', label: 'Skills' },
+                    { href: '#achievements', label: 'Achievements' },
+                    { href: '#contact', label: 'Contact' },
+                  ].map(({ href, label }) => (
                     <li key={href}>
-                      <a href={href} className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 capitalize">
-                        {href.replace('#', '')}
+                      <a href={href} className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]">
+                        {label}
                       </a>
                     </li>
                   ))}
@@ -201,8 +235,8 @@ export default function Contact() {
               <div>
                 <p className="text-[#1d1d1f] font-semibold mb-3">Legal</p>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200">Privacy Policy</a></li>
-                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200">Terms of Service</a></li>
+                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]">Privacy Policy</a></li>
+                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]">Terms of Service</a></li>
                 </ul>
               </div>
             </div>
