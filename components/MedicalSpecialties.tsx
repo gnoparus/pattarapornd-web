@@ -87,7 +87,7 @@ export default function MedicalSpecialties() {
           viewport={{ once: true, margin: '-60px' }}
           className="mb-16 rounded-3xl overflow-hidden shadow-apple group"
         >
-          <div className="relative min-h-[200px]" style={{ aspectRatio: '16/5' }}>
+          <div className="relative w-full" style={{ aspectRatio: '16/5', minHeight: '200px' }}>
             <Image
               src="/pattarapornd-team-doctors-standing-conference-hospital-room-senior-doctor-discussing-about-treatment-patient-looking-laptop-coworkers-white-coats-working-together-analysing-symptoms-disease.jpg"
               alt="Team of doctors in conference room"

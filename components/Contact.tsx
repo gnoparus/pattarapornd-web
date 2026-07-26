@@ -118,14 +118,14 @@ export default function Contact() {
                 <div className="space-y-2 mb-4">
                   <a
                     href={clinic.phoneHref}
-                    className="flex items-center gap-3 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                    className="flex items-center gap-3 min-h-11 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                   >
                     <Phone className="w-4 h-4 text-[#6e6e73] shrink-0" />
                     {clinic.phone}
                   </a>
                   <a
                     href={`mailto:${clinic.email}`}
-                    className="flex items-center gap-3 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                    className="flex items-center gap-3 min-h-11 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                   >
                     <Mail className="w-4 h-4 text-[#6e6e73] shrink-0" />
                     {clinic.email}
