@@ -15,7 +15,6 @@ export default function Journey() {
         'Currently pursuing a Master of Science degree in Medicine, furthering clinical research and medical expertise in Anti-Aging and Regenerative Science.',
       icon: GraduationCap,
       current: true,
-      link: 'https://hrv.pattarapornd.com/',
     },
     {
       year: '2023',
@@ -155,16 +154,6 @@ export default function Journey() {
                   <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-1">{item.title}</h3>
                   <p className="text-[#6e6e73] text-[14px] font-medium mb-3">{item.institution}</p>
                   <p className="text-[#6e6e73] text-[15px] leading-relaxed">{item.description}</p>
-                  {item.link && (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 mt-2 text-[14px] font-medium text-[var(--apple-accent)] hover:opacity-80 transition-opacity duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
-                    >
-                      View thesis project ↗
-                    </a>
-                  )}
                 </div>
               </div>
             </motion.div>
