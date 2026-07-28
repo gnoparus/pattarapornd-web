@@ -255,6 +255,16 @@ export default function Contact() {
                       HRV
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="https://shiftside.pattarapornd.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                    >
+                      Shiftside
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
