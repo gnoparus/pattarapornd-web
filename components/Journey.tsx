@@ -9,10 +9,10 @@ export default function Journey() {
   const education = [
     {
       year: '2025 – 2027',
-      title: 'Master of Science in Medicine',
+      title: 'Fellowship in Anti-Aging and Regenerative Science',
       institution: 'Dhurakij Pundit University (DPU)',
       description:
-        'Currently pursuing a Master of Science degree in Medicine, furthering clinical research and medical expertise in Anti-Aging and Regenerative Science.',
+        'Currently pursuing a Fellowship in Anti-Aging and Regenerative Science, furthering clinical research and medical expertise in the field.',
       icon: GraduationCap,
       current: true,
     },

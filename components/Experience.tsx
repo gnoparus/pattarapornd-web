@@ -18,6 +18,7 @@ export default function Experience() {
         'Building an ongoing patient care schedule alongside her other clinic roles',
       ],
       image: '/araya-clinic-treatment.jpg',
+      imagePosition: '50% 65%',
       current: true,
     },
     {
@@ -162,6 +163,7 @@ export default function Experience() {
                     src={exp.image}
                     alt={exp.organization}
                     fill
+                    style={{ objectPosition: exp.imagePosition ?? '50% 50%' }}
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 ) : (
