@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Linkedin, Facebook } from 'lucide-react'
+import { Phone, Mail, MapPin, Linkedin, Facebook, MessageCircle } from 'lucide-react'
 import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 
 export default function Contact() {
@@ -12,8 +12,9 @@ export default function Contact() {
       role: 'Aesthetic Physician',
       phone: '099 090 7772',
       phoneHref: 'tel:+66990907772',
+      messengerHref: 'https://m.me/ArayaClinicbyJaeleng',
       facebookHref: 'https://www.facebook.com/ArayaClinicbyJaeleng/',
-      mapsHref: 'https://www.google.com/maps/search/?api=1&query=40%2F90+%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5+74+%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%9A%E0%B8%B4%E0%B8%99+%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%AF+10210',
+      mapsHref: 'https://maps.app.goo.gl/qoRprSYDVmprEmym7',
     },
     {
       name: 'Izee Clinic',
@@ -163,6 +164,17 @@ export default function Contact() {
                     <Facebook className="w-3.5 h-3.5" />
                     Facebook
                   </a>
+                  {clinic.messengerHref && (
+                    <a
+                      href={clinic.messengerHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      Messenger
+                    </a>
+                  )}
                   {clinic.mapsHref && (
                     <a
                       href={clinic.mapsHref}
