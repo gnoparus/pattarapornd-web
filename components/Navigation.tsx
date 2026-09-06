@@ -1,8 +1,10 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
+
+const SECTION_IDS = ['home', 'about', 'services', 'education', 'experience', 'skills', 'achievements', 'contact']
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -15,16 +17,22 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const intersectingRef = useRef<Record<string, boolean>>({})
+
   useEffect(() => {
-    const ids = ['services', 'education', 'experience', 'contact']
-    const sections = ids
+    const sections = SECTION_IDS
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null)
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries.find((entry) => entry.isIntersecting)
-        if (visible) setActiveSection(visible.target.id)
+        entries.forEach((entry) => {
+          intersectingRef.current[entry.target.id] = entry.isIntersecting
+        })
+        // Pick the last (furthest down the page) section currently in the
+        // band so order is deterministic regardless of callback entry order.
+        const current = SECTION_IDS.filter((id) => intersectingRef.current[id])
+        setActiveSection(current[current.length - 1] ?? '')
       },
       { rootMargin: '-40% 0px -55% 0px' }
     )
@@ -72,7 +80,8 @@ export default function Navigation() {
         setTimeout(() => {
           const el = document.getElementById(id)
           if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' })
             history.pushState(null, '', href)
           }
         }, 80)
