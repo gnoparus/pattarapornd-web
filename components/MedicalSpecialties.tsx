@@ -28,7 +28,7 @@ export default function MedicalSpecialties() {
       icon: Wind,
       title: 'Anti-Aging & Regenerative',
       description:
-        'Currently pursuing M.Sc. in Anti-Aging and Regenerative Science, applying cutting-edge regenerative medicine approaches for holistic wellness.',
+        'Currently pursuing a Fellowship in Anti-Aging and Regenerative Science (2025–2026), applying cutting-edge regenerative medicine approaches for holistic wellness.',
     },
     {
       icon: Music,
