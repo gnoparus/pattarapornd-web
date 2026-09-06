@@ -20,11 +20,8 @@ export default function AchievementsVolunteering() {
   ]
 
   const volunteering = [
-    'Less Luxury Project — Spearheaded a charity initiative, honing project management and community engagement skills',
-    'In the Name of Love Ep. 2 — Contributed to mental health awareness events, promoting understanding and support for mental health in the community',
-    'Srithanya Charity Run — Participated in community health and wellness initiatives, promoting active lifestyles and charitable giving',
-    'Crazy Run 2019 — Led and participated in public health initiatives, fostering skills in communication and health promotion',
     '"I Can Detect! Let\'s Talk About Depression" — Educational project focused on mental health awareness and early detection of depression',
+    'Srithanya Charity Run — Participated in community health and wellness initiatives, promoting active lifestyles and charitable giving',
     'Change 5th Med RSU — Organized medical education events to bridge knowledge gaps among medical students',
   ]
 
@@ -54,7 +51,7 @@ export default function AchievementsVolunteering() {
         </motion.p>
 
         {/* Achievements */}
-        <motion.p
+        <motion.h3
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -62,7 +59,7 @@ export default function AchievementsVolunteering() {
           className="text-[#1d1d1f] font-semibold text-[17px] mb-6"
         >
           Professional Achievements
-        </motion.p>
+        </motion.h3>
 
         <div className="grid sm:grid-cols-2 gap-5 mb-16">
           {achievements.map((achievement, index) => (
@@ -79,7 +76,7 @@ export default function AchievementsVolunteering() {
                 <div className="w-9 h-9 bg-[#f5f5f7] rounded-xl flex items-center justify-center">
                   <Award className="w-4.5 h-4.5 text-[#1d1d1f]" />
                 </div>
-                <span className="text-[var(--apple-accent)] text-[13px] font-semibold">{achievement.year}</span>
+                <span className="text-[#6e6e73] text-[13px] font-semibold">{achievement.year}</span>
               </div>
               <h3 className="text-[#1d1d1f] font-semibold text-[16px] mb-3 group-hover:text-[var(--apple-accent)] transition-colors duration-200 leading-snug">
                 {achievement.title}
@@ -90,7 +87,7 @@ export default function AchievementsVolunteering() {
         </div>
 
         {/* Volunteering */}
-        <motion.p
+        <motion.h3
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -98,7 +95,7 @@ export default function AchievementsVolunteering() {
           className="text-[#1d1d1f] font-semibold text-[17px] mb-6"
         >
           Extracurricular &amp; Volunteering
-        </motion.p>
+        </motion.h3>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}

@@ -7,11 +7,30 @@ import { Menu, X } from 'lucide-react'
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const ids = ['services', 'education', 'experience', 'contact']
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting)
+        if (visible) setActiveSection(visible.target.id)
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
   }, [])
 
   // Prevent body scroll when mobile menu is open
@@ -24,6 +43,16 @@ export default function Navigation() {
     return () => {
       document.body.style.overflow = ''
     }
+  }, [isMenuOpen])
+
+  // Close mobile menu on Escape
+  useEffect(() => {
+    if (!isMenuOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMenuOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isMenuOpen])
 
   const navLinks = [
@@ -44,6 +73,7 @@ export default function Navigation() {
           const el = document.getElementById(id)
           if (el) {
             el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            history.pushState(null, '', href)
           }
         }, 80)
       })
@@ -76,20 +106,28 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-7">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-[13px] text-[#1d1d1f]/70 hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href.replace('#', '')
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    aria-current={isActive ? 'true' : undefined}
+                    className={`text-[13px] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)] ${
+                      isActive
+                        ? 'text-[var(--apple-accent)] font-medium'
+                        : 'text-[#1d1d1f]/70 hover:text-[#1d1d1f]'
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                )
+              })}
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="text-[13px] font-medium text-white bg-[#1d1d1f] rounded-full px-4 py-1.5 hover:bg-[#1d1d1f]/80 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                className="text-[13px] font-medium text-white bg-[var(--apple-accent)] rounded-full px-4 py-1.5 hover:bg-[var(--apple-accent)]/90 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
               >
                 Contact for Consultation
               </a>
@@ -190,7 +228,7 @@ export default function Navigation() {
                   <a
                     href="#contact"
                     onClick={(e) => handleNavClick(e, '#contact')}
-                    className="block text-center py-4 text-[17px] font-semibold text-white bg-[#1d1d1f] rounded-2xl hover:bg-[#1d1d1f]/80 active:scale-[0.98] transition-all touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                    className="block text-center py-4 text-[17px] font-semibold text-white bg-[var(--apple-accent)] rounded-2xl hover:bg-[var(--apple-accent)]/90 active:scale-[0.98] transition-all touch-manipulation focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                   >
                     Contact for Consultation
                   </a>

@@ -27,7 +27,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden bg-[#f5f5f7]"
+      className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden bg-[#1d1d1f]"
     >
       {/* Background image with scroll-driven parallax */}
       <motion.div
@@ -57,6 +57,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-white/75 text-[13px] font-medium tracking-widest uppercase mb-3"
+          style={{ textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}
         >
           Anti-Aging · Aesthetic Medicine
         </motion.p>
@@ -94,6 +95,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-white/80 text-[17px] font-medium tracking-wide mb-4"
+          style={{ textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35)' }}
         >
           Anti-Aging &amp; Aesthetic Medicine · Bangkok, Thailand
         </motion.p>

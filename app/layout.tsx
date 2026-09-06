@@ -5,6 +5,7 @@ import { SITE_URL } from '@/lib/site'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { MotionConfig } from 'framer-motion'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -59,10 +60,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className="antialiased bg-white">
-        <SchemaMarkup />
-        {children}
+        <MotionConfig reducedMotion="user">
+          <SchemaMarkup />
+          {children}
+        </MotionConfig>
         <Analytics />
         <SpeedInsights />
       </body>

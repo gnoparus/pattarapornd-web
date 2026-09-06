@@ -85,8 +85,16 @@ export default function Contact() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-20"
         >
-          She practices across multiple clinics on different days of the week —
-          reach out to whichever fits your schedule.
+          She practices across multiple clinics on different days of the week — check the{' '}
+          <a
+            href="https://www.facebook.com/profile.php?id=61594137771552"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--apple-accent)] font-medium hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)] rounded"
+          >
+            current shift schedule
+          </a>{' '}
+          to see where she is today, or reach out to whichever clinic fits your own schedule.
         </motion.p>
 
         {/* Two column: photo + contact */}
@@ -129,7 +137,7 @@ export default function Contact() {
                 className="bg-[#f5f5f7] rounded-2xl p-6"
               >
                 <p className="text-[#1d1d1f] font-semibold text-[16px] mb-0.5">{clinic.name}</p>
-                <p className="text-[var(--apple-accent)] text-[13px] font-medium mb-4">{clinic.role}</p>
+                <p className="text-[#6e6e73] text-[13px] font-medium mb-4">{clinic.role}</p>
 
                 {(clinic.phoneHref || clinic.email) && (
                   <div className="space-y-2 mb-4">
@@ -154,12 +162,12 @@ export default function Contact() {
                   </div>
                 )}
 
-                <div className="flex gap-4 text-[13px]">
+                <div className="flex flex-wrap gap-4 text-[13px]">
                   <a
                     href={clinic.facebookHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                    className="flex items-center gap-1.5 min-h-11 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                   >
                     <Facebook className="w-3.5 h-3.5" />
                     Facebook
@@ -169,7 +177,7 @@ export default function Contact() {
                       href={clinic.messengerHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                      className="flex items-center gap-1.5 min-h-11 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                     >
                       <MessageCircle className="w-3.5 h-3.5" />
                       Messenger
@@ -180,7 +188,7 @@ export default function Contact() {
                       href={clinic.mapsHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                      className="flex items-center gap-1.5 min-h-11 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                     >
                       <MapPin className="w-3.5 h-3.5" />
                       Directions
@@ -191,7 +199,7 @@ export default function Contact() {
                       href={clinic.websiteHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                      className="flex items-center min-h-11 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
                     >
                       Website
                     </a>
@@ -214,7 +222,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1">
                   <p className="text-[#1d1d1f] font-semibold text-[15px] mb-0.5">{link.title}</p>
-                  <p className="text-[var(--apple-accent)] text-[13px] font-medium mb-0.5">{link.subtitle}</p>
+                  <p className="text-[#6e6e73] text-[13px] font-medium mb-0.5">{link.subtitle}</p>
                   <p className="text-[#6e6e73] text-[12px]">{link.detail}</p>
                 </div>
               </a>
@@ -298,13 +306,6 @@ export default function Contact() {
                       Shiftside
                     </a>
                   </li>
-                </ul>
-              </div>
-              <div>
-                <p className="text-[#1d1d1f] font-semibold mb-3">Legal</p>
-                <ul className="space-y-2">
-                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]">Privacy Policy</a></li>
-                  <li><a href="#" className="text-[#6e6e73] hover:text-[#1d1d1f] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]">Terms of Service</a></li>
                 </ul>
               </div>
             </div>
