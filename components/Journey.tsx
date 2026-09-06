@@ -8,7 +8,7 @@ import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 export default function Journey() {
   const education = [
     {
-      year: '2025 – 2027',
+      year: '2025 – 2026',
       title: 'Fellowship in Anti-Aging and Regenerative Science',
       institution: 'Dhurakij Pundit University (DPU)',
       description:
