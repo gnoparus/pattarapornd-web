@@ -51,21 +51,6 @@ export default function Experience() {
       current: true,
     },
     {
-      period: 'Feb 2026 — May 2026',
-      title: 'Anti-Aging, Aesthetics & General Practitioner',
-      organization: 'Inspire IVF Thailand — Wellness Department',
-      location: 'Bangkok, Thailand',
-      description:
-        'Dr. Pattarapornd (Ploy) offered personalized one-on-one care in the Wellness Department of Bangkok\'s premier fertility and wellness centre, combining anti-aging medicine, aesthetic treatments, and general practice with a holistic approach.',
-      achievements: [
-        'Delivered specialized anti-aging and aesthetic medicine in a world-class fertility and wellness center',
-        'Provided comprehensive general practice care to international and local clients',
-        'Integrated holistic wellness approaches with cutting-edge medical technology',
-      ],
-      image: '/inspire_ivf_clinic101.webp',
-      current: false,
-    },
-    {
       period: 'Jun 2025 — Present',
       title: 'Teacher Assistant',
       organization: 'CMC Training Center',
@@ -92,6 +77,21 @@ export default function Experience() {
       ],
       image: '/pattarapornd-cosmetic-botox-injection-female-forehead.jpg',
       current: true,
+    },
+    {
+      period: 'Feb 2026 — May 2026',
+      title: 'Anti-Aging, Aesthetics & General Practitioner',
+      organization: 'Inspire IVF Thailand — Wellness Department',
+      location: 'Bangkok, Thailand',
+      description:
+        'Dr. Pattarapornd (Ploy) offered personalized one-on-one care in the Wellness Department of Bangkok\'s premier fertility and wellness centre, combining anti-aging medicine, aesthetic treatments, and general practice with a holistic approach.',
+      achievements: [
+        'Delivered specialized anti-aging and aesthetic medicine in a world-class fertility and wellness center',
+        'Provided comprehensive general practice care to international and local clients',
+        'Integrated holistic wellness approaches with cutting-edge medical technology',
+      ],
+      image: '/inspire_ivf_clinic101.webp',
+      current: false,
     },
     {
       period: 'Dec 2023 — Jan 2026',
@@ -192,7 +192,7 @@ export default function Experience() {
                 <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-1 group-hover:text-[var(--apple-accent)] transition-colors duration-200">
                   {exp.title}
                 </h3>
-                <p className="text-[var(--apple-accent)] text-[14px] font-medium mb-4">{exp.organization}</p>
+                <p className="text-[#6e6e73] text-[14px] font-medium mb-4">{exp.organization}</p>
                 <p className="text-[#6e6e73] text-[14px] leading-relaxed mb-5">{exp.description}</p>
 
                 <div className="space-y-2">

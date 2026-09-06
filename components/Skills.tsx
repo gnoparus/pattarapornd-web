@@ -4,25 +4,6 @@ import { motion } from 'framer-motion'
 import { Brain, Lightbulb, Users, Cpu } from 'lucide-react'
 
 export default function Skills() {
-  const technicalSkills = [
-    {
-      category: 'Languages',
-      items: [
-        { name: 'Thai', level: 'Native' },
-        { name: 'English', level: 'Intermediate' },
-        { name: 'Arabic', level: 'Beginner' },
-      ],
-    },
-    {
-      category: 'Computer Skills',
-      items: [
-        { name: 'Microsoft Word', level: 'Proficient' },
-        { name: 'Microsoft Excel', level: 'Proficient' },
-        { name: 'Microsoft PowerPoint', level: 'Proficient' },
-      ],
-    },
-  ]
-
   const skills = [
     {
       icon: Brain,
@@ -84,38 +65,6 @@ export default function Skills() {
         >
           Essential competencies that drive excellence in modern healthcare and patient care.
         </motion.p>
-
-        {/* Technical proficiencies */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          viewport={{ once: true, margin: '-60px' }}
-          className="bg-[#f5f5f7] rounded-2xl p-8 mb-16"
-        >
-          <h3 className="text-[#1d1d1f] font-semibold text-[19px] mb-8">Technical Proficiencies</h3>
-          <div className="grid sm:grid-cols-2 gap-10">
-            {technicalSkills.map((category, catIndex) => (
-              <div key={category.category}>
-                <p className="text-[var(--apple-accent)] text-[13px] font-semibold uppercase tracking-wider mb-4">
-                  {category.category}
-                </p>
-                <div className="space-y-0">
-                  {category.items.map((item, i) => (
-                    <div key={i}>
-                      <div className="h-px bg-[#d2d2d7]" />
-                      <div className="flex justify-between items-center py-3">
-                        <span className="text-[#1d1d1f] text-[15px]">{item.name}</span>
-                        <span className="text-[#6e6e73] text-[13px]">{item.level}</span>
-                      </div>
-                    </div>
-                  ))}
-                  <div className="h-px bg-[#d2d2d7]" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Core skills grid */}
         <div className="grid sm:grid-cols-2 gap-5">
