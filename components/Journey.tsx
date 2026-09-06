@@ -99,8 +99,8 @@ export default function Journey() {
         >
           <div className="relative w-full" style={{ aspectRatio: '16/5', minHeight: '200px' }}>
             <Image
-              src="/pattarapornd-group-surgeons-wearing-safety-masks-performing-operation-medicine-concept-surgery-medicine-people-concept-group-surgeons-operation-operating-room-hospital.jpg"
-              alt="Surgeons performing operation in operating room"
+              src="/journey-education-milestone.jpg"
+              alt="Dr. Pattarapornd Suparcha holding a completion certificate from an aesthetic medicine training course"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
             />

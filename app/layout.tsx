@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/studio-photo-202-16-9.jpg',
-        width: 1792,
-        height: 2388,
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
         alt: `${DOCTOR_NAME_EN} medical portfolio`,
       },
     ],
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: `${DOCTOR_NAME_EN} - Aesthetic & Anti-Aging Physician`,
     description:
       'Professional portfolio of Dr. Pattarapornd Suparcha, aesthetic and anti-aging physician in Bangkok.',
-    images: ['/studio-photo-202-16-9.jpg'],
+    images: ['/og-image.jpg'],
   },
 }
 

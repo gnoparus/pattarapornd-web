@@ -19,7 +19,7 @@ export function middleware(request: NextRequest) {
   }
 
   const acceptHeader = (request.headers.get('accept') || '').toLowerCase()
-  const markdownPreference = getQuality(acceptHeader, 'text/markdown')
+  const markdownPreference = getQuality(acceptHeader, 'text/markdown', { allowFullWildcard: false })
   const htmlPreference = Math.max(
     getQuality(acceptHeader, 'text/html'),
     getQuality(acceptHeader, 'application/xhtml+xml'),
@@ -71,7 +71,9 @@ function appendVary(existing: string | null, value: string) {
   return parts.join(', ')
 }
 
-function getQuality(acceptHeader: string, mediaType: string) {
+function getQuality(acceptHeader: string, mediaType: string, options: { allowFullWildcard?: boolean } = {}) {
+  const { allowFullWildcard = true } = options
+
   return acceptHeader
     .split(',')
     .map((entry) => entry.trim())
@@ -79,7 +81,7 @@ function getQuality(acceptHeader: string, mediaType: string) {
       if (!entry) return best
 
       const [type, ...params] = entry.split(';').map((part) => part.trim())
-      if (!matchesMediaType(type, mediaType)) return best
+      if (!matchesMediaType(type, mediaType, allowFullWildcard)) return best
 
       const qualityParam = params.find((param) => param.startsWith('q='))
       const quality = qualityParam ? Number.parseFloat(qualityParam.slice(2)) : 1
@@ -89,9 +91,9 @@ function getQuality(acceptHeader: string, mediaType: string) {
     }, 0)
 }
 
-function matchesMediaType(candidate: string, target: string) {
+function matchesMediaType(candidate: string, target: string, allowFullWildcard: boolean) {
   if (candidate === target) return true
-  if (candidate === '*/*') return true
+  if (allowFullWildcard && candidate === '*/*') return true
 
   const [candidateType, candidateSubType] = candidate.split('/')
   const [targetType, targetSubType] = target.split('/')

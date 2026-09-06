@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export default function Hero() {
@@ -10,6 +10,13 @@ export default function Hero() {
     target: ref,
     offset: ['start start', 'end start'],
   })
+
+  useEffect(() => {
+    // ponytail: framer-motion's scrollYProgress can read a stale non-zero
+    // value on first paint until a scroll event forces a recompute
+    const id = requestAnimationFrame(() => window.dispatchEvent(new Event('scroll')))
+    return () => cancelAnimationFrame(id)
+  }, [])
 
   const textY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
