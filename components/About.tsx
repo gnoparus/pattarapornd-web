@@ -61,7 +61,7 @@ export default function About() {
         >
           A physician who approaches medicine as an art form — specializing in aesthetic
           medicine, anti-aging treatments, and holistic wellness. She currently practices
-          at Izee Clinic and NURA Bangkok.
+          at Araya Clinic and NURA Bangkok, with occasional shifts at Izee Clinic.
         </motion.p>
 
         {/* Two-column: image + services */}

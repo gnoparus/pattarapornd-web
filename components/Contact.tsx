@@ -8,8 +8,16 @@ import { DOCTOR_NAME_EN, DOCTOR_NAME_TH } from '@/lib/profile'
 export default function Contact() {
   const clinics = [
     {
-      name: 'Izee Clinic',
+      name: 'Araya Clinic',
       role: 'Aesthetic Physician',
+      phone: '099 090 7772',
+      phoneHref: 'tel:+66990907772',
+      facebookHref: 'https://www.facebook.com/ArayaClinicbyJaeleng/',
+      mapsHref: 'https://www.google.com/maps/search/?api=1&query=40%2F90+%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5+74+%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%9A%E0%B8%B4%E0%B8%99+%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%AF+10210',
+    },
+    {
+      name: 'Izee Clinic',
+      role: 'Aesthetic Physician (Occasional)',
       phone: '097 923 4455',
       phoneHref: 'tel:+66979234455',
       email: 'izeeclinic@gmail.com',
@@ -34,6 +42,13 @@ export default function Contact() {
       subtitle: 'Pattarapornd Suparcha',
       detail: 'Connect professionally',
       href: 'https://www.linkedin.com/in/dr-pattarapornd-suparcha-914858392',
+    },
+    {
+      icon: Facebook,
+      title: 'Shift Schedule',
+      subtitle: 'ตารางเวร พญ.ภัทรภร',
+      detail: 'Shift updates only — not for online consultation',
+      href: 'https://www.facebook.com/profile.php?id=61594137771552',
     },
   ]
 
@@ -69,7 +84,7 @@ export default function Contact() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-[#6e6e73] text-[19px] text-center max-w-xl mx-auto mb-20"
         >
-          She practices across two clinics on different days of the week —
+          She practices across multiple clinics on different days of the week —
           reach out to whichever fits your schedule.
         </motion.p>
 
@@ -115,22 +130,28 @@ export default function Contact() {
                 <p className="text-[#1d1d1f] font-semibold text-[16px] mb-0.5">{clinic.name}</p>
                 <p className="text-[var(--apple-accent)] text-[13px] font-medium mb-4">{clinic.role}</p>
 
-                <div className="space-y-2 mb-4">
-                  <a
-                    href={clinic.phoneHref}
-                    className="flex items-center gap-3 min-h-11 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
-                  >
-                    <Phone className="w-4 h-4 text-[#6e6e73] shrink-0" />
-                    {clinic.phone}
-                  </a>
-                  <a
-                    href={`mailto:${clinic.email}`}
-                    className="flex items-center gap-3 min-h-11 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
-                  >
-                    <Mail className="w-4 h-4 text-[#6e6e73] shrink-0" />
-                    {clinic.email}
-                  </a>
-                </div>
+                {(clinic.phoneHref || clinic.email) && (
+                  <div className="space-y-2 mb-4">
+                    {clinic.phoneHref && (
+                      <a
+                        href={clinic.phoneHref}
+                        className="flex items-center gap-3 min-h-11 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                      >
+                        <Phone className="w-4 h-4 text-[#6e6e73] shrink-0" />
+                        {clinic.phone}
+                      </a>
+                    )}
+                    {clinic.email && (
+                      <a
+                        href={`mailto:${clinic.email}`}
+                        className="flex items-center gap-3 min-h-11 text-[#1d1d1f] text-[14px] hover:text-[var(--apple-accent)] transition-colors duration-200 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--apple-accent)]"
+                      >
+                        <Mail className="w-4 h-4 text-[#6e6e73] shrink-0" />
+                        {clinic.email}
+                      </a>
+                    )}
+                  </div>
+                )}
 
                 <div className="flex gap-4 text-[13px]">
                   <a

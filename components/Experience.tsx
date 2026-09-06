@@ -7,15 +7,28 @@ import { Check } from 'lucide-react'
 export default function Experience() {
   const experiences = [
     {
-      period: 'Jul 2026 — Present',
+      period: 'Sep 2026 — Present',
       title: 'Aesthetic Physician',
-      organization: 'Izee Clinic',
+      organization: 'Araya Clinic',
       location: 'Bangkok, Thailand',
       description:
-        'Providing aesthetic medicine consultations and treatments at Izee Clinic, with a weekday schedule that varies week to week.',
+        'Providing aesthetic medicine consultations and treatments at Araya Clinic, with a weekday schedule that varies week to week.',
       achievements: [
         'Delivering aesthetic treatments tailored to each patient\'s goals',
         'Building an ongoing patient care schedule alongside her other clinic roles',
+      ],
+      image: '/araya-clinic-treatment.jpg',
+      current: true,
+    },
+    {
+      period: 'Jul 2026 — Present',
+      title: 'Aesthetic Physician (Occasional)',
+      organization: 'Izee Clinic',
+      location: 'Bangkok, Thailand',
+      description:
+        'Continuing to see patients at Izee Clinic on an occasional basis alongside her primary role at Araya Clinic.',
+      achievements: [
+        'Delivering aesthetic treatments tailored to each patient\'s goals',
       ],
       image: '/studio-photo-301.jpg',
       current: true,
